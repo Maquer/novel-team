@@ -1,0 +1,25 @@
+{
+  "project_id": "helper-creator",
+  "title": "辅助之道",
+  "genre": "玄幻",
+  "platform": "番茄小说",
+  "target_words": 1000000,
+  "style": "轻松爽文",
+  "status": "completed_vol_1",
+  "created": "2026-09-30",
+  "current_chapter": 30,
+  "total_chapters": 30,
+  "word_count": 38891,
+  "last_update": "2026-10-01",
+  "lock": {
+    "active": false,
+    "chapter": null,
+    "session": null,
+    "updated_at": null
+  },
+  "volume_1": {
+    "status": "completed",
+    "end_chapter": 30,
+    "word_count": 38891
+  }
+}

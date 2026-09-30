@@ -1,0 +1,138 @@
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:33:50.178663", "fact_id": "F0001", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T23:33:51"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:34:34.250160", "fact_id": "F0002", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T23:34:35"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T23:34:55"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:35:31.807032", "fact_id": "F0003", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T23:35:32"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:57:16.755509", "fact_id": "F0004", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-09-30T23:57:17"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:57:59.834497", "fact_id": "F0005", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-09-30T23:58:00"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:58:42.927242", "fact_id": "F0006", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-09-30T23:58:43"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-09-30T23:59:10"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T23:59:32.576071", "fact_id": "F0007", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-09-30T23:59:33"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:02:13.724006", "fact_id": "F0008", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:02:14"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:02:54"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:03:21.162935", "fact_id": "F0009", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:03:22"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:03:42.348189", "fact_id": "F0010", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:03:43"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:08:00.082339", "fact_id": "F0011", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:08:00"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:09:27.440375", "fact_id": "F0012", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:09:28"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:10:50.951681", "fact_id": "F0013", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:10:51"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:11:23.262681", "fact_id": "F0014", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:11:24"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:12:03.169382", "fact_id": "F0015", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:12:04"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:14:08.213696", "fact_id": "F0016", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:14:09"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:14:50.970304", "fact_id": "F0017", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:14:51"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:16:41.829585", "fact_id": "F0018", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:16:42"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:17:11.541248", "fact_id": "F0019", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:17:12"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:17:25.363753", "fact_id": "F0020", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:17:26"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:18:20.165847", "fact_id": "F0021", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:18:21"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:18:48.383514", "fact_id": "F0022", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 4, "timestamp": "2026-10-01T00:18:49"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:19:28.477388", "fact_id": "F0023", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:19:29"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:19:31"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:19:33"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:20:19.263374", "fact_id": "F0024", "category": "gate_check", "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:22:23.214017", "fact_id": "F0025", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 5, "timestamp": "2026-10-01T00:22:24"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:22:48.563799", "fact_id": "F0026", "category": "gate_check", "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:23:22.777128", "fact_id": "F0027", "category": "gate_check", "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:24:43.039108", "fact_id": "F0028", "category": "gate_check", "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:27:51.251483", "fact_id": "F0029", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:27:52"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:28:00.019446", "fact_id": "F0030", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 5, "timestamp": "2026-10-01T00:28:00"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:28:12.514663", "fact_id": "F0031", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:28:13"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:28:43.791141", "fact_id": "F0032", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:28:43.809161", "fact_id": "F0033", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:28:44"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:28:44"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:29:25.778260", "fact_id": "F0034", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 6, "timestamp": "2026-10-01T00:29:26"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:31:02"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:31:25.801597", "fact_id": "F0035", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 7, "timestamp": "2026-10-01T00:31:26"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:32:16.141783", "fact_id": "F0036", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 7, "timestamp": "2026-10-01T00:32:16"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:32:22"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:32:25.829449", "fact_id": "F0037", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:32:26"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:32:28"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:33:09"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:33:11"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:33:13"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:33:45"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:33:47"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:33:50"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:34:13"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:34:26"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:34:54"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:34:56"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:34:58"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:35:16.640813", "fact_id": "F0038", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:35:17"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:35:39.091100", "fact_id": "F0039", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:35:39"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:36:54.856815", "fact_id": "F0040", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:36:55"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:36:58.980048", "fact_id": "F0041", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:36:59"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:37:02.895027", "fact_id": "F0042", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:37:03"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:37:31.059408", "fact_id": "F0043", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T00:37:31"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:37:34.937261", "fact_id": "F0044", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 2, "timestamp": "2026-10-01T00:37:35"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T00:37:38.786169", "fact_id": "F0045", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 3, "timestamp": "2026-10-01T00:37:39"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:03:57.235523", "fact_id": "F0046", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:03:58"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:04:37.964730", "fact_id": "F0047", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 10, "timestamp": "2026-10-01T07:04:38"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:04:52.406238", "fact_id": "F0048", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 10, "timestamp": "2026-10-01T07:04:53"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:11.752579", "fact_id": "F0049", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:05:12"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:33.642967", "fact_id": "F0050", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:33.969093", "fact_id": "F0051", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 10, "timestamp": "2026-10-01T07:05:34"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:05:34"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:58.178331", "fact_id": "F0052", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:58.408269", "fact_id": "F0053", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:05:58.799206", "fact_id": "F0054", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 10, "timestamp": "2026-10-01T07:05:59"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 30, "timestamp": "2026-10-01T07:05:59"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 20, "timestamp": "2026-10-01T07:05:59"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:06:23.427046", "fact_id": "F0055", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:06:24"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:07:00.724700", "fact_id": "F0056", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:07:01"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:07:26.601132", "fact_id": "F0057", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:07:26.670007", "fact_id": "F0058", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:07:26.836012", "fact_id": "F0059", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-10-01T07:07:27"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 10, "timestamp": "2026-10-01T07:07:28"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 20, "timestamp": "2026-10-01T07:07:28"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 30, "timestamp": "2026-10-01T07:07:28"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:21:05.209700", "fact_id": "F0060", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 8, "timestamp": "2026-10-01T07:21:06"}
+{"event": "FACT_ADDED", "timestamp": "2026-10-01T07:21:09.623650", "fact_id": "F0061", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 8, "timestamp": "2026-10-01T07:21:10"}

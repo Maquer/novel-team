@@ -49,3 +49,7 @@
 {"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T17:42:14"}
 {"event": "FACT_ADDED", "timestamp": "2026-09-30T18:00:25.658539", "fact_id": "F0027", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
 {"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T18:00:26"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T18:12:23.396117", "fact_id": "F0028", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T18:12:24"}
+{"event": "FACT_ADDED", "timestamp": "2026-09-30T20:08:49.853016", "fact_id": "F0029", "category": "gate_check", "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1"}
+{"event": "CHAPTER_GATE_PASSED", "chapter": 1, "timestamp": "2026-09-30T20:08:50"}

@@ -1,0 +1,551 @@
+{
+  "F0001": {
+    "id": "F0001",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:33:50.170840",
+    "verified": false
+  },
+  "F0002": {
+    "id": "F0002",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:34:34.240602",
+    "verified": false
+  },
+  "F0003": {
+    "id": "F0003",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:35:31.798087",
+    "verified": false
+  },
+  "F0004": {
+    "id": "F0004",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:57:16.747205",
+    "verified": false
+  },
+  "F0005": {
+    "id": "F0005",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:57:59.826673",
+    "verified": false
+  },
+  "F0006": {
+    "id": "F0006",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:58:42.915945",
+    "verified": false
+  },
+  "F0007": {
+    "id": "F0007",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T23:59:32.565771",
+    "verified": false
+  },
+  "F0008": {
+    "id": "F0008",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:02:13.714368",
+    "verified": false
+  },
+  "F0009": {
+    "id": "F0009",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:03:21.151755",
+    "verified": false
+  },
+  "F0010": {
+    "id": "F0010",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:03:42.338463",
+    "verified": false
+  },
+  "F0011": {
+    "id": "F0011",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:08:00.072507",
+    "verified": false
+  },
+  "F0012": {
+    "id": "F0012",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:09:27.430853",
+    "verified": false
+  },
+  "F0013": {
+    "id": "F0013",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:10:50.942234",
+    "verified": false
+  },
+  "F0014": {
+    "id": "F0014",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:11:23.253608",
+    "verified": false
+  },
+  "F0015": {
+    "id": "F0015",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:12:03.160085",
+    "verified": false
+  },
+  "F0016": {
+    "id": "F0016",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:14:08.202602",
+    "verified": false
+  },
+  "F0017": {
+    "id": "F0017",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:14:50.958398",
+    "verified": false
+  },
+  "F0018": {
+    "id": "F0018",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:16:41.818453",
+    "verified": false
+  },
+  "F0019": {
+    "id": "F0019",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:17:11.531072",
+    "verified": false
+  },
+  "F0020": {
+    "id": "F0020",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:17:25.353323",
+    "verified": false
+  },
+  "F0021": {
+    "id": "F0021",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:18:20.154485",
+    "verified": false
+  },
+  "F0022": {
+    "id": "F0022",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch004.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:18:48.372897",
+    "verified": false
+  },
+  "F0023": {
+    "id": "F0023",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:19:28.464678",
+    "verified": false
+  },
+  "F0024": {
+    "id": "F0024",
+    "category": "gate_check",
+    "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:20:19.252094",
+    "verified": false
+  },
+  "F0025": {
+    "id": "F0025",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:22:23.202109",
+    "verified": false
+  },
+  "F0026": {
+    "id": "F0026",
+    "category": "gate_check",
+    "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:22:48.552831",
+    "verified": false
+  },
+  "F0027": {
+    "id": "F0027",
+    "category": "gate_check",
+    "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:23:22.766052",
+    "verified": false
+  },
+  "F0028": {
+    "id": "F0028",
+    "category": "gate_check",
+    "content": "门禁结果: 未通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:24:43.025881",
+    "verified": false
+  },
+  "F0029": {
+    "id": "F0029",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:27:51.235822",
+    "verified": false
+  },
+  "F0030": {
+    "id": "F0030",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch005.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:28:00.005680",
+    "verified": false
+  },
+  "F0031": {
+    "id": "F0031",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:28:12.498577",
+    "verified": false
+  },
+  "F0032": {
+    "id": "F0032",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:28:43.776402",
+    "verified": false
+  },
+  "F0033": {
+    "id": "F0033",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:28:43.795451",
+    "verified": false
+  },
+  "F0034": {
+    "id": "F0034",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch006.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:29:25.765649",
+    "verified": false
+  },
+  "F0035": {
+    "id": "F0035",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch007.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:31:25.787251",
+    "verified": false
+  },
+  "F0036": {
+    "id": "F0036",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch007.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:32:16.122991",
+    "verified": false
+  },
+  "F0037": {
+    "id": "F0037",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:32:25.814978",
+    "verified": false
+  },
+  "F0038": {
+    "id": "F0038",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:35:16.626087",
+    "verified": false
+  },
+  "F0039": {
+    "id": "F0039",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:35:39.037525",
+    "verified": false
+  },
+  "F0040": {
+    "id": "F0040",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:36:54.831103",
+    "verified": false
+  },
+  "F0041": {
+    "id": "F0041",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:36:58.965645",
+    "verified": false
+  },
+  "F0042": {
+    "id": "F0042",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:37:02.880646",
+    "verified": false
+  },
+  "F0043": {
+    "id": "F0043",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:37:31.044889",
+    "verified": false
+  },
+  "F0044": {
+    "id": "F0044",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch002.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:37:34.922868",
+    "verified": false
+  },
+  "F0045": {
+    "id": "F0045",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch003.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T00:37:38.772003",
+    "verified": false
+  },
+  "F0046": {
+    "id": "F0046",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:03:57.218120",
+    "verified": false
+  },
+  "F0047": {
+    "id": "F0047",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch010.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:04:37.948342",
+    "verified": false
+  },
+  "F0048": {
+    "id": "F0048",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch010.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:04:52.389275",
+    "verified": false
+  },
+  "F0049": {
+    "id": "F0049",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:11.736679",
+    "verified": false
+  },
+  "F0050": {
+    "id": "F0050",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch010.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:33.626206",
+    "verified": false
+  },
+  "F0051": {
+    "id": "F0051",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:33.942098",
+    "verified": false
+  },
+  "F0052": {
+    "id": "F0052",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch010.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:58.157928",
+    "verified": false
+  },
+  "F0053": {
+    "id": "F0053",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch030.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:58.381198",
+    "verified": false
+  },
+  "F0054": {
+    "id": "F0054",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch020.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:05:58.772694",
+    "verified": false
+  },
+  "F0055": {
+    "id": "F0055",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:06:23.410899",
+    "verified": false
+  },
+  "F0056": {
+    "id": "F0056",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:07:00.708025",
+    "verified": false
+  },
+  "F0057": {
+    "id": "F0057",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:07:26.572095",
+    "verified": false
+  },
+  "F0058": {
+    "id": "F0058",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:1 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch010.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:07:26.639357",
+    "verified": false
+  },
+  "F0059": {
+    "id": "F0059",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch030.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:07:26.813781",
+    "verified": false
+  },
+  "F0060": {
+    "id": "F0060",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch008.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:21:05.191678",
+    "verified": false
+  },
+  "F0061": {
+    "id": "F0061",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:0",
+    "source": "/var/minis/shared/novel-team/projects/helper-creator/current/chapters/ch008.md",
+    "status": "unverified",
+    "created_at": "2026-10-01T07:21:09.605189",
+    "verified": false
+  }
+}

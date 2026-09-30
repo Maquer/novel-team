@@ -1,0 +1,24 @@
+{
+  "nodes": {
+    "FN0001": {
+      "id": "FN0001",
+      "name": "三线并行",
+      "ntype": "parallel",
+      "lines": [
+        "hero",
+        "villain",
+        "side"
+      ],
+      "timeout_chapters": 0,
+      "condition": null,
+      "completed_lines": {},
+      "convergence_chapters": [
+        10
+      ],
+      "info_asymmetry": [],
+      "status": "pending",
+      "created_at": "2026-09-30T20:28:57.411173"
+    }
+  },
+  "updated_at": "2026-09-30T20:28:58.571323"
+}

@@ -1,15 +1,21 @@
 ---
 name: novel-team
 description: "小说创作团队——以女娲方法论驱动，从网文创作到IP开发的全流程智能体团队。触发：用户说「小说团队」「novel」「写小说」「天命」。\n核心：任务驱动 + 状态可见 + 创意蒸馏 + 数据治理"
-version: "v2.0.0"
+version: "v2.6.0"
 minis_url: minis://shared/novel-team/TEAM.md
 created: 2026-09-27
-last_update: 2026-09-29
+last_update: 2026-09-30
 ---
 
 # 小说团队 · TEAM.md
 
+> v2.6.0 | 2026-10-01（第1-3章创作完成：7745字/75000字，进度10.3%；P0全部清零，Humanizer 10-14分）
+> v2.3.0 | 2026-09-30（质量门禁阈值决策桥接：① grill-gate-bridge.py 新增 — grill-me↔门禁系统衔接层；② 阈值决策追问5领域（字数下限/AI味阻断线/AI味预警线/超长警告线/其他插件阈值）；③ 生成 threshold-decision-{date}.md 决策记录；④ 自动检测字数分布并预警）
+> v2.2.0 | 2026-09-30（世界包驱动创作流程v3.0落地：① grill-world-bridge.py/grill-me衔接层；② world-logic-builder.py Phase1→3主控；③ outline-grill-bridge.py大纲追问桥接；④ chapter-brief-generator.py细纲生成器；⑤ outline-dynamic-adjust.py动态调整；⑥ world-question-bank.yaml问题库；⑦ TEAM.md注册新工具链）
+> v2.1.0 | 2026-09-30（P1多线叙事收敛校验 + P2心理描写深度检测：① narrative-flow.py 升级v2 — 汇聚点标记/信息不对称检测/线程间隙警告/总编报告；② 新增 psychological_depth.py 检查插件 — 直白心理词「他想/她觉得」检测+情绪词堆砌检测+缺生理细节提示；③ team-rules.md 升级v2 — 新增「心理描写指引」和「多线叙事规范」两大节）
 > v2.0.0 | 2026-09-30（架构升级：novelkit 框架层 + 13 插件门禁 + 统一阈值 config + CLI 兼容垫片。删除 v1 上帝对象脚本集，改用可插拔检查插件）
+> v0.71.1 | 2026-10-01（数据归位：helper-creator 游离副本 `novel-team/novel-team/projects/helper-creator/` 已删除，docs/ 和 manifest.json 补归到规范路径；deliver-index.py 输出零告警）
+> v0.71.0 | 2026-10-01（交付门禁落地：① 新增 `tools/deliver-index.py` — 按阶段扫描项目产物并输出含 minis:// 链接的清单；② TEAM.md 加第7条「交付纪律」：每阶段完成后强制运行脚本并把输出贴给用户，不贴=未通过；③ 数据归位 helper-creator 大纲/决策树/文档从游离副本搬到规范路径；④ 实测 helper-creator 23 个文件全链路可读）
 > v0.70.0 | 2026-09-29（团队优化·防短篇+连贯过渡：① SOP 加第7条「场景过渡连贯」准则；② gate-check 加场景跳跃检测（SCENE_JUMP_PATTERNS）；③ 角色灵魂模板加「心理描写指引」；④ 建 chapter-prompt.yaml 标准模板；⑤ 建 world-pack-schema.json 规范）
 > v0.69.0 | 2026-09-29（二次清空：删除 multi-model 对比报告 + 验证项目数据全部清除）
 > v0.68.0 | 2026-09-29（长篇框架升级：① gate-check 字数门禁升级 soft_min 1500/min_words 2500/critical True；② SOP 加第6条「长篇节奏控制」；③ 大纲模板加 volumes 卷结构；④ gonggong ch1-ch2 扩写至 2100+/1558 字）
@@ -21,6 +27,19 @@ last_update: 2026-09-29
 > v0.60.0 | 2026-09-28（第1章完成+hook扩展版）
 > 核心原则：任务驱动 + 状态可见 + 创意蒸馏 + 数据治理
 > 状态：🟢 优秀，可启动创作
+
+### ⑦ 交付纪律（v0.71 新增）
+**根因**：SOP 定义了"交付物"但无一步要求把文件回给用户 → 文件落盘 = 交付完成 = 用户看不到。这是依赖"主动想起"的软规则，必落空（mdd-sim-gateway 教训）。
+
+**硬门禁**（每次阶段完成必须跑，不跑=未通过）：
+```bash
+python3 tools/deliver-index.py --project <project_id>
+```
+把输出**完整贴到对话里**（含全部 minis:// 链接）。不得自行删减、不得只发摘要文字。
+
+**判定标准**：输出至少包含 1 条链接才算通过。零链接 = P0 阻断（重新生成清单）。
+
+**游离副本告警**：工具会检测并提示不在规范路径下的同名目录（相对路径 bug 产物），发现后必须归位到 `projects/<id>/current/`。
 
 ---
 
@@ -153,7 +172,7 @@ git log --oneline TEAM.md | head -3
 | 知识图谱 | `tools/story-graph.py` | 8节点类型 + 10边类型 | `--project <name>` → graph.json |
 | 事实账本 | `tools/fact-ledger.py` | 四层记忆系统+认知分级 | `--add/--query/--snapshot` |
 | 质量门禁 | `tools/quality-gate.py` | 全流程检查+提交机制 | `--chapter <path> --novel-id <id> [--commit]` |
-| 门禁检查 | `tools/gate-check.py` | 六道刚性/柔性门禁 | `check --chapter <num> --file <file>` |
+| 门禁检查 | `tools/gate-check.py` | 六道刚性/柔性门禁 + psychological_depth（v2.0） | `check --chapter <num> --file <file>` |
 | 上下文管理 | `tools/context-manager.py` | 多轮注入+有界完成 | CLI子命令：build/generate/status/estimate/bounded-check |
 | 大纲构建 | `tools/outline-builder.py` | 三级大纲+伏笔管理（add-work/add-volume/add-chapter/add-foreshadow/pay-off/tree/stats） | `--project <dir>` + 子命令；示例：`add-chapter -v <vol-id> -n <num> -t <title> [-p <points...>]` |
 | 大纲预检 | `tools/outline-precheck.py` | 合同树咬合+**爽点节拍L1-L4**（破冰/压抑上限/里程碑/疲劳/卷末L4） | `check|beats --project <dir> [--strict]` → JSON；回归 `test-outline-precheck.py` |
@@ -168,6 +187,12 @@ git log --oneline TEAM.md | head -3
 | 多线叙事 | `tools/narrative-flow.py` | **Flow流程引擎**：Parallel/Race/Sequence/Timeout；多线并行+汇聚+超时收束 | `add/advance/check/graph/summary --project <id>` → JSON |
 | 剧情解释 | `tools/plot-explain.py` | **Explain解释树**：因果链追溯+章节报告；审稿时快速定位逻辑断层 | `add/link/explain/chain/report/summary --project <id>` → JSON |
 | 批量改词 | `tools/batch-replace-v2.py` | 批量替换+自动备份 | `--find <x> --replace <y> --dir <path>` |
+| **世界包逻辑构建** | `tools/world-logic-builder.py` | **Phase 1→3主控**：grill-me追问→决策树→core-logic.md+iron-laws.md | `grill/build/status --project <id>` |
+| **世界包追问桥接** | `tools/grill-world-bridge.py` | **grill-me↔世界包衔接**：启动追问/复制决策树/落地逻辑文件 | `start/build/run --project <id>` |
+| **大纲追问桥接** | `tools/outline-grill-bridge.py` | **grill-me↔大纲衔接**：启动大纲追问/落地卷细纲/状态查看 | `start/build/status --project <id>` |
+| **单章细纲生成** | `tools/chapter-brief-generator.py` | **Phase 4细纲生成器**：根据卷细纲+世界逻辑生成每章写作指令 | `--chapter N / --volume N --batch` |
+| **大纲动态调整** | `tools/outline-dynamic-adjust.py` | **动态调整分析**：根据已写章节进度自动生成调整建议 | `analyze/status --project <id>` |
+| **门禁阈值决策** | `tools/grill-gate-bridge.py` | **grill-me↔门禁衔接**：阈值决策追问/决策记录落地/状态查看 | `start/build/status --project <id>` |
 
 ### 外部项目（参考源）
 
@@ -504,3 +529,74 @@ minis_url: minis://shared/novel-team/TEAM.md
 
 
 **方法论印证**：D1（v0.57 登记 → 纸面完成）→ D2（v0.57 登记 → 一半纸面 + 核心排序声明失效）。**团队已连续 3 次出现「文档登记领先于代码实现」**，且每次都是**声明的核心卖点恰好是失效的那部分**。 |
+
+---
+
+## 八、字数纪律
+
+> **铁律：每章 ≥2000 字（硬下限 1500 字）**
+> - 低于 1500 字 → gate-check P0 阻断，禁止入库
+> - 1500-1999 字 → P1 警告，需扩充场景/对话/心理
+> - ≥2500 字 → 优秀，可加分
+
+### 字数不达标时的扩充策略
+
+| 问题类型 | 扩充方向 | 示例 |
+|---------|---------|------|
+| 场景描写不足 | 加环境细节（光影、声音、气味） | "月光太淡" → "月光从窗缝漏进来，在青石板上切出一道冷白" |
+| 心理活动缺失 | 加内心独白/回忆闪回 | "他想" → "他想起三年前那个雨夜，父亲说过的话" |
+| 对话过简 | 加语气词/动作描写/潜台词 | "好的" → "好。"他顿了顿，"但有个条件。" |
+| 节奏过快 | 加过渡桥段（行走/等待/天气变化） | 直接跳场景 → 加路途描写 |
+
+### 多窗口协作纪律
+
+> **单窗口单章：同一时间只有一个窗口在创作**
+> - 创作前：`python3 tools/chapter-lock.py lock --chapter N --session YOUR_SESSION`
+> - 创作后：`python3 tools/chapter-lock.py unlock --chapter N`
+> - 状态检查：`python3 tools/chapter-lock.py get --project PROJECT_ID`
+
+---
+
+---
+
+## 九、SOP 强制执行纪律
+
+> **铁律：gate-check 未通过 = 禁止创作下一章**
+> - 每章完成后必须运行 `gate-check.py check`
+> - P0 阻断 → 必须修复后才能解锁
+> - 解锁时必须加 `--auto` 参数（自动门禁检验）
+
+### 强制执行流程
+
+```bash
+# 1. 锁定章节
+python3 tools/chapter-lock.py lock --project PROJECT_ID --chapter N --session SESSION_ID
+
+# 2. 创作正文（必须 ≥2000 字）
+# ...
+
+# 3. 运行门禁检验
+python3 tools/gate-check.py check --chapter N --file chapters/ch00N.md --novel-id PROJECT_ID --no-cache
+
+# 4. 根据结果修改（P0 阻断必须修复）
+# ...
+
+# 5. 解锁（自动门禁检验）
+python3 tools/chapter-lock.py unlock --project PROJECT_ID --chapter N --auto
+```
+
+### 违规处理
+
+| 违规行为 | 后果 |
+|---------|------|
+| 未运行 gate-check 就解锁 | P0 阻断，禁止入库 |
+| gate-check 未通过就继续创作 | 后续章节全部标记为「待复检」 |
+| 多窗口并行创作同一章 | chapter-lock 拒绝解锁，强制串行 |
+
+### 批量创作纪律
+
+> **禁止连续创作超过 3 章而不运行 gate-check**
+> - 每创作 3 章必须运行一次完整门禁检验
+> - 发现问题立即返工，不得累积
+
+---

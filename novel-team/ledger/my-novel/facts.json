@@ -241,5 +241,23 @@
     "status": "unverified",
     "created_at": "2026-09-30T18:00:25.645777",
     "verified": false
+  },
+  "F0028": {
+    "id": "F0028",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T18:12:23.382837",
+    "verified": false
+  },
+  "F0029": {
+    "id": "F0029",
+    "category": "gate_check",
+    "content": "门禁结果: 通过 | 模式:write | P0阻断:0 | P1警告:1",
+    "source": "novel-team/projects/helper-creator/chapters/ch001.md",
+    "status": "unverified",
+    "created_at": "2026-09-30T20:08:49.827709",
+    "verified": false
   }
 }

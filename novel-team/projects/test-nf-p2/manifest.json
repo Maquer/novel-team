@@ -1,0 +1,12 @@
+{
+  "id": "test-nf-p2",
+  "current": 1,
+  "generations": [
+    {
+      "id": 1,
+      "state": "active",
+      "reason": "initial",
+      "timestamp": "2026-09-30T20:27:50.562002"
+    }
+  ]
+}
