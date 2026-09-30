@@ -1,0 +1,39 @@
+{
+  "chains": [
+    {
+      "id": "5114e27a",
+      "source": "my-novel",
+      "event_type": "CHAPTER_GATE_PASSED",
+      "action": "scheduler",
+      "command": null,
+      "prompt": null,
+      "target": null,
+      "label": "门检通过→世界包扫描",
+      "timeout": 300,
+      "once": false,
+      "created_at": "2026-09-29T00:00:45.521096+08:00",
+      "enabled": true,
+      "fire_count": 4,
+      "scheduler_id": "CH-GATE-PASSED→world-sync",
+      "scheduler_reset": true
+    },
+    {
+      "id": "0701f2b0",
+      "source": "my-novel",
+      "event_type": "FACT_ADDED",
+      "action": "scheduler",
+      "command": null,
+      "prompt": null,
+      "target": null,
+      "label": "新事实→快速同步",
+      "timeout": 300,
+      "once": false,
+      "created_at": "2026-09-29T00:01:04.015919+08:00",
+      "enabled": true,
+      "fire_count": 1,
+      "scheduler_id": "FACT_ADDED→sync-review",
+      "scheduler_reset": false
+    }
+  ],
+  "created_at": "2026-09-29T00:00:45.519519+08:00"
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>所有文章 - 个人博客</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .filters { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      border-radius: 20px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .page-title { font-size: 2rem; font-weight: 700; margin-bottom: 32px; }
+  </style>
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">个人博客</a>
+      <nav class="nav">
+        <a href="/">首页</a>
+        <a href="/articles.html" class="active">文章</a>
+        <a href="/about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="articles-page">
+      <div class="container">
+        <h1 class="page-title">所有文章</h1>
+        <div class="filters" id="filter-categories"></div>
+        <div class="article-grid" id="article-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 个人博客. 使用 React + Node.js 构建.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章详情 - 个人博客</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .article-detail { padding: 40px 0; max-width: 800px; margin: 0 auto; }
+    .back-link { display: inline-block; color: var(--text-light); margin-bottom: 16px; }
+    .back-link:hover { color: var(--primary); }
+    .article-meta { display: flex; gap: 16px; color: var(--text-light); font-size: 0.9rem; margin-bottom: 24px; align-items: center; }
+    .article-meta .category { padding: 4px 12px; background: #eff6ff; color: var(--primary); font-size: 0.75rem; font-weight: 600; border-radius: 20px; }
+    .tag { padding: 4px 10px; background: var(--bg-secondary); border-radius: 4px; font-size: 0.8rem; }
+    .article-content { font-size: 1.05rem; line-height: 1.8; }
+    .article-content h1, .article-content h2, .article-content h3 { margin: 32px 0 16px; }
+    .article-content h1 { font-size: 2rem; }
+    .article-content h2 { font-size: 1.5rem; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+    .article-content h3 { font-size: 1.25rem; }
+    .article-content p { margin-bottom: 16px; }
+    .article-content ul, .article-content ol { margin-bottom: 16px; padding-left: 24px; }
+    .article-content li { margin-bottom: 8px; }
+    .article-content code { background: var(--bg-secondary); padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    .article-content blockquote { border-left: 4px solid var(--primary); padding-left: 16px; margin: 16px 0; color: var(--text-light); }
+  </style>
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">个人博客</a>
+      <nav class="nav">
+        <a href="/">首页</a>
+        <a href="/articles.html">文章</a>
+        <a href="/about.html">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-detail">
+      <div class="container">
+        <a href="/articles.html" class="back-link">← 返回文章列表</a>
+        <div id="article-header">
+          <h1 id="article-title">加载中...</h1>
+          <div class="article-meta" id="article-meta"></div>
+          <div id="article-tags" class="tags"></div>
+        </div>
+        <div class="article-content" id="article-content">加载中...</div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 个人博客. 使用 React + Node.js 构建.</p>
+    </div>
+  </footer>
+</body>
+</html>

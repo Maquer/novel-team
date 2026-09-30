@@ -1,0 +1,35 @@
+{
+  "tier_s": [
+    "nvidia/nemotron-3.5-lightning:free"
+  ],
+  "tier_a": [
+    "deepseek-v4-flash-0731"
+  ],
+  "tier_b": [
+    "agnes-2.5-flash"
+  ],
+  "tier_c": [
+    "Qwen3.8-27B",
+    "Qwen3.8-Flash-Next",
+    "MiMo-V2.6-Flash",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "dots-studio/dots-3-note-preview:free",
+    "inclusionai/ling-3.0-flash-sante:free",
+    "cohere/north-mini-code:free",
+    "system-tts",
+    "system-asr-online",
+    "system-asr-offline"
+  ],
+  "tier_d": [],
+  "delete": [
+    "qwen/qwen3.8-max-0902",
+    "DeepSeek-V4-Flash",
+    "deepseek/deepseek-v4-flash",
+    "z-ai/glm-5.3-flash",
+    "inclusionai/ling-3.0-flash-fin:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "liquid/lfm-2.5-2.6b:free",
+    "qwen38-flash-next"
+  ]
+}

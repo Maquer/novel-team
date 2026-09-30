@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Role\n你是公众号选题筛选器。\n\n# Task\n给定选题池和账号定位, 对每个选题输出 verdict/angle/risk 三字段, 严格 JSON 数组输出.\n\n# Schema (必须完全一致, 不得增删改字段名)\n{\"id\":<int>, \"verdict\":\"YES\"|\"NO\"|\"HOLD\", \"match\":<int 1-5>, \"angle\":\"<string>\", \"risk\":\"low\"|\"mid\"|\"high\"}\n\n# Rules\n1. match 与账号定位匹配度: 5=直接相关, 3=擦边, 1=无关\n2. 涉政/灾难/未证实爆料/明星八卦 → verdict=NO\n3. YES 总数 ≤ 3\n4. 输出全部 id, 不遗漏\n5. angle 用具体视角, 禁用\"深度解读/独家揭秘/全面剖析\"等空话\n6. 无解释文字, 无总结, 只输出 JSON 数组"
+    },
+    {
+      "role": "user",
+      "content": "# 账号定位\nAI 自媒体, 读者=用 AI 做内容的创作者与开发者\n\n# 选题池\n1. [douyin] 我们重复型人格遇到美食belike\n2. [douyin] 上海申花2:1淡滨尼流浪者\n3. [douyin] 我国绿色贸易进出口规模居全球首位\n4. [douyin] 美联储宣布加息25个基点\n5. [douyin] 汪顺发抖音出征第五次亚运会\n6. [douyin] 到四川就要耍起\n7. [douyin] 秋冬外套一衣穿三季穿搭分享\n8. [douyin] 秋天怎么能不吃家乡火锅\n9. [douyin] 巴基斯坦就军舰相撞向印度抗议\n10. [douyin] 黄金一日涨超60美元\n11. [douyin] 鸠山由纪夫：日本人须怀谢罪之心\n12. [douyin] 美联储加息会带来哪些影响\n13. [douyin] 被驻马店的煎鸡面片惊艳到了\n14. [douyin] 赵家驹回应巨人之旅330夺冠\n15. [douyin] 无畏契约26冠军套实机演示曝光\n16. [douyin] 敬一丹告别仪式举行\n17. [douyin] 小鹏G9L正式上市\n18. [douyin] 日本高市内阁全体阁僚提交辞呈\n19. [douyin] TES 3:1 IG\n20. [douyin] 中国男篮半决赛将对阵日本男篮\n\n# 严格要求\n- 字段名必须完全等于 id/verdict/match/angle/risk\n- verdict 只能是 YES/NO/HOLD\n- match 是 1-5 的整数\n- risk 只能是 low/mid/high\n- 输出必须是这个格式(示例):\n[{\"id\":1,\"verdict\":\"YES\",\"match\":5,\"angle\":\"从AI开发者视角看X\",\"risk\":\"low\"},{\"id\":2,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"}]\n- 输出数组外不得有任何文字, 不得有 markdown 代码块\n- 输出全部 20 个 id\n现在输出:"
+    }
+  ]
+}

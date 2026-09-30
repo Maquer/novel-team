@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 - 个人博客</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .about-page { padding: 60px 0; max-width: 700px; margin: 0 auto; }
+    .about-page h1 { font-size: 2rem; margin-bottom: 24px; }
+    .about-page p { margin-bottom: 16px; color: var(--text-light); }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .skill-tag { padding: 6px 16px; background: var(--bg-secondary); border-radius: 20px; font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">个人博客</a>
+      <nav class="nav">
+        <a href="/">首页</a>
+        <a href="/articles.html">文章</a>
+        <a href="/about.html" class="active">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="about-page container">
+      <h1>关于我</h1>
+      <p>你好！我是一名全栈软件工程师，专注于前端开发和后端架构设计。</p>
+      <p>这个博客是我记录学习笔记、技术思考和项目经验的地方。希望通过分享能帮助到同样在路上的朋友。</p>
+      
+      <h2 style="margin-top: 40px;">技术栈</h2>
+      <div class="skills">
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AI/ML</span>
+      </div>
+
+      <h2 style="margin-top: 40px;">联系我</h2>
+      <p>GitHub: <a href="https://github.com">@yourusername</a></p>
+      <p>Email: your@email.com</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 个人博客. 使用 React + Node.js 构建.</p>
+    </div>
+  </footer>
+</body>
+</html>

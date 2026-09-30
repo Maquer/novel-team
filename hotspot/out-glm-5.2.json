@@ -1,0 +1,9 @@
+{
+  "content" : "[{\"id\":1,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":4,\"verdict\":\"NO\",\"match\":2,\"angle\":\"\",\"risk\":\"low\"},{\"id\":12,\"verdict\":\"HOLD\",\"match\":3,\"angle\":\"用AI Agent拆解加息影响，演示财经类AI内容的检索、推理与事实校验工作流\",\"risk\":\"mid\"},{\"id\":17,\"verdict\":\"HOLD\",\"match\":2,\"angle\":\"聚焦智驾\/座舱AI能力作为AI落地案例，给创作者提供产品向选题切入\",\"risk\":\"low\"},{\"id\":18,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":27,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":28,\"verdict\":\"YES\",\"match\":5,\"angle\":\"从AI创作者与开发者视角，反思模型变强如何倒逼我们重新理解创造力、判断与协作\",\"risk\":\"low\"}]",
+  "model_id" : "glm-5.2",
+  "timestamp" : "2026-09-17T17:16:08Z",
+  "usage" : {
+    "input_tokens" : 337,
+    "output_tokens" : 2470
+  }
+}

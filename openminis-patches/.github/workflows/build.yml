@@ -1,0 +1,128 @@
+name: Build
+
+# ⚠️ UNVALIDATED — structured per BUILDING.md but never run on a real runner.
+# First push will likely need 2-3 iterations on: Xcode version, NDK version,
+# cache keys, and SDK availability. See PR-hygiene-and-ci.md §2b risk notes.
+#
+# Once green, this catches what no-CI currently can't: semantic compile errors
+# in Swift/Kotlin that static lint cannot detect.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Select Xcode
+        # BUILDING.md requires iOS 26.2 SDK + Swift 6.0 → Xcode 26+.
+        # macos-latest may not ship it yet; adjust path if build fails with
+        # "SDK not found" or "Swift version too old".
+        run: |
+          sudo xcode-select -s /Applications/Xcode.app || true
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i ios || true
+
+      - name: Install build tools
+        run: |
+          brew install ninja llvm libarchive pkg-config
+          pip3 install meson
+
+      - name: Copy customization template
+        run: |
+          cp src/ios/Configs/ProviderCustomization.xcconfig.example \
+             src/ios/Configs/ProviderCustomization.xcconfig || true
+
+      - name: Cache native dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            deps/lame-build
+            deps/frameworks
+            deps/libs
+            deps/include
+            deps/resources
+          key: ios-deps-${{ hashFiles('deps/build_lame.sh', 'deps/build_ffmpeg.sh', 'deps/build_ish.sh', 'deps/prepare_alpine_rootfs.sh', '.gitmodules') }}
+
+      - name: Build native dependencies (ordered)
+        # FFmpeg links against LAME, so LAME must exist first.
+        # Skip each if its output already exists (cache hit).
+        run: |
+          [ -d deps/lame-build/lib ] || ./deps/build_lame.sh
+          [ -d deps/frameworks ]     || ./deps/build_ffmpeg.sh
+          [ -d deps/libs ]          || ./deps/build_ish.sh
+          [ -f deps/resources/alpine-rootfs.zip ] || ./deps/prepare_alpine_rootfs.sh
+
+      - name: Build app
+        run: |
+          xcodebuild -project src/ios/Minis.xcodeproj -scheme Minis \
+                     -configuration Debug \
+                     -destination 'generic/platform=iOS' \
+                     CODE_SIGNING_ALLOWED=NO build
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Android SDK + NDK
+        # BUILDING.md: compileSdk 36, NDK r28+, CMake 3.22.1.
+        # Adjust NDK version string if r28 is unavailable on the runner.
+        uses: android-actions/setup-android@v3
+        with:
+          packages: |
+            platforms;android-36
+            build-tools;36.0.0
+            ndk;28.0.12433566
+            cmake;3.22.1
+
+      - name: Set NDK home
+        run: echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/28.0.12433566" >> $GITHUB_ENV
+
+      - name: Copy customization template
+        run: |
+          cp src/android/app/provider-customization.properties.example \
+             src/android/app/provider-customization.properties || true
+
+      - name: Cache native dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            src/android/app/src/main/assets/proot-aarch64
+            src/android/app/src/main/jniLibs/arm64-v8a
+            src/android/app/src/main/assets/alpine-minirootfs.tar.gz
+          key: android-deps-${{ hashFiles('deps/build_proot.sh', 'scripts/prepare_android_sandbox.sh', '.gitmodules') }}
+
+      - name: Build native dependencies
+        run: |
+          [ -f src/android/app/src/main/assets/proot-aarch64 ] || ./deps/build_proot.sh
+          [ -f src/android/app/src/main/assets/alpine-minirootfs.tar.gz ] || ./scripts/prepare_android_sandbox.sh
+
+      - name: Build app
+        working-directory: src/android
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:assembleDebug
+
+      - name: Run unit tests
+        working-directory: src/android
+        run: ./gradlew :app:testDebugUnitTest

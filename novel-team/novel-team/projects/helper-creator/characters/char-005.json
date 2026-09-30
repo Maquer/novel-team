@@ -1,0 +1,16 @@
+{
+  "char_id": "char-005",
+  "name": "陆鸣",
+  "role": "核心弟子",
+  "realm": "筑基",
+  "rank": "玄徒",
+  "appearance": "白衣，丹炉从不离身",
+  "personality": [
+    "骄",
+    "傲",
+    "不服输"
+  ],
+  "goal": "丹道第一，压过一切外门杂役",
+  "relation_to_protag": "中期竞争对手，瞧不起杂役",
+  "arc": "压→败→敬→盟"
+}

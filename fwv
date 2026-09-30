@@ -1,0 +1,18 @@
+#!/bin/sh
+# fwv <文件> [字节数] [额外参数...]  ——  file_write 落盘校验
+# FWV-SENTINEL-7X3K
+# 用法: fwv /path/file 941 --marker "首尾标记"
+#        fwv /path/file                    (字节数可选，仍做 stub 检测)
+
+f="$1"
+[ -z "$f" ] && { echo "usage: fwv <file> [bytes] [extra...]" >&2; exit 64; }
+shift
+
+if [ $# -ge 1 ] && printf '%s' "$1" | grep -Eq '^[0-9]+$'; then
+  b="$1"; shift
+  set -- --path "$f" --bytes "$b" "$@"
+else
+  set -- --path "$f" "$@"
+fi
+
+exec python3 /var/minis/shared/write-guard.py verify "$@"

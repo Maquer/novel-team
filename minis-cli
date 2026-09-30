@@ -1,0 +1,499 @@
+#!/bin/sh
+# minis-cli — Minis 统一命令行入口
+# 用法: minis-cli <命令> <子命令> [参数...]
+# 查看所有命令: minis-cli --help
+
+BASE="/var/minis/shared"
+VERSION="1.3.3"
+JSON_MODE=0
+
+# Global --json flag: parse ALL positional arguments for -j/--json
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --json|-j)
+      JSON_MODE=1
+      shift
+      ;;
+    --)
+      shift
+      break
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
+
+# Set env var for subcommands that don't support --json flag directly
+# Python scripts can check `os.environ.get("MINIS_JSON")` to adapt output format
+export MINIS_JSON="$JSON_MODE"
+
+usage() {
+cat << 'HELP'
+Minis CLI v1.0.0 — 统一命令行入口
+
+用法: minis-cli <命令> [子命令] [参数...]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔍 search       — 知识检索
+   search         Obsidian 笔记搜索 (关键词/文件夹/分层)
+   batch          批量搜索多个关键词
+
+📚 knowledge    — 知识管理
+   distill        知识卡片蒸馏 (创建/审核/批准/归档)
+   graph          知识图谱构建 (解析 wiki-link)
+   crossq         交叉验证 (发现矛盾/缺口)
+   blindspot      认知盲区发现
+   tag            标签提取与一致性检查
+   analytics      搜索热度分析
+   learn          学习轨迹记录
+   sync           Obsidian 双向同步
+   tiering        L0/L1/L2 分层内容处理
+   error-learn    错误模式学习与修复
+   ground         Grounded Claims (证据版本追踪/过期检测)
+   okf            OKF v0.2 格式导出 (Google 标准知识格式)
+   viz            知识图谱可视化器 (交互式节点图+Markdown阅读器)
+   dreaming       记忆 Dreaming (离线固化/孤立检测/补链接)
+   schema         Schema Learning (模式发现/字段校验/自动修复)
+
+🧰 skill         — Skill 管理
+   registry       Skill 注册表 (scan/list/show/validate)
+   eval           Skill 评测门禁 (run/report/json)
+   migrate        Skill 生产结构迁移
+   lifecycle      Skill 生命周期管理
+   duel         红蓝军自对弈
+   route        Skill 组合路由（Decompose→Retrieve→Compose） (probe-banks/replay-history)
+
+🧠 brain         — 第二大脑
+   train          全量训练流水线 (11 步)
+   pulse          轻量训练脉冲 (<3秒)
+   scheduler      事件调度器 (定时任务/事件钩子/队列)
+   dashboard      健康仪表盘 (健康分/图谱/雷达)
+   feedback       反馈层 (PEV 传感器/根因分析)
+   commit         Session 自动记忆提交
+   auto-learn     自动学习管道 (manual/semi/auto)
+
+📦 hub           — Skill 包管理器 (CLI-Anything CLI-Hub 借鉴)
+   list           浏览 Skill-Hub 注册表
+   search         搜索社区 Skill
+   info           查看 Skill 详情
+   install        安装 Skill
+   update         更新 Skill
+   uninstall      卸载 Skill
+   status         查看 Hub 状态
+
+🧠 nuwa          — 女娲蒸馏
+   distill        人物思维分身蒸馏 (六路调研+三重验证)
+
+💬 explain      — 受众自适应解释 (ELI5 方法论)
+   explain        用四原则解释任何主题
+
+🤖 multi-agent  — 多 Agent 群聊 (借鉴 Hermes Bot Mode)
+   multi-agent    多 Bot 协作群聊（@协议/三轮限制/人类拍板）
+
+🔄 agent       — Agent 后端管理（借鉴 Agent Canvas 多后端切换）
+   agent          Agent 后端注册表 (list/init/use/show/add/rm/run)
+🧠 model-router — 多模型智能路由（复杂度感知+健康追踪+自动降级）
+   mr             route/status/ping/health/registry
+🐕 watchdog      — 模型健康看门狗（变更检测+存活率统计+告警历史）
+   mw             check/status/report/sync/registry
+
+🔄 agent       — Agent 后端管理（借鉴 Agent Canvas 多后端切换）
+   agent          Agent 后端注册表 (list/init/use/show/add/rm)
+🧠 model-router — 多模型智能路由（复杂度感知+健康追踪+自动降级）
+   mr             route/status/ping/health/registry
+🐕 watchdog      — 模型健康看门狗（变更检测+存活率统计+告警历史）
+   mw             check/status/report/sync/registry
+   health         模型健康快速检查
+
+🤖 automation  — 自动化模板（借鉴 Agent Canvas 预置工作流）
+   automation     自动化模板注册表 (list/init/run/show/add/rm)
+
+⚡ context     — 上下文工程（KV Cache 保护 + 状态栏）
+   context        会话状态栏管理 (status/gen/inject)
+   compact        上下文压缩建议器（保留决策/约束/标识符，压缩原始输出）
+   summary        Obsidian 搜索结果摘要 (--summary)
+
+📚 playbook     — 经验晋级 Playbook（借鉴 OpenOPC Self-Grown）
+   playbook       经验 Playbook 管理 (scan/list/show/promote/load/merge)
+
+👤 experience   — Agent 经验档案（借鉴 OpenOPC 员工经验）
+   experience     Agent 经验管理 (record/lesson/profile/load/stats)
+
+🏢 company      — Company Mode 编排（借鉴 OpenOPC Self-Run）
+   company        多角色任务编排 (plan/run/history)
+
+📝 memory        — 记忆管理
+   rollup         L2 周报生成
+   link           跨笔记知识关联
+   capture        闪念捕捉 (快捷记录)
+   dashboard      系统健康检查
+
+📹 duoduo        — 多多视频项目
+   search         视频搜索
+   download       视频下载
+   tracker        追踪器
+   pipeline       处理管道
+   run            运行流水线
+
+🎨 gzh           — 公众号品牌视觉（封面图/首图/尾图，基准 md5 锁定）
+   cover          生成封面图 (带标题 900x383)
+   all            全量重生成 5 张基准图
+   check          基准漂移检测
+   list           产物↔脚本对应表
+   push           公众号 API 直推草稿箱 (token→upload→push→draft)
+
+🔧 system        — 系统工具
+   friction       摩擦度评分
+   backup         工作区备份
+   audit          全量量化评分
+   aliases        加载快捷命令
+   config         Minis 设置管理
+   mcp            MCP 服务器管理
+   model          多模型调用
+   session        会话管理
+   verify         GLOBAL.md 一致性验证
+   soul           SOUL.md 审计
+   archetype      archify 规格预检
+   start          启动 Web Portal
+   stop           停止 Portal 守护进程
+   catchup        触发定时任务补跑
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   --help         显示此帮助
+   --version      显示版本
+HELP
+}
+
+# --- 核心路由 ---
+case "$1" in
+  --help|-h)
+    usage
+    ;;
+  --version|-v)
+    echo "minis-cli v${VERSION}"
+    ;;
+
+  # ===== search =====
+  search)
+    shift
+    exec python3 "$BASE/obsidian-search.py" "$@"
+    ;;
+  batch-search)
+    shift
+    exec bash "$BASE/batch-search.sh" "$@"
+    ;;
+
+  # ===== knowledge =====
+  distill)
+    shift
+    exec python3 "$BASE/obsidian-distill.py" "$@"
+    ;;
+  graph)
+    shift
+    exec python3 "$BASE/obsidian-graph.py" "$@"
+    ;;
+  crossq|cross-query)
+    shift
+    exec python3 "$BASE/obsidian-crossq.py" "$@"
+    ;;
+  blindspot)
+    shift
+    exec python3 "$BASE/obsidian-blindspot.py" "$@"
+    ;;
+  tag)
+    shift
+    exec python3 "$BASE/obsidian-tag.py" "$@"
+    ;;
+  analytics)
+    shift
+    exec python3 "$BASE/obsidian-analytics.py" "$@"
+    ;;
+  learn)
+    shift
+    exec python3 "$BASE/obsidian-learn.py" "$@"
+    ;;
+  sync)
+    shift
+    exec bash "$BASE/obsidian-sync.sh" "$@"
+    ;;
+  tiering|tier)
+    shift
+    exec python3 "$BASE/tiering.py" "$@"
+    ;;
+  error-learn|error)
+    shift
+    exec python3 "$BASE/obsidian-error-learn.py" "$@"
+    ;;
+
+  # ===== grounded claims =====
+  ground|gclaims)
+    shift
+    exec python3 "$BASE/grounded-claims.py" "$@"
+    ;;
+  okf)
+    shift
+    exec python3 "$BASE/okf-writer.py" "$@"
+    ;;
+  viz|visualize)
+    shift
+    exec python3 "$BASE/knowledge-visualizer.py" "$@"
+    ;;
+  dreaming)
+    shift
+    exec python3 "$BASE/obsidian-dreaming.py" "$@"
+    ;;
+  schema)
+    shift
+    exec python3 "$BASE/obsidian-schema-learn.py" "$@"
+    ;;
+
+  # ===== skill =====
+  registry|reg)
+    shift
+    exec python3 "$BASE/skill-registry.py" "$@"
+    ;;
+  eval)
+    shift
+    exec python3 "$BASE/skill-eval-gate.py" "$@"
+    ;;
+  migrate)
+    shift
+    exec python3 "$BASE/skill-migrate.py" "$@"
+    ;;
+  lifecycle)
+    shift
+    exec python3 "$BASE/obsidian-skill-lifecycle.py" "$@"
+    ;;
+  duel)
+    shift
+    exec python3 "$BASE/ctx2skill-duel.py" "$@"
+    ;;
+  route)
+    shift
+    exec python3 "$BASE/skill-router.py" route "$@"
+    ;;
+  mr|model-router)
+    shift
+    exec python3 "$BASE/model-router.py" "$@"
+    ;;
+  mw|model-watchdog|watchdog)
+    shift
+    exec python3 "$BASE/model-watchdog.py" "$@"
+    ;;
+  health)
+    shift
+    exec python3 "$BASE/model-health-check.py" "$@"
+    ;;
+  model-sync|registry-sync)
+    shift
+    exec python3 "$BASE/model-registry-sync.py" sync "$@"
+    ;;
+
+  # ===== brain (第二大脑) =====
+  train)
+    shift
+    exec bash "$BASE/second-brain-train.sh" "$@"
+    ;;
+  pulse)
+    shift
+    exec bash "$BASE/second-brain-pulse.sh" "$@"
+    ;;
+  scheduler)
+    shift
+    exec python3 "$BASE/second-brain-scheduler.py" "$@"
+    ;;
+  dashboard)
+    shift
+    exec python3 "$BASE/second-brain-dashboard.py" "$@"
+    ;;
+  feedback)
+    shift
+    exec python3 "$BASE/second-brain-feedback.py" "$@"
+    ;;
+  commit)
+    shift
+    exec python3 "$BASE/session-commit.py" "$@"
+    ;;
+  auto-learn)
+    shift
+    exec python3 "$BASE/obsidian-auto-learn.py" "$@"
+    ;;
+
+  # ===== nuwa =====
+  nuwa)
+    shift
+    exec python3 "$BASE/nuwa-distill.py" "$@"
+    ;;
+
+  # ===== explain =====
+  explain)
+    shift
+    exec python3 "$BASE/obsidian-explain.py" "$@"
+    ;;
+
+  # ===== multi-agent =====
+  multi-agent)
+    shift
+    exec python3 "$BASE/obsidian-multi-agent.py" "$@"
+    ;;
+
+  # ===== memory =====
+  rollup)
+    shift
+    exec python3 "$BASE/memory-l2-rollup.py" "$@"
+    ;;
+  link)
+    shift
+    exec python3 "$BASE/memory-knowledge-link.py" "$@"
+    ;;
+  capture)
+    shift
+    exec bash "$BASE/minis-capture.sh" "$@"
+    ;;
+  sys-dashboard|system-dashboard)
+    shift
+    exec bash "$BASE/minis-dashboard.sh" "$@"
+    ;;
+
+  # ===== duoduo =====
+  duoduo)
+    shift
+    case "${1:-}" in
+      search) shift; exec python3 "$BASE/duoduo-search.py" "$@" ;;
+      download) shift; exec bash "$BASE/duoduo-download.sh" "$@" ;;
+      tracker) shift; exec python3 "$BASE/duoduo-tracker.py" "$@" ;;
+      pipeline) shift; exec python3 "$BASE/duoduo-pipeline.py" "$@" ;;
+      run) shift; exec bash "$BASE/duoduo-run.sh" "$@" ;;
+      *) python3 "$BASE/duoduo-search.py" --help ;;
+    esac
+    ;;
+
+  # ===== gzh =====
+  gzh)
+    shift
+    exec python3 "$BASE/gzh-team/gzh-brand.py" "$@"
+    ;;
+
+  # ===== system =====
+  friction)
+    shift
+    exec python3 "$BASE/friction-score.py" "$@"
+    ;;
+  backup)
+    shift
+    exec bash "$BASE/workspace-backup.sh" "$@"
+    ;;
+  audit)
+    shift
+    exec python3 "$BASE/minis-audit.py" "$@"
+    ;;
+  aliases)
+    shift
+    . "$BASE/minis-aliases.sh"
+    ;;
+  config)
+    shift
+    exec minis-config "$@"
+    ;;
+  mcp)
+    shift
+    exec minis-mcp-cli "$@"
+    ;;
+  model)
+    shift
+    exec minis-model-use "$@"
+    ;;
+  session)
+    shift
+    exec minis-sessions-cli "$@"
+    ;;
+  verify)
+    shift
+    exec python3 "$BASE/global-verify.py" "$@"
+    ;;
+  soul-audit)
+    shift
+    exec python3 "$BASE/soul-audit-v3.py" "$@"
+    ;;
+  archetype)
+    shift
+    exec python3 "$BASE/archify-selfcheck.py" "$@"
+    ;;
+  sync-portal|portal-sync)
+    shift
+    exec bash "$BASE/worker-sync.py" "$@"
+    ;;
+  start)
+    shift
+    exec bash "$BASE/start-portal.sh" "$@"
+    ;;
+  stop)
+    shift
+    exec bash "$BASE/portal-daemon.sh" stop
+    ;;
+  catchup)
+    shift
+    exec bash "$BASE/minis-scheduler-catchup.sh" "$@"
+    ;;
+  gzh-push)
+    shift
+    exec python3 "$BASE/gzh-api-push.py" "$@"
+    ;;
+
+  agent)
+    shift
+    exec python3 "$BASE/agent-registry.py" "$@"
+    ;;
+  automation)
+    shift
+    exec python3 "$BASE/automation-registry.py" "$@"
+    ;;
+  playbook)
+    shift
+    exec python3 "$BASE/playbook-promote.py" "$@"
+    ;;
+  experience)
+    shift
+    exec python3 "$BASE/agent-experience.py" "$@"
+    ;;
+  company)
+    shift
+    exec python3 "$BASE/company-mode.py" "$@"
+    ;;
+
+  # ===== context (上下文工程) =====
+  context)
+    shift
+    case "${1:-}" in
+      status|bar) shift; exec python3 "$BASE/session-status.py" "$@" ;;
+      gen|generate) shift; exec python3 "$BASE/session-status-generator.py" "$@" ;;
+      inject) shift; exec python3 "$BASE/session-status-inject.py" "$@" ;;
+      *) python3 "$BASE/session-status.py" --help ;;
+    esac
+    ;;
+  summary)
+    shift
+    exec python3 "$BASE/obsidian-search.py" --summary "$@"
+    ;;
+  hub)
+    shift
+    exec python3 "$BASE/skill-hub.py" "$@"
+    ;;
+  usage)
+    shift
+    exec python3 "$BASE/skill-usage.py" "$@"
+    ;;
+
+  compact)
+    shift
+    exec python3 "$BASE/context-compact.py" "$@"
+    ;;
+
+  *)
+    echo "未知命令: $1"
+    echo ""
+    usage
+    exit 1
+    ;;
+esac

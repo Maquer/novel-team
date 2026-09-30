@@ -1,0 +1,102 @@
+{
+  "records": [
+    {
+      "record_id": "train-1790491880",
+      "member_id": "director-001",
+      "role": "director",
+      "skill": "context-manager",
+      "start_time": "2026-09-27T14:51:19.995101",
+      "end_time": "2026-09-27T14:51:20.500835",
+      "duration_minutes": 1,
+      "score": 87,
+      "status": "completed",
+      "feedback": "得分87分，通过"
+    },
+    {
+      "record_id": "train-1790491882",
+      "member_id": "lead_writer-001",
+      "role": "lead_writer",
+      "skill": "context-manager",
+      "start_time": "2026-09-27T14:51:21.745703",
+      "end_time": "2026-09-27T14:51:22.251575",
+      "duration_minutes": 1,
+      "score": 94,
+      "status": "completed",
+      "feedback": "得分94分，通过"
+    },
+    {
+      "record_id": "train-1790491884",
+      "member_id": "writer-001",
+      "role": "writer",
+      "skill": "batch-replace",
+      "start_time": "2026-09-27T14:51:23.537016",
+      "end_time": "2026-09-27T14:51:24.039043",
+      "duration_minutes": 1,
+      "score": 72,
+      "status": "completed",
+      "feedback": "得分72分，通过"
+    },
+    {
+      "record_id": "train-1790491885",
+      "member_id": "world_builder-001",
+      "role": "world_builder",
+      "skill": "world-pack",
+      "start_time": "2026-09-27T14:51:25.305506",
+      "end_time": "2026-09-27T14:51:25.811201",
+      "duration_minutes": 1,
+      "score": 91,
+      "status": "completed",
+      "feedback": "得分91分，通过"
+    },
+    {
+      "record_id": "train-1790491887",
+      "member_id": "outline_designer-001",
+      "role": "outline_designer",
+      "skill": "outline",
+      "start_time": "2026-09-27T14:51:27.119285",
+      "end_time": "2026-09-27T14:51:27.625100",
+      "duration_minutes": 1,
+      "score": 92,
+      "status": "completed",
+      "feedback": "得分92分，通过"
+    },
+    {
+      "record_id": "train-1790491889",
+      "member_id": "editor-001",
+      "role": "editor",
+      "skill": "gate-check",
+      "start_time": "2026-09-27T14:51:28.914673",
+      "end_time": "2026-09-27T14:51:29.420679",
+      "duration_minutes": 1,
+      "score": 100,
+      "status": "completed",
+      "feedback": "得分100分，通过"
+    },
+    {
+      "record_id": "train-1790491891",
+      "member_id": "style_optimizer-001",
+      "role": "style_optimizer",
+      "skill": "anti-ai-12",
+      "start_time": "2026-09-27T14:51:30.569603",
+      "end_time": "2026-09-27T14:51:31.075685",
+      "duration_minutes": 1,
+      "score": 96,
+      "status": "completed",
+      "feedback": "得分96分，通过"
+    },
+    {
+      "record_id": "train-1790491892",
+      "member_id": "analyst-001",
+      "role": "analyst",
+      "skill": "fact-ledger",
+      "start_time": "2026-09-27T14:51:32.187690",
+      "end_time": "2026-09-27T14:51:32.694063",
+      "duration_minutes": 1,
+      "score": 93,
+      "status": "completed",
+      "feedback": "得分93分，通过"
+    }
+  ],
+  "training_programs": {},
+  "statistics": {}
+}

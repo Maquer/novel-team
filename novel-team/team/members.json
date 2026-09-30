@@ -1,0 +1,311 @@
+{
+  "team_name": "小说创作团队",
+  "version": "1.0.0",
+  "created_at": "2026-09-27",
+  "members": [
+    {
+      "id": "director-001",
+      "name": "总监AI",
+      "role": "director",
+      "department": "management",
+      "status": "active",
+      "responsibilities": [
+        "统筹协调各部门工作",
+        "审核重大决策",
+        "把控整体质量",
+        "对接外部需求"
+      ],
+      "skills": [
+        "context-manager",
+        "decide-trigger",
+        "contract-tree",
+        "multi-candidate",
+        {
+          "skill": "context-manager",
+          "score": 87,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:20.500835"
+        }
+      ],
+      "authority": "high",
+      "workload": {
+        "daily_tasks": 5,
+        "review_capacity": 10
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "lead_writer-001",
+      "name": "主笔作者AI",
+      "role": "lead_writer",
+      "department": "content",
+      "status": "active",
+      "responsibilities": [
+        "负责关键章节创作（开篇、高潮、结局）",
+        "把控整体文风和叙事节奏",
+        "指导辅助作者创作方向",
+        "处理复杂剧情转折"
+      ],
+      "skills": [
+        "context-manager",
+        "plot-analyzer",
+        "plot-simulation-v2",
+        "wordcount-check",
+        "prompt-library",
+        {
+          "skill": "context-manager",
+          "score": 94,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:22.251575"
+        }
+      ],
+      "authority": "high",
+      "workload": {
+        "daily_chapters": 2,
+        "word_target": 4000
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "writer-001",
+      "name": "辅助作者AI",
+      "role": "writer",
+      "department": "content",
+      "status": "active",
+      "responsibilities": [
+        "常规章节创作（过渡章节、日常剧情）",
+        "根据大纲和提示词续写",
+        "章节润色和优化",
+        "批量文本处理"
+      ],
+      "skills": [
+        "batch-replace",
+        "merge-chapters",
+        "wordcount-check",
+        "clean_commas",
+        "inject_punctuation",
+        {
+          "skill": "batch-replace",
+          "score": 72,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:24.039043"
+        }
+      ],
+      "authority": "medium",
+      "workload": {
+        "daily_chapters": 3,
+        "word_target": 6000
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "world_builder-001",
+      "name": "世界观师AI",
+      "role": "world_builder",
+      "department": "world",
+      "status": "active",
+      "responsibilities": [
+        "维护世界包数据（地理、势力、物品等）",
+        "确保世界设定一致性",
+        "管理知识图谱和事实账本",
+        "提供RAG检索支持"
+      ],
+      "skills": [
+        "world-pack",
+        "world-init",
+        "fact-snapshot",
+        "story-graph",
+        "rag-enhanced",
+        {
+          "skill": "world-pack",
+          "score": 91,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:25.811201"
+        }
+      ],
+      "authority": "high",
+      "workload": {
+        "daily_updates": 20,
+        "consistency_check": true
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "outline_designer-001",
+      "name": "大纲设计师AI",
+      "role": "outline_designer",
+      "department": "world",
+      "status": "active",
+      "responsibilities": [
+        "制定三级大纲（作品级/卷级/章级）",
+        "管理伏笔和钩子",
+        "进行剧情推演和选优",
+        "确保大纲一致性"
+      ],
+      "skills": [
+        "outline",
+        "outline-builder",
+        "fact-snapshot",
+        "plot-simulation-v2",
+        "foreshadow-service",
+        "contract-tree",
+        {
+          "skill": "outline",
+          "score": 92,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:27.625100"
+        }
+      ],
+      "authority": "high",
+      "workload": {
+        "daily_chapters": 5,
+        "foreshadow_targets": 3
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "editor-001",
+      "name": "审稿编辑AI",
+      "role": "editor",
+      "department": "quality",
+      "status": "active",
+      "responsibilities": [
+        "执行六道门禁检查",
+        "审核章节内容一致性",
+        "核验事实账本",
+        "确保合规发布"
+      ],
+      "skills": [
+        "gate-check",
+        "guard-v6",
+        "fact-ledger",
+        "decide-trigger",
+        "novel-humanizer",
+        {
+          "skill": "gate-check",
+          "score": 100,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:29.420679"
+        }
+      ],
+      "authority": "high",
+      "workload": {
+        "daily_reviews": 10,
+        "pass_rate_target": 0.9
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "style_optimizer-001",
+      "name": "去AI味师AI",
+      "role": "style_optimizer",
+      "department": "quality",
+      "status": "active",
+      "responsibilities": [
+        "执行去AI味检测和修复",
+        "指纹蒸馏（5源文→公约数）",
+        "文风优化和打磨",
+        "执行硬性约束"
+      ],
+      "skills": [
+        "anti-ai-12",
+        "novel-humanizer",
+        "fusion-engine",
+        "guard-v6",
+        "clean_commas",
+        {
+          "skill": "anti-ai-12",
+          "score": 96,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:31.075685"
+        }
+      ],
+      "authority": "medium",
+      "workload": {
+        "daily_optimizations": 8,
+        "ai_tone_target": 15
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    },
+    {
+      "id": "analyst-001",
+      "name": "数据分析师AI",
+      "role": "analyst",
+      "department": "data",
+      "status": "active",
+      "responsibilities": [
+        "统计创作数据（字数/进度/效率）",
+        "监控数值一致性（防跳变）",
+        "分析创作效果",
+        "生成日报/周报"
+      ],
+      "skills": [
+        "fact-ledger",
+        "preference-memory",
+        "timeline",
+        "capability-evaluator",
+        "wordcount-check",
+        {
+          "skill": "fact-ledger",
+          "score": 93,
+          "status": "completed",
+          "trained_at": "2026-09-27T14:51:32.694063"
+        }
+      ],
+      "authority": "medium",
+      "workload": {
+        "daily_reports": 2,
+        "stats_accuracy": 1.0
+      },
+      "training_status": "pending",
+      "certification_level": 0
+    }
+  ],
+  "departments": [
+    {
+      "name": "管理层",
+      "head": "director-001",
+      "members": [
+        "director-001"
+      ]
+    },
+    {
+      "name": "内容创作部",
+      "head": "lead_writer-001",
+      "members": [
+        "lead_writer-001",
+        "writer-001"
+      ]
+    },
+    {
+      "name": "世界架构部",
+      "head": "world_builder-001",
+      "members": [
+        "world_builder-001",
+        "outline_designer-001"
+      ]
+    },
+    {
+      "name": "质量控制部",
+      "head": "editor-001",
+      "members": [
+        "editor-001",
+        "style_optimizer-001"
+      ]
+    },
+    {
+      "name": "数据分析部",
+      "head": "analyst-001",
+      "members": [
+        "analyst-001"
+      ]
+    }
+  ]
+}

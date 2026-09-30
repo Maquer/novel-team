@@ -1,0 +1,58 @@
+{
+  "kb-1790487929-0": {
+    "item_id": "kb-1790487929-0",
+    "dimension": "文风叙事",
+    "category": "叙事视角",
+    "content": "采用第三人称叙事，以观察者视角描述故事发展",
+    "source": "/tmp/test-novel.txt",
+    "confidence": 0.8,
+    "tags": [
+      "third-person",
+      "observer"
+    ],
+    "examples": [],
+    "created_at": "2026-09-27T13:45:29.053059"
+  },
+  "kb-1790488024-1": {
+    "item_id": "kb-1790488024-1",
+    "dimension": "文风叙事",
+    "category": "叙事视角",
+    "content": "采用第三人称叙事，以观察者视角描述故事发展",
+    "source": "stdin",
+    "confidence": 0.8,
+    "tags": [
+      "third-person",
+      "observer"
+    ],
+    "examples": [],
+    "created_at": "2026-09-27T13:47:04.019471"
+  },
+  "kb-1790488072-2": {
+    "item_id": "kb-1790488072-2",
+    "dimension": "文风叙事",
+    "category": "叙事视角",
+    "content": "采用第三人称叙事，以观察者视角描述故事发展",
+    "source": "stdin",
+    "confidence": 0.8,
+    "tags": [
+      "third-person",
+      "observer"
+    ],
+    "examples": [],
+    "created_at": "2026-09-27T13:47:52.091128"
+  },
+  "kb-1790488255-3": {
+    "item_id": "kb-1790488255-3",
+    "dimension": "文风叙事",
+    "category": "叙事视角",
+    "content": "采用第三人称叙事，以观察者视角描述故事发展",
+    "source": "stdin",
+    "confidence": 0.8,
+    "tags": [
+      "third-person",
+      "observer"
+    ],
+    "examples": [],
+    "created_at": "2026-09-27T13:50:55.021901"
+  }
+}

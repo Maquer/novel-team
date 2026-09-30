@@ -1,0 +1,9 @@
+{
+  "content" : "\n\n```json\n[\n  {\n    \"id\": \"ch-007\",\n    \"scenario\": \"并发降级时，context-manager 的 priority 矩阵在3个以上任务同时触发 fallback，依赖重算顺序与实际契约声明不符，边界条件未定义：当优先级相同时谁先回退？触发死循环还是静默失败？\",\n    \"weakness\": \"契约只声明了'有降级策略'，但未定义同级优先时的排序规则与循环检测阈值——实际回退路径可能无限嵌套\",\n    \"difficulty\": \"hard\"\n  },\n  {\n    \"id\": \"ch-008\",\n    \"scenario\": \"非线性流程触发阶段回退后，状态标签（state tag）的脏读问题：回退目标依赖尚未写入时，读取旧值是否会导致反例黑名单中的AI味梯度失控？\",\n    \"weakness\": \"修复文档编码了6类失败，但未覆盖'回退中状态不一致'这一隐式场景——契约完整性存在盲区\",\n    \"difficulty\": \"medium\"\n  },\n  {\n    \"id\": \"ch-009\",\n    \"scenario\": \"工具契约参数的边界情况：context-manager.py 错误处理已声明，但并发降级策略在N+1个依赖节点时是否真的防止死循环？优先级矩阵的循环检测阈值是多少？\",\n    \"weakness\": \"修复后表面完整，但深层漏洞在'回退路径实际执行时的递归深度未定义'——可能导致创作失败\",\n    \"difficulty\": \"hard\"\n  }\n]\n```",
+  "model_id" : "agnes-2.5-flash",
+  "timestamp" : "2026-09-27T13:42:48Z",
+  "usage" : {
+    "input_tokens" : 349,
+    "output_tokens" : 465
+  }
+}

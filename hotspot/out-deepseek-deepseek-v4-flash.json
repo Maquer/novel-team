@@ -1,0 +1,9 @@
+{
+  "content" : "[{\"id\":1,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":4,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":18,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":28,\"verdict\":\"YES\",\"match\":5,\"angle\":\"从AI自我认知角度探讨AI辅助自我洞察的边界与可能\",\"risk\":\"mid\"},{\"id\":17,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":12,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":27,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"}]",
+  "model_id" : "deepseek\/deepseek-v4-flash",
+  "timestamp" : "2026-09-17T17:15:01Z",
+  "usage" : {
+    "input_tokens" : 0,
+    "output_tokens" : 164
+  }
+}

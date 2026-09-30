@@ -1,0 +1,182 @@
+[
+  {
+    "model": "GLM智谱",
+    "prompt": "A",
+    "elapsed": 1.7,
+    "rc": 1,
+    "text_len": 411,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Provider error: [402] This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/GLM智谱_A.txt"
+  },
+  {
+    "model": "GLM智谱",
+    "prompt": "B",
+    "elapsed": 1.7,
+    "rc": 1,
+    "text_len": 411,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Provider error: [402] This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/GLM智谱_B.txt"
+  },
+  {
+    "model": "GLM智谱",
+    "prompt": "D",
+    "elapsed": 0.5,
+    "rc": 1,
+    "text_len": 411,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Provider error: [402] This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/GLM智谱_D.txt"
+  },
+  {
+    "model": "GLM智谱",
+    "prompt": "C",
+    "elapsed": 0.7,
+    "rc": 1,
+    "text_len": 411,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Provider error: [402] This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/GLM智谱_C.txt"
+  },
+  {
+    "model": "MiMo小米",
+    "prompt": "A",
+    "elapsed": 0.3,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:11+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiMo小米_A.txt"
+  },
+  {
+    "model": "DeepSeek",
+    "prompt": "D",
+    "elapsed": 2.7,
+    "rc": 0,
+    "text_len": 34,
+    "text_preview": "这产品续航真的顶，充一次电能用一整天，完全不耽误事儿，挺值得入手的。",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/DeepSeek_D.txt"
+  },
+  {
+    "model": "MiMo小米",
+    "prompt": "C",
+    "elapsed": 0.3,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:11+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiMo小米_C.txt"
+  },
+  {
+    "model": "MiMo小米",
+    "prompt": "D",
+    "elapsed": 0.2,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:11+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiMo小米_D.txt"
+  },
+  {
+    "model": "MiniCPM面壁",
+    "prompt": "B",
+    "elapsed": 0.2,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:11+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiniCPM面壁_B.txt"
+  },
+  {
+    "model": "MiniCPM面壁",
+    "prompt": "A",
+    "elapsed": 0.3,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:11+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiniCPM面壁_A.txt"
+  },
+  {
+    "model": "MiniCPM面壁",
+    "prompt": "D",
+    "elapsed": 0.3,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:12+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiniCPM面壁_D.txt"
+  },
+  {
+    "model": "MiniCPM面壁",
+    "prompt": "C",
+    "elapsed": 0.3,
+    "rc": 1,
+    "text_len": 220,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"Rate limited — please try again later\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:10:12+08:00\",\n  \"tool\" : ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiniCPM面壁_C.txt"
+  },
+  {
+    "model": "DeepSeek",
+    "prompt": "A",
+    "elapsed": 9.2,
+    "rc": 0,
+    "text_len": 217,
+    "text_preview": "用了三个月的保温杯，真心想安利给全世界！🌍  \n早上倒的热水，下午喝还是烫嘴的程度，保温效果真的绝了！杯身磨砂质感，握着超舒服，而且完全不沾指纹。  \n最戳我的是它的杯盖，一键弹开+安全锁，单手操作超方便，通勤路上喝水不用手忙脚乱。  \n容量400ml刚好够我半天，放包里也不重，颜值还高，奶茶色越看越喜欢～💕  \n现在每天喝水频率都变高了，连同事都被种草问链接。  \n姐妹们，你们选保温杯最看重啥？",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/DeepSeek_A.txt"
+  },
+  {
+    "model": "Qwen通义",
+    "prompt": "D",
+    "elapsed": 9.4,
+    "rc": 0,
+    "text_len": 29,
+    "text_preview": "\n\n这款产品的续航挺给力的，从早用到晚基本没问题，很推荐。",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/Qwen通义_D.txt"
+  },
+  {
+    "model": "Qwen通义",
+    "prompt": "A",
+    "elapsed": 13.3,
+    "rc": 0,
+    "text_len": 206,
+    "text_preview": "\n\n姐妹们，我真的被这个保温杯拿捏了🥹  \n以前冬天喝热水，没一会儿就凉了，后来随手入手了这个保温杯，结果直接爱上！保温效果很惊喜，早上倒的热水到下午还是温温的，泡咖啡、泡茶也很合适☕  \n\n杯子颜值也很能打，简单干净，放办公桌上看着都舒服✨ 密封性也OK，放包里不怕漏水。最关键是一点不显重，随手带出门很方便👌  \n\n冬天真的不能没有它，感觉随时都有热乎乎的水喝～你们平时买保温杯最看重保温、颜值还",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/Qwen通义_A.txt"
+  },
+  {
+    "model": "DeepSeek",
+    "prompt": "C",
+    "elapsed": 13.8,
+    "rc": 0,
+    "text_len": 363,
+    "text_preview": "我们先逐步分析每个人的话：\n\n**设定：**\n- 甲说：“乙在说谎。”\n- 乙说：“丙在说谎。”\n- 丙说：“甲和乙都在说谎。”\n\n**假设甲说真话：**  \n那么乙确实在说谎。  \n乙说“丙在说谎”是假话，所以丙没说谎，即丙说真话。  \n丙说“甲和乙都在说谎”——既然甲说真话，那么丙说“甲在说谎”就是假，这与“丙说真话”矛盾。  \n所以假设甲说真话不成立，甲在说谎。\n\n**因此甲在说谎。**  ",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/DeepSeek_C.txt"
+  },
+  {
+    "model": "Qwen通义",
+    "prompt": "B",
+    "elapsed": 36.8,
+    "rc": 0,
+    "text_len": 1293,
+    "text_preview": "\n\n**为什么年轻人开始戒掉短视频？**\n\n最近有个很明显的变化：越来越多人开始偷偷戒短视频。\n\n他们不一定是卸载App，只是开始把图标藏到最后一个页面，开启屏幕时间提醒，甚至给自己定规矩：“地铁上不许刷”“睡前不碰手机”。\n\n你会发现，大家嘴上说的是“无聊”，心里其实早就有了一点不舒服：我们好像越来越没有耐心了。\n\n刷短视频的时候，15秒一个反转，30秒一个爽点，60秒一个情绪高潮。看起来是在放",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/Qwen通义_B.txt"
+  },
+  {
+    "model": "MiMo小米",
+    "prompt": "B",
+    "elapsed": 37.7,
+    "rc": 0,
+    "text_len": 1141,
+    "text_preview": "# 为什么年轻人开始戒掉短视频\n\n**一**\n\n前段时间刷到一个话题：#卸载抖音第30天#。\n\n本以为底下会是大型嘲讽现场，结果评论区画风诡异——全是\"真香\"。\n\n有人说：\"原来一晚上可以看完半本书。\"\n\n有人说：\"我以为我会无聊死，结果发现无聊挺舒服的。\"\n\n一个朋友更直接，去年还在嘲笑我卸载短视频是\"装\"，今年春节聚餐，他掏出手机给我看屏幕使用时间——日均从4小时20分钟，掉到了40分钟。\n\n",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/MiMo小米_B.txt"
+  },
+  {
+    "model": "DeepSeek",
+    "prompt": "B",
+    "elapsed": 60.4,
+    "rc": 1,
+    "text_len": 188,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"请求超时。\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:11:09+08:00\",\n  \"tool\" : \"minis-model-use\"\n}\n",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/DeepSeek_B.txt"
+  },
+  {
+    "model": "Qwen通义",
+    "prompt": "C",
+    "elapsed": 60.4,
+    "rc": 1,
+    "text_len": 188,
+    "text_preview": "{\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\" : \"请求超时。\"\n  },\n  \"ok\" : false,\n  \"timestamp\" : \"2026-09-24T09:11:09+08:00\",\n  \"tool\" : \"minis-model-use\"\n}\n",
+    "text_full_file": "/var/minis/shared/xhs-team/实测数据库/api-responses/Qwen通义_C.txt"
+  }
+]

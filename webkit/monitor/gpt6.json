@@ -1,0 +1,15 @@
+{
+  "url": "https://news.qq.com/rain/a/20260904A02YJP00",
+  "label": "gpt6",
+  "digest": "a2a95c8adbd956b1ca194c5927907643d93290d1aaa29a6c28c12c002232cab6",
+  "created": "2026-09-04 19:12:34",
+  "updated": "2026-09-04 19:12:34",
+  "history": [
+    {
+      "time": "2026-09-04 19:12:34",
+      "digest": "a2a95c8adbd956b1ca194c5927907643d93290d1aaa29a6c28c12c002232cab6",
+      "len": 11352,
+      "snapshot": "/var/minis/shared/webkit/monitor/gpt6-1788520354.md"
+    }
+  ]
+}

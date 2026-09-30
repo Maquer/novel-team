@@ -1,0 +1,139 @@
+[
+  {
+    "day": "周一",
+    "scene": "美妆护肤",
+    "chars": 222,
+    "emoji_count": 3,
+    "emoji_pct": 1.4,
+    "ai_markers": {
+      "泛泛夸赞": [
+        "闭眼冲"
+      ]
+    },
+    "scores": {
+      "ai_taste": 9,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 10,
+      "platform": 10
+    },
+    "total": 49,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周二",
+    "scene": "穿搭OOTD",
+    "chars": 239,
+    "emoji_count": 9,
+    "emoji_pct": 3.8,
+    "ai_markers": {
+      "泛泛夸赞": [
+        "闭眼冲",
+        "绝了"
+      ],
+      "结构化标记": [
+        "✅",
+        "👇"
+      ]
+    },
+    "scores": {
+      "ai_taste": 8,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 10,
+      "platform": 10
+    },
+    "total": 48,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周三",
+    "scene": "美食探店",
+    "chars": 276,
+    "emoji_count": 6,
+    "emoji_pct": 2.2,
+    "ai_markers": {},
+    "scores": {
+      "ai_taste": 10,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 6,
+      "platform": 10
+    },
+    "total": 46,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周四",
+    "scene": "家居好物",
+    "chars": 232,
+    "emoji_count": 5,
+    "emoji_pct": 2.2,
+    "ai_markers": {},
+    "scores": {
+      "ai_taste": 10,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 10,
+      "platform": 10
+    },
+    "total": 50,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周五",
+    "scene": "数码配件",
+    "chars": 172,
+    "emoji_count": 5,
+    "emoji_pct": 2.9,
+    "ai_markers": {
+      "泛泛夸赞": [
+        "闭眼冲",
+        "绝了"
+      ]
+    },
+    "scores": {
+      "ai_taste": 9,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 10,
+      "platform": 10
+    },
+    "total": 49,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周六",
+    "scene": "旅行攻略",
+    "chars": 231,
+    "emoji_count": 7,
+    "emoji_pct": 3.0,
+    "ai_markers": {},
+    "scores": {
+      "ai_taste": 10,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 6,
+      "platform": 5
+    },
+    "total": 41,
+    "verdict": "✅ 能直接发"
+  },
+  {
+    "day": "周日",
+    "scene": "读书分享",
+    "chars": 229,
+    "emoji_count": 2,
+    "emoji_pct": 0.9,
+    "ai_markers": {},
+    "scores": {
+      "ai_taste": 10,
+      "emoji": 10,
+      "detail": 10,
+      "interact": 6,
+      "platform": 10
+    },
+    "total": 46,
+    "verdict": "✅ 能直接发"
+  }
+]

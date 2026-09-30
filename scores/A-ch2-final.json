@@ -1,0 +1,51 @@
+{
+ "label": "A-ch2-final",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [
+   "字数过短：1205 < 软下限 1500（信息密度不足）"
+  ],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1205,
+  "paragraph_count": 37,
+  "total_score": 5,
+  "weighted_score": 5,
+  "tier_1a": 5,
+  "tier_1b": 0,
+  "level": "🟢 极轻AI味",
+  "color": "🟢",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现13处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "外门弟子，骨龄二十以下，修为不限。",
+     "赵猛，赵霸的堂弟，淬体六重，",
+     "这位苏师姐十九岁，已是凝元境初期，掌门亲传，"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demofinal/chapters/chapter-002.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demofinal/chapters/chapter-002.md\",\n    \"exists\": true,\n    \"word_count\": 1257,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"fail\",\n    \"message\": \"字数: 1257（门禁口径（全字符））(✗ 不足，低于门禁线1350字，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1335字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1335.33,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 9347\n    }\n  }\n]\n"
+ }
+}

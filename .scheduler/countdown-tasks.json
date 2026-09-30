@@ -1,0 +1,570 @@
+{
+  "tasks": [
+    {
+      "id": "b274cb2d",
+      "name": "pulse",
+      "kind": "shell",
+      "command": "bash /var/minis/shared/second-brain-pulse.sh",
+      "countdown_seconds": 43200,
+      "next_fire_at": "2026-09-27T01:48:50.956493+08:00",
+      "enabled": true,
+      "description": "轻量训练脉冲，采样关键指标+异常检测",
+      "created_at": "2026-09-16T15:43:05.352615+08:00",
+      "fired_count": 8,
+      "migrated_from": "second-brain-scheduler",
+      "last_run": "2026-09-26T13:48:52.270541+08:00",
+      "last_status": "ok",
+      "retry_count": 0
+    },
+    {
+      "id": "fe10da30",
+      "name": "auto-learn",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/obsidian-auto-learn.py",
+      "countdown_seconds": 86400,
+      "next_fire_at": "2026-09-26T22:53:45.847500+08:00",
+      "enabled": true,
+      "description": "扫描Obsidian新笔记→摩擦度评分→蒸馏→审核→归档",
+      "created_at": "2026-09-16T15:43:05.353067+08:00",
+      "fired_count": 6,
+      "migrated_from": "second-brain-scheduler",
+      "last_run": "2026-09-25T22:53:54.748564+08:00",
+      "last_status": "ok",
+      "retry_count": 0
+    },
+    {
+      "id": "d774c7ec",
+      "name": "distill-review",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/obsidian-distill.py --review",
+      "countdown_seconds": 259200,
+      "next_fire_at": "2026-09-29T13:48:50.956493+08:00",
+      "enabled": true,
+      "description": "检查待审核知识卡片",
+      "created_at": "2026-09-16T15:43:05.353451+08:00",
+      "fired_count": 3,
+      "migrated_from": "second-brain-scheduler",
+      "last_run": "2026-09-26T13:48:50.980243+08:00",
+      "last_status": "ok",
+      "retry_count": 0
+    },
+    {
+      "id": "21285def",
+      "name": "blindspot",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/obsidian-blindspot.py",
+      "countdown_seconds": 604800,
+      "next_fire_at": "2026-09-23T15:43:05.354076+08:00",
+      "enabled": false,
+      "description": "每周扫描认知盲区和浅涉领域",
+      "created_at": "2026-09-16T15:43:05.354228+08:00",
+      "fired_count": 0,
+      "migrated_from": "second-brain-scheduler"
+    },
+    {
+      "id": "59517583",
+      "name": "dreaming",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/obsidian-dreaming.py --report --archive --link --dry-run",
+      "countdown_seconds": 604800,
+      "next_fire_at": "2026-09-30T15:44:29.910384+08:00",
+      "enabled": true,
+      "description": "每周离线记忆整理：标签冗余/近重复/张力/陈旧/孤立/补链接（dry-run 只出报告）",
+      "created_at": "2026-09-16T15:43:05.354907+08:00",
+      "fired_count": 1,
+      "migrated_from": "second-brain-scheduler",
+      "last_run": "2026-09-23T15:44:30.576700+08:00",
+      "last_status": "ok"
+    },
+    {
+      "id": "cbbf5820",
+      "name": "REM-20260923-03",
+      "kind": "prompt",
+      "command": null,
+      "prompt": "下周复盘这篇稿子的选题方向和受众匹配度",
+      "target": "new",
+      "countdown_seconds": 604778,
+      "next_fire_at": "2026-09-30T06:38:23.332696+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "",
+      "created_at": "2026-09-23T06:38:45.333544+08:00",
+      "fired_count": 0
+    },
+    {
+      "id": "82aad1ea",
+      "name": "tag-audit",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/obsidian-tag.py --scan-dir /var/minis/mounts/loong --audit --json",
+      "prompt": null,
+      "target": null,
+      "countdown_seconds": 604800,
+      "next_fire_at": "2026-10-01T22:42:55.805272+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "",
+      "created_at": "2026-09-24T22:42:55.805921+08:00",
+      "fired_count": 0
+    },
+    {
+      "id": "f7f5bdb7",
+      "name": "REM-20260923-02",
+      "kind": "prompt",
+      "command": null,
+      "prompt": "【REM-20260923-02】wanganzhou《今年网安周，3.0框架里4个动作值得抄》72h 数据回收。公众号 API 取不到数（错误 40164 IP 不在白名单，且数据中心接口需认证），请用户到后台「数据中心→内容分析」抄录：阅读量/完读率/分享/收藏/留言/新增关注/搜一搜人数。取到后由 07 岗写入 gzh-team/复盘档案/数据回收台账.md（D+3 行）。铁律：取不到写 [待补]，禁止推算值冒充事实。",
+      "target": "follow-up",
+      "countdown_seconds": 259200,
+      "event_at": "2026-09-25T20:00:00+08:00",
+      "next_fire_at": "2026-09-28T20:00:00+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "wanganzhou《今年网安周，3.0框架里4个动作值得抄》首发后72h阅读量回收。API不可用(IP白名单)，需用户查后台后由07岗录入 复盘档案/数据回收台账.md",
+      "created_at": "2026-09-26T14:01:30.852868+08:00",
+      "fired_count": 0
+    },
+    {
+      "id": "5622c16d",
+      "name": "FACT_ADDED→sync-review",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/novel-team/tools/world-sync.py scan",
+      "prompt": null,
+      "target": null,
+      "countdown_seconds": 3600,
+      "event_at": null,
+      "next_fire_at": "2026-09-29T00:56:30.196276+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "新事实写入后，快速同步待确认区",
+      "created_at": "2026-09-28T23:56:30.196938+08:00",
+      "fired_count": 1,
+      "on_event": "FACT_ADDED",
+      "event_source": "my-novel",
+      "event_triggered": true,
+      "last_run": "2026-09-29T00:33:12.095239+08:00"
+    },
+    {
+      "id": "f6e76ee4",
+      "name": "CH-GATE-PASSED→world-sync",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/novel-team/tools/world-sync.py scan",
+      "prompt": null,
+      "target": null,
+      "countdown_seconds": 3600,
+      "event_at": null,
+      "next_fire_at": "2026-09-29T05:50:33.565922+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "门检通过事件触发后，自动扫描新实体并更新世界包",
+      "created_at": "2026-09-28T23:57:41.014655+08:00",
+      "fired_count": 22,
+      "on_event": "CHAPTER_GATE_PASSED",
+      "event_source": "my-novel",
+      "event_triggered": true,
+      "last_run": "2026-09-29T04:50:33.564253+08:00",
+      "last_status": "fail"
+    },
+    {
+      "id": "f7c16892",
+      "name": "world-sync-check",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/novel-team/tools/world-sync-check.py",
+      "prompt": null,
+      "target": null,
+      "countdown_seconds": 21600,
+      "event_at": null,
+      "next_fire_at": "2026-09-29T06:05:16.302407+08:00",
+      "enabled": true,
+      "timeout": 120,
+      "description": "",
+      "created_at": "2026-09-29T00:05:16.303097+08:00",
+      "fired_count": 0,
+      "on_event": null,
+      "event_source": null,
+      "event_triggered": false
+    },
+    {
+      "id": "aa9c62fb",
+      "name": "event-consume-30m",
+      "kind": "shell",
+      "command": "python3 /var/minis/shared/event-bus.py consume --all",
+      "prompt": null,
+      "target": null,
+      "countdown_seconds": 1800,
+      "event_at": null,
+      "next_fire_at": "2026-09-29T01:02:25.843752+08:00",
+      "enabled": true,
+      "timeout": 300,
+      "description": "定期消费所有事件源新事件，触发对应监听链（事件驱动的时间兜底）",
+      "created_at": "2026-09-29T00:32:25.845271+08:00",
+      "fired_count": 0,
+      "on_event": null,
+      "event_source": null,
+      "event_triggered": false
+    }
+  ],
+  "history": [
+    {
+      "task": "__test_catchup",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n---STDERR---\n",
+      "ran_at": "2026-09-16T16:12:40.886211+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "empero-recheck",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "{\n  \"action\" : \"create\",\n  \"data\" : {\n    \"created\" : {\n      \"createdAt\" : \"2026-09-17T07:31:39Z\",\n      \"creatorSessionId\" : \"3A38E91B-3A02-4E92-BAC7-E87BBDAD07FA\",\n      \"enabled\" : true,\n      \"firedCount\" : 0,\n      \"id\" : \"E6453BD9-71B5-434E-9EDA-ABF433A1D4C0\",\n      \"label\" : \"empero-recheck-catchup-20260917-1531\",\n      \"nextFireAt\" : \"2026-09-17T07:31:40Z\",\n      \"origin\" : \"cli\",\n      \"prompt\" : \"复测 free.empero.org\\/v1 维护状态: 1) curl -s -m 15 -w HTTP:%{http_code} https:\\/\\/free.empero.org\\/v1\\/models 看是否还 maintenance; 2) 若正常, 测真实 chat completion (curl -X POST https:\\/\\/free.empero.org\\/v1\\/chat\\/completi\",\n      \"remaining\" : null,\n      \"state\" : \"pending\",\n      \"target\" : \"followUp(3A38E91B)\",\n      \"title\" : \"empero-recheck-catchup-20260917-1531\",\n      \"trigger\" : \"once(+1s)\"\n    },\n    \"note\" : \"Best effort: this timer lives only while the Minis app process is alive. A reminder notification is registered as insurance; for guaranteed background execution use an Apple Shortcuts automation.\"\n  },\n  \"ok\" : true,\n  \"timestamp\" : \"2026-09-17T15:31:39+08:00\",\n  \"tool\" : \"minis-scheduled\"\n}\n\n---STDERR---\n",
+      "ran_at": "2026-09-17T15:31:39.390191+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-17 15:31:39\n\n📊 状态:\n  笔记: 384 | 图谱: 448节点/118链接 | 孤立: 323\n  搜索:   总搜索: 5 次\n  命中率: 0.0%\n  点击率: 0.0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-13 22:38:46\n\n⚠️ 发现:\n  🏝️ 孤立笔记 +14 (309→323)\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 88 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-17T15:31:39.452048+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-17 16:59\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 384 篇笔记，130 篇新/已修改\n  ⏭️  🧠 Browser-BC — 浏览器行为克隆与技能蒸馏 — （评分:84，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 别凭感觉改 Skill：如何给 Agent Skill （评分:56，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 TencentDB Agent Memory — AI （评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  DeepTutor（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 Book-to-Skill — 把书变成 AI Agen（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  OpenMontage 代理驱动视频生产系统（评分:76，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 AI Coding Dictionary — AI 编码（评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 精选 LLM 应用大全 — Awesome-LLM-Ap（评分:72，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 AI Berkshire — AI 时代的价值投资研究框（评分:71，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🏗️ Qwen-AgentWorld 语言世界模型：让AI在（评分:80，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  kuku2api（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 Y2A-Auto：把海外视频本地化做成一条自动化流水线 （评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 CC-Switch — AI 工具管理器 — 工具（评分:88，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 EchoBird AI 工具管理器 — 工具（评分:88，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 极轻量 AI Agent 框架 — nanobot — （评分:90，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 agent-rules-books — 经典软件工程书籍（评分:61，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  Free AI Image（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 SandCastle — TypeScript 沙盒化 （评分:74，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  Wigolo — Local-first Web Intel（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 个人 AI Agent 框架 — Hermes Agen（评分:90，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  Whatsmeow（评分:70，[high摩擦] 手动模式：所有卡",
+      "ran_at": "2026-09-17T16:59:26.795838+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-19 21:32:33\n\n📊 状态:\n  笔记: 402 | 图谱: 466节点/118链接 | 孤立: 341\n  搜索:   总搜索: 5 次\n  命中率: 0.0%\n  点击率: 0.0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-13 22:38:46\n\n⚠️ 发现:\n  🏝️ 孤立笔记 +32 (309→341)\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 142 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-19T21:32:33.228366+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-19 21:32\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 402 篇笔记，149 篇新/已修改\n  ⏭️  20260919-006-archify验证覆盖到哪一层（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-002-美联储加息影响（评分:74，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-004-黄金行情（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-008-DSHA撤退条件前置（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-009-AnySearch一半能力（评分:66，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-001-重复型人格遇到美食.md — 低摩擦，仅记录摘要 (摩擦:+3)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  选题库（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-003-秋冬外套一衣穿三季.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260919-007-Sherlock活体对照组（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-005-小鹏G9L上市（评分:60，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  已做方向索引（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 Browser-BC — 浏览器行为克隆与技能蒸馏 — （评分:84，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260919132457.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260918152347.md — 零摩擦，跳过 (零摩擦：无实质内容，跳过)\n  ⏭️  🧠 别凭感觉改 Skill：如何给 Agent Skill （评分:56，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 TencentDB Agent Memory — AI （评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  DeepTutor（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 Book-to-Skill — 把书变成 AI Agen（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  OpenMontage 代理驱动视频生产系统（评分:76，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 AI Coding Dictionary — AI 编码（评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 精选 LLM 应用大全 — Awesome-LLM-Ap（评分:72，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 AI Berkshire — AI 时代的价值投资研究框（评分:71，",
+      "ran_at": "2026-09-19T21:32:45.306130+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "distill-review",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "✅ 无待审核知识卡片\n\n---STDERR---\n",
+      "ran_at": "2026-09-19T21:34:27.376088+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-22 00:28:20\n\n📊 状态:\n  笔记: 414 | 图谱: 476节点/434链接 | 孤立: 77\n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-19 21:34:44\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 50 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-22T00:28:19.948945+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-22 00:28\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 414 篇笔记，161 篇新/已修改\n  ⏭️  20260919-006-archify验证覆盖到哪一层（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-002-美联储加息影响（评分:74，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-004-黄金行情（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-008-DSHA撤退条件前置（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-009-AnySearch一半能力（评分:66，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-001-重复型人格遇到美食.md — 低摩擦，仅记录摘要 (摩擦:+3)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  选题库（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-003-秋冬外套一衣穿三季.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260919-007-Sherlock活体对照组（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-005-小鹏G9L上市（评分:60，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  已做方向索引（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 Browser-BC — 浏览器行为克隆与技能蒸馏 — （评分:84，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260919132457.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260918152347.md — 零摩擦，跳过 (零摩擦：无实质内容，跳过)\n  ⏭️  公众号文章索引（评分:80，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  AI工具索引（评分:78，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 别凭感觉改 Skill：如何给 Agent Skill （评分:56，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 TencentDB Agent Memory — AI （评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  DeepTutor（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 Book-to-Skill — 把书变成 AI Agen（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  OpenMontage 代理驱动视频生产系统（评分:76，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 AI Coding Dictionary — AI 编码（评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  higgsfield —",
+      "ran_at": "2026-09-22T00:28:27.466059+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-22 16:32:56\n\n📊 状态:\n  笔记: 415 | 图谱: 477节点/434链接 | 孤立: 78\n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-19 21:34:44\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 66 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-22T16:32:56.274493+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "distill-review",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "✅ 无待审核知识卡片\n\n---STDERR---\n",
+      "ran_at": "2026-09-23T07:27:55.941353+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-23 07:27\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 0 篇笔记，0 篇新/已修改\n  ✅ 无新笔记，无需处理\n  🌳 Obsidian 等级: Lv.3\n\n---STDERR---\n",
+      "ran_at": "2026-09-23T07:27:57.017943+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-23 07:27:58\n\n📊 状态:\n  笔记: 0 | 图谱: 节点/链接 | 孤立: \n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: \n  上次全量训练: 2026-09-19 21:34:44\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 81 小时前\n\n\n---STDERR---\n  File \"<string>\", line 6\n    'nodes': ,\n           ^\nSyntaxError: expression expected after dictionary key and ':'\n",
+      "ran_at": "2026-09-23T07:27:58.172602+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "tag-audit",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n---STDERR---\nusage: obsidian-tag.py [-h] [--scan SCAN] [--scan-dir SCAN_DIR] [--audit]\n                       [--apply APPLY] [--json]\nobsidian-tag.py: error: unrecognized arguments: --suggest\n",
+      "ran_at": "2026-09-23T15:44:29.911909+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "dreaming",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🌙 记忆 Dreaming 报告 — 2026-09-23T15:44:31\n   总卡片: 122\n   状态: {'approved': 30, 'committed': 92}\n   类型: {'memory': 120, 'tool': 1, 'framework': 1}\n   范围: {'local': 118, 'global': 4}\n   有证据: 28/122\n\n📉 陈旧卡片: 0 张 (age≥21d + score<40 + status≠committed)\n\n🔗 可补链接: 13 对\n   [0.29] 归档 Prism Browser Community（DFarm6/Prism-  ↔  归档 AnySearch Skill（anysearch-ai/anysearc\n   [0.28] 归档 OmniGet（tonhowtf/omniget）（2026-09-13）  ↔  归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）\n   [0.27] 归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）  ↔  归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Dail\n   [0.27] 归档 Prism Browser Community（DFarm6/Prism-  ↔  归档 GLaDOS Worker（sxxsoo/glados_worker）（2\n   [0.24] 归档 AnySearch Skill（anysearch-ai/anysearc  ↔  归档 Videdown（cshuangyy/videdown）（2026-09-\n   [0.19] 归档 AnySearch Skill（anysearch-ai/anysearc  ↔  归档 GLaDOS Worker（sxxsoo/glados_worker）（2\n   [0.19] OpenWiki P0/P1 落地（2026-08-24 08:59）  ↔  CLI-Anything 借鉴 三方审计 + 修复（2026-08-24）\n   [0.17] 归档 GLaDOS Worker（sxxsoo/glados_worker）（2  ↔  归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）\n   [0.14] skill-eval-gate.py v5 — LLM Trigger Eval  ↔  references 缺失修复 + skill-eval-gate 12/12 \n   [0.14] MagicMirror² 归档 + 第二大脑对接（2026-08-22 08-4  ↔  bb-browser + bb-sites 归档 + 分析（2026-08-24\n\n🗂️  归档: 0 张 (dry-run)\n🔗 补链接: 13 对 (dry-run)\n\n---STDERR---\n",
+      "ran_at": "2026-09-23T15:44:30.576700+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "tag-audit",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n---STDERR---\n",
+      "ran_at": "2026-09-23T15:59:43.980695+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "tag-audit",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n---STDERR---\n",
+      "ran_at": "2026-09-23T16:02:10.861126+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "tag-audit",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n---STDERR---\nusage: obsidian-tag.py [-h] [--scan SCAN] [--scan-dir SCAN_DIR] [--audit]\n                       [--apply APPLY] [--json]\nobsidian-tag.py: error: unrecognized arguments: --obsidian --report\n",
+      "ran_at": "2026-09-24T22:41:06.187967+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-24 22:41:06\n\n📊 状态:\n  笔记: 419 | 图谱: 481节点/434链接 | 孤立: 82\n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-19 21:34:44\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 121 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-24T22:41:06.867398+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-24 22:41\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 419 篇笔记，166 篇新/已修改\n  ⏭️  上下文包 · 公众号团队（2026-09-23 14:40）（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-006-archify验证覆盖到哪一层（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-002-美联储加息影响（评分:74，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-004-黄金行情（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-008-DSHA撤退条件前置（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260919-009-AnySearch一半能力（评分:66，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-001-重复型人格遇到美食.md — 低摩擦，仅记录摘要 (摩擦:+3)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  选题库（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260918-003-秋冬外套一衣穿三季.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260919-007-Sherlock活体对照组（评分:58，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  20260918-005-小鹏G9L上市（评分:60，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  已做方向索引（评分:74，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 Browser-BC — 浏览器行为克隆与技能蒸馏 — （评分:84，[high摩擦] 手动模式：所有卡片等待人工确认）\n  📋 20260919132457.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  20260918152347.md — 零摩擦，跳过 (零摩擦：无实质内容，跳过)\n  ⏭️  公众号文章索引（评分:80，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  AI工具索引（评分:78，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🧠 别凭感觉改 Skill：如何给 Agent Skill （评分:56，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 TencentDB Agent Memory — AI （评分:69，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  DeepTutor（评分:70，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🔧 Book-to-Skill — 把书变成 AI Agen（评分:72，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  OpenMontage 代理驱动视频生产系统（评分:76，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  📋 AI Codi",
+      "ran_at": "2026-09-24T22:41:14.824983+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-25 22:53:45\n\n📊 状态:\n  笔记: 423 | 图谱: 486节点/492链接 | 孤立: 26\n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-25 12:19:30\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 10 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-25T22:53:45.849044+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "auto-learn",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "⚪ 摩擦度: +0 (empty)\n⏭️ 建议动作: skip\n   零摩擦：无实质内容，跳过\n   高摩擦信号: 0 | 中摩擦: 0 | 低摩擦: 0\n   条目: 0 | 字符: 0\n  SCORE=0  LEVEL=empty  ACTION=skip\n==================================================\n  📚 自动学习管道 — 2026-09-25 22:53\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 421 篇笔记，208 篇新/已修改\n  📋 任务看板.md — 低摩擦，仅记录摘要 (摩擦:+3)\n     低摩擦：日常例行，仅记录摘要\n  📋 任务看板.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  📋 核心概念图谱.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  📋 AI工具知识库.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  📋 本周日志.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  📋 收件箱待处理.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  近期归档（评分:44，[中摩擦] 手动模式：所有卡片等待人工确认）\n  📋 audience.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  📋 identity.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  经验沉淀（评分:74，[中摩擦] 手动模式：所有卡片等待人工确认）\n  📋 platforms.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  📋 style.md — 低摩擦，仅记录摘要 (摩擦:+5)\n     低摩擦：日常例行，仅记录摘要\n  📋 preferences.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  受众画像（评分:51，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  身份定位（评分:76，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  经验沉淀（评分:77，[中摩擦] 手动模式：所有卡片等待人工确认）\n  📋 platforms.md — 低摩擦，仅记录摘要 (摩擦:+2)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  表达风格（评分:75，[中摩擦] 手动模式：所有卡片等待人工确认）\n  📋 preferences.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  📋 执行计划v2.md — 低摩擦，仅记录摘要 (摩擦:+4)\n     低摩擦：日常例行，仅记录摘要\n  ⏭️  📋 明日执行手册（评分:79，[中摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  🎬 多多视频 — 拼多多短视频带货（评分:81，[high摩擦] 手动模式：所有卡片等待人工确认）\n  ⏭️  多多视频项目进度报告（2026-08-12）（评分:81，[中摩擦] 手动模式：所有卡片等待人工确认）\n  📋 收益日报模板.md",
+      "ran_at": "2026-09-25T22:53:54.748564+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "REM-20260923-02",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "pending=True minis-scheduled=True enqueued_to=/var/minis/shared/.scheduler/pending-prompts.jsonl",
+      "ran_at": "2026-09-26T13:48:50.958136+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "distill-review",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "✅ 无待审核知识卡片\n\n---STDERR---\n",
+      "ran_at": "2026-09-26T13:48:50.980243+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "pulse",
+      "status": "ok",
+      "exit_code": 0,
+      "summary": "\n🫀 训练脉冲 — 2026-09-26 13:48:52\n\n📊 状态:\n  笔记: 423 | 图谱: 486节点/492链接 | 孤立: 26\n  搜索:   总搜索: 0 次\n  命中率: 0%\n  点击率: 0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-25 12:19:30\n\n⚠️ 发现:\n  📝 待审核知识卡片: 1 张\n  ⏰ 上次全量训练: 25 小时前\n\n\n---STDERR---\n",
+      "ran_at": "2026-09-26T13:48:52.270541+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:02:38.192471+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:02:46.949024+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:02:54.787319+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:03:02.723757+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:03:09.985584+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:03:18.840513+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:03:26.997933+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:03:34.868447+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:06:05.945743+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:06:15.304896+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:06:22.358685+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:06:32.166650+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:06:43.883894+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:07:42.698838+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "🔥 触发: [my-novel] CHAPTER_GATE_PASSED → 门检通过→世界包扫描\n   → scheduler trigger exit=1\n   Traceback (most recent call last):\n  File \"/var/minis/shared/countdown-scheduler.py\", line 961, in <module>\n    elif cmd == \"trigger\": sys.exit(cmd_trigger(rest))\n                                    ^\n   游标推进: 3 → 4 (1 条新事件, 触发 1 次)\n\n📊 consume 完成: 共触发 1 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:07:55.863237+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:08:21.243848+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n📊 consume 完成: 共触发 0 条监听\n\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: my-novel\n",
+      "ran_at": "2026-09-29T00:08:43.018515+08:00",
+      "duration_ms": null
+    },
+    {
+      "task": "CH-GATE-PASSED→world-sync",
+      "triggered_by": "event-bus",
+      "status": "fail",
+      "exit_code": 2,
+      "summary": "\n---STDERR---\nusage: world-sync.py [-h] [--novel-id NOVEL_ID]\n                     {scan,list,approve,reject,emit} ...\nworld-sync.py: error: unrecognized arguments: --novel-id my-novel\n",
+      "ran_at": "2026-09-29T00:11:57.579573+08:00",
+      "duration_ms": null
+    }
+  ],
+  "created_at": "2026-09-16T15:43:05.350973+08:00"
+}

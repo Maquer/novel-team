@@ -1,0 +1,78 @@
+[2026-08-24 01:54:50] RUNNING: pulse — bash /var/minis/shared/second-brain-pulse.sh
+[2026-08-24 01:55:48] RESULT: pulse ✅ (exit=0)
+[2026-08-24 01:55:48] RUNNING: auto-learn — python3 /var/minis/shared/obsidian-auto-learn.py
+[2026-08-24 01:56:46] RESULT: auto-learn ✅ (exit=0)
+[2026-08-24 01:56:46] RUNNING: distill-review — python3 /var/minis/shared/obsidian-distill.py --review
+[2026-08-24 01:56:47] RESULT: distill-review ✅ (exit=0)
+[2026-08-24 01:56:47] RUNNING: tag-audit — python3 /var/minis/shared/obsidian-tag.py --suggest
+[2026-08-24 01:56:48] RESULT: tag-audit ⚠️ (exit=2)
+[2026-08-24 01:56:48] EVENT_HOOK: archive-article triggered by KD-20260824-015638-2df4-一个微信平台，一周结3000多——拼多多多多视频带货.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-article triggered by KD-20260824-015644-589a-新手做公众号，这3个设置最容易忽略（附解决方法）.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015642-df8b-Prime Day冲刺工具箱：普通人7天搞定一套赚钱流水线.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015621-a99d-Book-to-Skill — 把书变成 AI Agent .md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015623-c143-极轻量 AI Agent 框架 — nanobot.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015642-de7c-给AI Agent装上自我进化能力：从被动执行到主动学习.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015631-7ccd-grill-me — AI Agent 苏格拉底式追问.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015605-e36f-小红书自动笔记生成器 — Auto-Redbook-Skil.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015641-a5b5-给 AI Agent 的 Skill 装上"自我进化"引擎：.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015605-6dd6-Claude for Legal 中国法版本 — claud.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015621-45cc-AI Berkshire — AI 时代的价值投资研究框架.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015635-78b8-别盲目跟风搭AI工作台！我折腾两天后发现了这3个致命短板.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015631-114e-真实工程师 AI 技能集 — mattpocock-skil.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015626-30b1-agent-rules-books — 经典软件工程书籍→A.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015615-a498-CC-Switch — AI 工具管理器.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015623-f920-Qwen-AgentWorld 语言世界模型：让AI在行动前.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015616-6d06-TencentDB Agent Memory — AI Ag.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015620-741e-EchoBird AI 工具管理器.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015613-2957-精选 LLM 应用大全 — Awesome-LLM-Apps.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015602-d563-CC Switch — AI 工具全管理器.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015604-8643-Kickbacks.ai — AI编码等待时间的广告市场.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015638-c3ac-为你的知识库装上「大脑」——三个 Skill 让知识库活起来.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015610-c97a-Claude 设计卡片生成器 — claude-design.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015615-1150-AI Coding Dictionary — AI 编码术语.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015639-71c9-AI 创业别再瞎做 App 了：我翻完 Reddit，发现赚.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015604-df58-nuphus-mcp — 桌面自动化 MCP Server.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015610-eb21-webreader — 用你的浏览器读任何网页（Dokobo.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015630-7d9a-熔铸仿写工作流 — Casting-Workflow.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015641-59c1-Agent 调了什么工具你根本看不见：接上 mcpsnoop.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015628-90d3-自适应网页抓取框架 — Scrapling.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015637-ffdc-普通人用AI搞副业，这三条路已经有人跑通了.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015602-61c2-cnb.cool — 腾讯云云原生构建平台.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015604-4f12-aweskill — AI Agent 技能包管理器.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015608-a29f-NoteRelay — Obsidian 多平台内容排版插件.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015634-c965-融资1.17亿美元的技术被彻底开源！5.6万星AI黑客杀疯了.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015637-01e4-我给 AI 租了一间每月十几块的办公室，它竟然开始 24 小.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015643-e068-AI工具全免费了，为什么你还是赚不到钱.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015642-6599-不露脸不做视频，一个YouTube频道靠长尾关键词吃联盟佣金.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015632-4801-AI 电影级产品视频生成器 — video-shotcraf.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015606-df55-一站式 AI 短视频生成器 — MoneyPrinterTu.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015613-ac29-个人 AI Agent 框架 — Hermes Agent.md
+[2026-08-24 01:56:48] EVENT_HOOK: archive-tool triggered by KD-20260824-015616-df58-SandCastle — TypeScript 沙盒化 AI.md
+[2026-09-13 23:22:38] RUNNING: pulse — bash /var/minis/shared/second-brain-pulse.sh
+[2026-09-13 23:23:01] RESULT: pulse ✅ (exit=0)
+[2026-09-13 23:23:01] RUNNING: auto-learn — python3 /var/minis/shared/obsidian-auto-learn.py
+[2026-09-13 23:23:32] RESULT: auto-learn ✅ (exit=0)
+[2026-09-13 23:23:32] RUNNING: distill-review — python3 /var/minis/shared/obsidian-distill.py --review
+[2026-09-13 23:23:33] RESULT: distill-review ✅ (exit=0)
+[2026-09-13 23:23:33] RUNNING: tag-audit — python3 /var/minis/shared/obsidian-tag.py --suggest
+[2026-09-13 23:23:34] RESULT: tag-audit ⚠️ (exit=2)
+[2026-09-13 23:23:34] RUNNING: model-watchdog — python3 /var/minis/shared/model-watchdog.py check --quiet
+[2026-09-13 23:25:01] RUNNING: pulse — bash /var/minis/shared/second-brain-pulse.sh
+[2026-09-13 23:25:24] RESULT: pulse ✅ (exit=0)
+[2026-09-13 23:25:24] RUNNING: auto-learn — python3 /var/minis/shared/obsidian-auto-learn.py
+[2026-09-13 23:25:54] RESULT: auto-learn ✅ (exit=0)
+[2026-09-13 23:25:54] RUNNING: distill-review — python3 /var/minis/shared/obsidian-distill.py --review
+[2026-09-13 23:25:55] RESULT: distill-review ✅ (exit=0)
+[2026-09-13 23:25:55] RUNNING: tag-audit — python3 /var/minis/shared/obsidian-tag.py --suggest
+[2026-09-13 23:25:56] RESULT: tag-audit ⚠️ (exit=2)
+[2026-09-13 23:25:56] RUNNING: model-watchdog — python3 /var/minis/shared/model-watchdog.py check --quiet
+[2026-09-13 23:39:07] RUNNING: pulse — bash /var/minis/shared/second-brain-pulse.sh
+[2026-09-13 23:39:14] RESULT: pulse ✅ (exit=0)
+[2026-09-13 23:39:14] RUNNING: auto-learn — python3 /var/minis/shared/obsidian-auto-learn.py
+[2026-09-13 23:39:33] RESULT: auto-learn ✅ (exit=0)
+[2026-09-13 23:39:33] RUNNING: distill-review — python3 /var/minis/shared/obsidian-distill.py --review
+[2026-09-13 23:39:34] RESULT: distill-review ✅ (exit=0)
+[2026-09-13 23:39:34] RUNNING: tag-audit — python3 /var/minis/shared/obsidian-tag.py --suggest
+[2026-09-13 23:39:34] RESULT: tag-audit ⚠️ (exit=2)
+[2026-09-13 23:39:34] RUNNING: dreaming — python3 /var/minis/shared/obsidian-dreaming.py --report --archive --link --dry-run
+[2026-09-13 23:39:35] RESULT: dreaming ✅ (exit=0)

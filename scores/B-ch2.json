@@ -1,0 +1,97 @@
+{
+ "label": "B-ch2",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [
+   "AI味接近阈值：tier_1a=13（阻断线 15，建议收敛表达）"
+  ],
+  "p1": [],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1501,
+  "paragraph_count": 43,
+  "total_score": 13,
+  "weighted_score": 13,
+  "tier_1a": 13,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则1·翻案腔",
+    "desc": "翻案腔「不是…而是」",
+    "text": "胸口的刹那——  怀里的剑胎，烫了。  不是之前那种温热，而是一种滚烫，像是一团火在胸口炸开。一股暖流顺着经脉疯狂涌入四肢",
+    "score": 2,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 2.00/千字（人类0.80，AI 2.38）",
+    "text": "全文共3处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "前置话题壳",
+    "text": "！\"  就在拳头即将触到林玄胸口的刹那——  怀里的剑胎，烫了。  不是之前那种温热，而是一种滚烫，",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category1·AI高频词汇",
+    "desc": "发现2处AI高频词，Top5: 仿佛(×1), 嘴角勾起(×1)",
+    "text": "见详情",
+    "score": 2,
+    "details": [
+     {
+      "phrase": "仿佛",
+      "count": 1,
+      "reason": "过度比喻词",
+      "examples": [
+       "…都在震颤，体内那点淬体三重的灵力，竟在这股暖流的带动下，骤然壮大了数倍！  时间仿佛变慢了。赵猛的拳头在他眼中，一寸一寸地逼近，破绽毕露。  林玄福至心灵，并指…"
+      ]
+     },
+     {
+      "phrase": "嘴角勾起",
+      "count": 1,
+      "reason": "微笑描写套话",
+      "examples": [
+       "…场哗然。六格，那是淬体六重的极限水准。  赵霸得意地环视全场，目光落在林玄身上，嘴角勾起一抹讥笑：\"林师弟，你也来试试？别到时候连一格都点不亮，丢了咱们外门的脸…"
+      ]
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现16处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "外门弟子，骨龄二十以下，修为不限。",
+     "说话的是赵猛，赵霸的堂弟，淬体六重，",
+     "林玄没理他，径直走到报名处，报上名字。"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demob/chapters/chapter-002.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demob/chapters/chapter-002.md\",\n    \"exists\": true,\n    \"word_count\": 1553,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"pass\",\n    \"message\": \"字数: 1553（门禁口径（全字符））(✓ 达标，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1600字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1599.67,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 11197\n    }\n  }\n]\n"
+ }
+}

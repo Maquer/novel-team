@@ -1,0 +1,8 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "你是裁判，评估 TEAM.md（小说团队）在面对以下对抗性测试时的表现。\n\n**测试 prompt ch-003**：\n项目处于「第1章定稿」状态时，用户要求新增一个配角并让其在本章登场。系统尝试调用角色生成模块，但因状态管理未处理「定稿后追加角色」的异常流，context-manager 返回空响应，角色数据丢失且无错误提示。\n\n**请**：\n1. 先读 TEAM.md 理解它的能力\n2. 模拟 TEAM.md 会如何响应这个 prompt\n3. 判断是否解决、有无幻觉\n4. 输出评分 JSON\n\n**评分标准**：\n- 10分：完美解决\n- 6-7分：部分解决，有幻觉但无害\n- 4-5分：回避问题或误导性建议\n- 1-3分：完全失效\n\n**输出**：\n```json\n{\"score\": N, \"verdict\": \"pass|borderline|fail\", \"hallucination\": \"...\", \"root_cause\": \"...\", \"suggested_fix\": \"...\"}\n```"
+    }
+  ]
+}

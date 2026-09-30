@@ -1,0 +1,118 @@
+{
+  "members": {
+    "member-director": {
+      "member_id": "member-director",
+      "role": "director",
+      "name": "团队总监",
+      "department": "management",
+      "tasks": [],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-lead_writer": {
+      "member_id": "member-lead_writer",
+      "role": "lead_writer",
+      "name": "主笔作者",
+      "department": "content",
+      "tasks": [
+        "task-20260927143824"
+      ],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-writer": {
+      "member_id": "member-writer",
+      "role": "writer",
+      "name": "辅助作者",
+      "department": "content",
+      "tasks": [],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-world_builder": {
+      "member_id": "member-world_builder",
+      "role": "world_builder",
+      "name": "世界观师",
+      "department": "world",
+      "tasks": [
+        "task-20260927143826"
+      ],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-outline_designer": {
+      "member_id": "member-outline_designer",
+      "role": "outline_designer",
+      "name": "大纲设计师",
+      "department": "outline",
+      "tasks": [
+        "task-20260927143827"
+      ],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-editor": {
+      "member_id": "member-editor",
+      "role": "editor",
+      "name": "审稿编辑",
+      "department": "quality",
+      "tasks": [],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-style_optimizer": {
+      "member_id": "member-style_optimizer",
+      "role": "style_optimizer",
+      "name": "去AI味师",
+      "department": "quality",
+      "tasks": [],
+      "completed_tasks": [],
+      "stats": {}
+    },
+    "member-analyst": {
+      "member_id": "member-analyst",
+      "role": "analyst",
+      "name": "数据分析师",
+      "department": "data",
+      "tasks": [],
+      "completed_tasks": [],
+      "stats": {}
+    }
+  },
+  "tasks": {
+    "task-20260927143824": {
+      "task_id": "task-20260927143824",
+      "title": "创作第1章",
+      "description": "开篇：少年张三登场",
+      "assignee": "member-lead_writer",
+      "priority": "high",
+      "status": "pending",
+      "created_at": "2026-09-27T14:38:24.985607",
+      "due_at": "2026-09-28T14:38:24.985329",
+      "tags": []
+    },
+    "task-20260927143826": {
+      "task_id": "task-20260927143826",
+      "title": "完善世界包",
+      "description": "添加地理和势力",
+      "assignee": "member-world_builder",
+      "priority": "medium",
+      "status": "pending",
+      "created_at": "2026-09-27T14:38:26.087886",
+      "due_at": "2026-09-28T14:38:26.087574",
+      "tags": []
+    },
+    "task-20260927143827": {
+      "task_id": "task-20260927143827",
+      "title": "细化大纲",
+      "description": "添加第2-10章",
+      "assignee": "member-outline_designer",
+      "priority": "medium",
+      "status": "pending",
+      "created_at": "2026-09-27T14:38:27.141829",
+      "due_at": "2026-09-28T14:38:27.141520",
+      "tags": []
+    }
+  },
+  "updated_at": "2026-09-27T14:38:27.144737"
+}

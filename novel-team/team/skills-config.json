@@ -1,0 +1,346 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-09-27",
+  
+  "skill_definitions": {
+    "context-manager": {
+      "name": "上下文管理器",
+      "description": "管理多轮对话上下文，支持RTCO框架",
+      "file": "tools/context-manager.py",
+      "usage": "python context-manager.py {build|generate|status|estimate|bounded-check}",
+      "params": {
+        "build": "--chapters 1-10 --mode full",
+        "bounded-check": "--chapter 5 --margin 10"
+      },
+      "output_format": "json"
+    },
+    "plot-analyzer": {
+      "name": "剧情分析服务",
+      "description": "分析章节的钩子、冲突、伏笔、节奏",
+      "file": "tools/plot-analyzer.py",
+      "usage": "python plot-analyzer.py analyze --chapter {n} --content \"{text}\"",
+      "params": {
+        "analyze": "--chapter 1 --file chapter.md"
+      },
+      "output_format": "json"
+    },
+    "plot-simulation-v2": {
+      "name": "多维度剧情推演",
+      "description": "多模型抽卡机制，五维评分选优",
+      "file": "tools/plot-simulation-v2.py",
+      "usage": "python plot-simulation-v2.py simulate --context \"{text}\" --outline \"{text}\" --model all",
+      "params": {
+        "simulate": "--context-file context.txt --outline-file outline.txt --model all --plans 3"
+      },
+      "output_format": "json"
+    },
+    "wordcount-check": {
+      "name": "字数检查脚本",
+      "description": "智能统计中文字数，排除标点",
+      "file": "tools/wordcount-check.py",
+      "usage": "python wordcount-check.py {target} [--min-words N] [--pattern PATTERN]",
+      "params": {
+        "check": "--min-words 1800 --pattern chapter"
+      },
+      "output_format": "json"
+    },
+    "world-pack": {
+      "name": "世界包管理系统",
+      "description": "管理23种条目类型和30种关系类型",
+      "file": "tools/world-pack.py",
+      "usage": "python world-pack.py {init|add|check|stats}",
+      "params": {
+        "add": "--type place --id p001 --name 烈焰谷"
+      },
+      "output_format": "json"
+    },
+    "world-init": {
+      "name": "世界初始化器",
+      "description": "初始化世界包基础数据",
+      "file": "tools/world-init.py",
+      "usage": "python world-init.py {init|add-node|add-rel|check|stats}",
+      "params": {
+        "init": "--project projects/my-novel --name 玄天大陆"
+      },
+      "output_format": "json"
+    },
+    "fact-snapshot": {
+      "name": "15维事实快照",
+      "description": "追踪角色状态、位置、外貌等15个维度",
+      "file": "tools/fact-snapshot.py",
+      "usage": "python fact-snapshot.py {init|write|read|check}",
+      "params": {
+        "write": "-c 1 -f changes.json"
+      },
+      "output_format": "json"
+    },
+    "story-graph": {
+      "name": "知识图谱",
+      "description": "管理角色关系图谱",
+      "file": "tools/story-graph.py",
+      "usage": "python story-graph.py {add-node|add-edge|list-nodes|list-edges}",
+      "params": {
+        "add-node": "--node-id char-001 --type character --name 张三"
+      },
+      "output_format": "json"
+    },
+    "rag-enhanced": {
+      "name": "增强RAG检索",
+      "description": "混合检索（BM25+语义向量）",
+      "file": "tools/rag-enhanced.py",
+      "usage": "python rag-enhanced.py {build|search|rerank|compress}",
+      "params": {
+        "search": "--query 主角突破 --top-k 10"
+      },
+      "output_format": "json"
+    },
+    "outline": {
+      "name": "三级大纲系统",
+      "description": "四级结构：作品→卷→章节→场景",
+      "file": "tools/outline.py",
+      "usage": "python outline.py {init|add|update|delete|list|stats|export}",
+      "params": {
+        "add": "-l volume -t 第一卷 --parent work-001"
+      },
+      "output_format": "json"
+    },
+    "outline-builder": {
+      "name": "大纲构建器",
+      "description": "构建和管理三级大纲",
+      "file": "tools/outline-builder.py",
+      "usage": "python outline-builder.py {add-work|add-volume|add-chapter|add-foreshadow}",
+      "params": {
+        "add-chapter": "--volume-id vol-001 --num 1 --title 开篇"
+      },
+      "output_format": "json"
+    },
+    "foreshadow-service": {
+      "name": "伏笔管理服务",
+      "description": "管理伏笔的埋设和回收",
+      "file": "tools/foreshadow-service.py",
+      "usage": "python foreshadow-service.py {add|check|payoff|list}",
+      "params": {
+        "add": "--chapter 1 --content 天命剑来历 --tier 1"
+      },
+      "output_format": "json"
+    },
+    "contract-tree": {
+      "name": "合同树程序校验",
+      "description": "账目/线头/事实三类字段咬合检查",
+      "file": "tools/contract-tree.py",
+      "usage": "python contract-tree.py {init|add|check|visualize}",
+      "params": {
+        "check": "--project-id proj-001"
+      },
+      "output_format": "json"
+    },
+    "gate-check": {
+      "name": "门禁检查系统",
+      "description": "六道门禁：协议解析/引用校验/一致性/未知实体/描写一致性/蓝图出场",
+      "file": "tools/gate-check.py",
+      "usage": "python gate-check.py {check|list|report}",
+      "params": {
+        "check": "--chapter 1 --file chapter.md"
+      },
+      "output_format": "json"
+    },
+    "guard-v6": {
+      "name": "四道一致性防线",
+      "description": "硬约束/软约束/认知分级/决策触发",
+      "file": "tools/guard-v6.py",
+      "usage": "python guard-v6.py {check|constrain|tracker}",
+      "params": {
+        "check": "--chapter 1 --content file.md"
+      },
+      "output_format": "json"
+    },
+    "fact-ledger": {
+      "name": "事实账本",
+      "description": "追踪事实变化，防止数值跳变",
+      "file": "tools/fact-ledger.py",
+      "usage": "python fact-ledger.py {add-fact|list-facts|update-state|account}",
+      "params": {
+        "add-fact": "--type realm --id char-001 --value 筑基初期"
+      },
+      "output_format": "json"
+    },
+    "decide-trigger": {
+      "name": "决策触发判定",
+      "description": "四种决策类型判定（剧情/设定/人物/节奏）",
+      "file": "tools/decide-trigger.py",
+      "usage": "python decide-trigger.py --events events.json",
+      "params": {
+        "trigger": "--focus plot"
+      },
+      "output_format": "json"
+    },
+    "anti-ai-12": {
+      "name": "去AI味12条纪律",
+      "description": "识别和修复AI写作特征",
+      "file": "tools/anti-ai-12.py",
+      "usage": "python anti-ai-12.py {check|preview|blacklist}",
+      "params": {
+        "check": "--file chapter.md"
+      },
+      "output_format": "json"
+    },
+    "novel-humanizer": {
+      "name": "去AI味检测v3",
+      "description": "Tier 1A/1B分层检测，分数≤15为达标",
+      "file": "tools/novel-humanizer.py",
+      "usage": "python novel-humanizer.py --text \"{text}\" --json",
+      "params": {
+        "check": "--chapter-file chapter.md"
+      },
+      "output_format": "json"
+    },
+    "fusion-engine": {
+      "name": "指纹蒸馏引擎",
+      "description": "5源文→公约数，剔除作者指纹",
+      "file": "tools/fusion-engine.py",
+      "usage": "python fusion-engine.py fuse --sources s1.md s2.md s3.md",
+      "params": {
+        "fuse": "--output fused.md"
+      },
+      "output_format": "json"
+    },
+    "batch-replace": {
+      "name": "批量改词工具",
+      "description": "文件夹批量替换，支持预览和备份",
+      "file": "tools/batch-replace.py",
+      "usage": "python batch-replace.py --find 旧词 --replace 新词 --dir chapters/",
+      "params": {
+        "replace": "--find 青云门 --replace 天剑宗 --preview"
+      },
+      "output_format": "json"
+    },
+    "merge-chapters": {
+      "name": "合并导出工具",
+      "description": "md→txt，自动补章节标题",
+      "file": "tools/merge-chapters.py",
+      "usage": "python merge-chapters.py --input chapters/ --output novel.txt",
+      "params": {
+        "merge": "--format txt --title-format '第{num}章 {title}'"
+      },
+      "output_format": "json"
+    },
+    "clean_commas": {
+      "name": "脏逗号清理",
+      "description": "清理中文语境下的错误逗号使用",
+      "file": "tools/clean_commas.py",
+      "usage": "python clean_commas.py input.md",
+      "params": {
+        "clean": "--output fixed.md"
+      },
+      "output_format": "text"
+    },
+    "inject_punctuation": {
+      "name": "标点注入",
+      "description": "模拟番茄风格标点密度",
+      "file": "tools/inject_punctuation.py",
+      "usage": "python inject_punctuation.py input.md",
+      "params": {
+        "inject": "--excl 8 --comma 3"
+      },
+      "output_format": "text"
+    },
+    "preference-memory": {
+      "name": "创作记忆系统",
+      "description": "跨会话学习用户偏好",
+      "file": "tools/preference-memory.py",
+      "usage": "python preference-memory.py {set|get|apply|history}",
+      "params": {
+        "set": "--novel-id novel-001 --preference style 写实"
+      },
+      "output_format": "json"
+    },
+    "timeline": {
+      "name": "时间线管理",
+      "description": "14种事件类型的 timeline 管理",
+      "file": "tools/timeline.py",
+      "usage": "python timeline.py {add|list|visualize}",
+      "params": {
+        "add": "--event-type chapter_start --chapter 1 --time 第1天"
+      },
+      "output_format": "json"
+    },
+    "llm-integrator": {
+      "name": "LLM API集成",
+      "description": "多模型调用，Token统计，成本控制",
+      "file": "tools/llm-integrator.py",
+      "usage": "python llm-integrator.py {chat|complete|stream|stats}",
+      "params": {
+        "chat": "--model glm --messages messages.json"
+      },
+      "output_format": "json"
+    },
+    "knowledge-base": {
+      "name": "AI拆书知识库",
+      "description": "7维知识提取，支持URL抓取",
+      "file": "tools/knowledge-base.py",
+      "usage": "python knowledge-base.py {crawl|analyze|search|list}",
+      "params": {
+        "analyze": "--content 小说内容 --title 示例小说"
+      },
+      "output_format": "json"
+    },
+    "team-manager": {
+      "name": "团队管理器",
+      "description": "任务分配、进度跟踪、报告生成",
+      "file": "tools/team-manager.py",
+      "usage": "python team-manager.py {init|assign|complete|status|report}",
+      "params": {
+        "assign": "--role lead_writer --title 创作第1章"
+      },
+      "output_format": "json"
+    },
+    "capability-evaluator": {
+      "name": "能力评估器",
+      "description": "7维度能力评估，生成评估报告",
+      "file": "tools/capability-evaluator.py",
+      "usage": "python capability-evaluator.py --all --report",
+      "params": {
+        "evaluate": "--module knowledge-management"
+      },
+      "output_format": "json"
+    }
+  },
+  
+  "skill_flows": {
+    "chapter_creation": {
+      "name": "章节创作流程",
+      "steps": [
+        {"step": 1, "actor": "outline_designer", "skill": "outline-builder", "action": "add-chapter"},
+        {"step": 2, "actor": "lead_writer", "skill": "llm-integrator", "action": "chat"},
+        {"step": 3, "actor": "lead_writer", "skill": "plot-analyzer", "action": "analyze"},
+        {"step": 4, "actor": "writer", "skill": "batch-replace", "action": "replace"},
+        {"step": 5, "actor": "editor", "skill": "gate-check", "action": "check"},
+        {"step": 6, "actor": "style_optimizer", "skill": "novel-humanizer", "action": "check"},
+        {"step": 7, "actor": "analyst", "skill": "wordcount-check", "action": "check"},
+        {"step": 8, "actor": "world_builder", "skill": "fact-snapshot", "action": "write"},
+        {"step": 9, "actor": "director", "skill": "contract-tree", "action": "check"}
+      ]
+    },
+    "world_building": {
+      "name": "世界构建流程",
+      "steps": [
+        {"step": 1, "actor": "world_builder", "skill": "world-init", "action": "init"},
+        {"step": 2, "actor": "world_builder", "skill": "world-pack", "action": "add-node"},
+        {"step": 3, "actor": "world_builder", "skill": "story-graph", "action": "add-node"},
+        {"step": 4, "actor": "world_builder", "skill": "world-pack", "action": "check"},
+        {"step": 5, "actor": "outline_designer", "skill": "fact-snapshot", "action": "read"}
+      ]
+    },
+    "quality_control": {
+      "name": "质量控制流程",
+      "steps": [
+        {"step": 1, "actor": "editor", "skill": "gate-check", "action": "check"},
+        {"step": 2, "actor": "editor", "skill": "guard-v6", "action": "check"},
+        {"step": 3, "actor": "editor", "skill": "fact-ledger", "action": "list-facts"},
+        {"step": 4, "actor": "style_optimizer", "skill": "anti-ai-12", "action": "check"},
+        {"step": 5, "actor": "style_optimizer", "skill": "novel-humanizer", "action": "check"},
+        {"step": 6, "actor": "style_optimizer", "skill": "fusion-engine", "action": "fuse"}
+      ]
+    }
+  }
+}

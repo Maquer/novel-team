@@ -1,0 +1,64 @@
+{
+  "ok": [
+    "inclusionai/ling-3.0-flash-sante:free",
+    "inclusionai/ling-3.0-flash-fin:free",
+    "dots-studio/dots-3-note-preview:free",
+    "liquid/lfm-2.5-2.6b:free",
+    "nvidia/nemotron-3.5-lightning:free",
+    "poolside/laguna-xs-2.1:free",
+    "cohere/north-mini-code:free",
+    "nvidia/nemotron-3.5-content-safety:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "minimax/minimax-m3:free",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "minimax/minimax-m2.7:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "deepseek/deepseek-v4-flash",
+    "z-ai/glm-5.3-flash",
+    "qwen/qwen3.8-max-0902"
+  ],
+  "fail": [
+    [
+      "thinkingmachines/inkling-small:free",
+      "HTTP403",
+      "{\"error\":{\"message\":\"thinkingmachines/inkling-small:free is only available on agentic harnesses. Try"
+    ],
+    [
+      "poolside/laguna-s-2.1:free",
+      "HTTP429",
+      "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"poolside/laguna-s-2.1:fr"
+    ],
+    [
+      "thinkingmachines/inkling:free",
+      "HTTP403",
+      "{\"error\":{\"message\":\"thinkingmachines/inkling:free is only available on agentic harnesses. Try plugg"
+    ],
+    [
+      "google/gemma-4-26b-a4b-it:free",
+      "HTTP400",
+      "{\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\n  \\\"error\\\": {\\n    \\"
+    ],
+    [
+      "google/gemma-4-31b-it:free",
+      "HTTP400",
+      "{\"error\":{\"message\":\"Provider returned error\",\"code\":400,\"metadata\":{\"raw\":\"{\\n  \\\"error\\\": {\\n    \\"
+    ],
+    [
+      "openai/gpt-6-astra",
+      "HTTP403",
+      "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_fu"
+    ],
+    [
+      "anthropic/claude-fable-5.1",
+      "HTTP403",
+      "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_fu"
+    ],
+    [
+      "google/gemini-3.8-flash",
+      "HTTP403",
+      "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_fu"
+    ]
+  ],
+  "timestamp": "2026-09-06T21:27:31+0800",
+  "test_count": 24
+}

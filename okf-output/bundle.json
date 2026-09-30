@@ -1,0 +1,219 @@
+{
+  "okf_version": "0.2",
+  "bundle_id": "minis-knowledge-store-20260824",
+  "produced_by": "minis/grounded-claims",
+  "produced_at": "2026-08-24T02:33:25.161954+00:00",
+  "card_count": 29,
+  "type_counts": {
+    "memory": 29
+  },
+  "status_counts": {
+    "committed": 29
+  },
+  "stale_count": 0,
+  "cards": [
+    {
+      "id": "SC-2026-08-22-35fc",
+      "title": "女娲蒸馏技能集成（2026-08-22 19:35）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-f524",
+      "title": "第二大脑 MCP 接口落地（2026-08-22 18:55）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-4422",
+      "title": "知识库装上大脑——三个 Skill 让知识库活起来（2026-08-22 19:01）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-d115",
+      "title": "Mobilerun 归档（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-4c36",
+      "title": "Needle 归档（2026-08-22 18:10）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-ed5d",
+      "title": "Skill 三件套 v2 审计修复（2026-08-22 18:35）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-d2ce",
+      "title": "MediaCrawler 归档（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-d78a",
+      "title": "Agent Skills 自演化三件套落地（2026-08-22 18:15）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-761f",
+      "title": "Needle 归档（2026-08-22 18:10）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-6507",
+      "title": "摩擦度评分驱动 auto-learn 自动触发逻辑（2026-08-22 15:36）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-09aa",
+      "title": "train.sh 升级为 11 步训练流水线（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-77e2",
+      "title": "第二大脑三模块补齐：错误模式学习 + Skill生命周期 + 渐进式策略（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-5b1c",
+      "title": "反馈层升级（PEV 架构，2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-5c5b",
+      "title": "公众号文章归档：AI工具全免费了，为什么你还是赚不到钱（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-cc8b",
+      "title": "🐛 聊天复制按钮 Bug — 已提交 GitHub Issue #254（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-ffa3",
+      "title": "🐛 Minis App Bug：聊天内容复制按钮无响应（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-1ef5",
+      "title": "DeerFlow 归档（2026-08-22 09:13）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-d69b",
+      "title": "新枝（Newledge）评估（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-4c55",
+      "title": "Skill 结构优化（The Agency 范式借鉴，2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-4bcb",
+      "title": "The Agency 归档（2026-08-22 09:00）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-d26f",
+      "title": "MagicMirror² 归档 + 第二大脑对接（2026-08-22 08:45）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-a71b",
+      "title": "第二大脑升级：自动学习+仪表盘+蒸馏优化（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-af7b",
+      "title": "第二大脑审计修复（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-77b4",
+      "title": "第二大脑升级：训练闭环（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-51b5",
+      "title": "第二大脑升级：训练 Agent 封装（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-7518",
+      "title": "第二大脑升级：学习能力补全（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-79f9",
+      "title": "第二大脑升级：交叉验证模块（2026-08-22）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-1a3d",
+      "title": "第二大脑升级：三个自我进化模块（2026-08-21）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    },
+    {
+      "id": "SC-2026-08-22-c744",
+      "title": "OpenViking 三特性借鉴（2026-08-22 19:55）",
+      "type": "concept",
+      "status": "active",
+      "evidence_ok": true
+    }
+  ]
+}

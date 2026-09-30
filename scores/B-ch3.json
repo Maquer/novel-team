@@ -1,0 +1,102 @@
+{
+ "label": "B-ch3",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [],
+  "p2": [
+   "纪律5「反乒乓链」命中1处",
+   "纪律6「冷开场」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1827,
+  "paragraph_count": 49,
+  "total_score": 12,
+  "weighted_score": 12,
+  "tier_1a": 12,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 4.93/千字（人类0.80，AI 2.38）",
+    "text": "全文共9处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "前置话题壳",
+    "text": "声。那黑影在林玄的窗外停了一下，缓缓抬起头。  那是一张戴着血色面具的脸，面具上",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "前置话题壳",
+    "text": "烫。  就在血影的手掌即将按上他后心的刹那——  剑胎\"醒\"了。  没有征兆，一",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category1·AI高频词汇",
+    "desc": "发现1处AI高频词，Top5: 仿佛(×1)",
+    "text": "见详情",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "仿佛",
+      "count": 1,
+      "reason": "过度比喻词",
+      "examples": [
+       "…道血线，不知何时已经断成了两截。  林玄瘫坐在地，大口喘气，掌心的剑胎重归冰凉，仿佛刚才那毁天灭地的一幕，只是一场梦。  远处，传来赵霸连滚爬爬逃跑的哭喊声，还…"
+      ]
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category3·意义膨胀",
+    "desc": "发现1类意义膨胀词",
+    "text": "意味深长",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "意味深长",
+      "count": 1,
+      "reason": "意义膨胀"
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现16处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "月光下，剑胎黑沉沉的，纹路蛰伏不动，",
+     "瓦片被踩动的声音，很轻，很轻，",
+     "他吹熄油灯，屏住呼吸，悄悄摸到窗边，"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demob/chapters/chapter-003.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demob/chapters/chapter-003.md\",\n    \"exists\": true,\n    \"word_count\": 1877,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"pass\",\n    \"message\": \"字数: 1877（门禁口径（全字符））(✓ 达标，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1600字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1599.67,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 11197\n    }\n  }\n]\n"
+ }
+}

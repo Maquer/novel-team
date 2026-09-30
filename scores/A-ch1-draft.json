@@ -1,0 +1,108 @@
+{
+ "label": "A-ch1-draft",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1485,
+  "paragraph_count": 31,
+  "total_score": 12,
+  "weighted_score": 12,
+  "tier_1a": 12,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 2.02/千字（人类0.80，AI 2.38）",
+    "text": "全文共3处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "修饰语(15字)长于被修饰语(2字)",
+    "text": "手。他将它捞出水面，借着月光仔细查看：那是一块黑色的剑胎，只有巴掌大小，形状像是一柄没有开锋的短剑，表面布满",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category1·AI高频词汇",
+    "desc": "发现1处AI高频词，Top5: 仿佛(×1)",
+    "text": "见详情",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "仿佛",
+      "count": 1,
+      "reason": "过度比喻词",
+      "examples": [
+       "…就在这个时候，天空中的云层悄然移开，明亮的月光毫无保留地洒落下来。那块黑色的剑胎仿佛被点燃了一般，表面的纹路骤然亮了起来，青色的光芒沿着纹路不断游走，最终在剑身…"
+      ]
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category3·意义膨胀",
+    "desc": "发现1类意义膨胀词",
+    "text": "意味深长",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "意味深长",
+      "count": 1,
+      "reason": "意义膨胀"
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category6·正式语体入侵",
+    "desc": "发现1类正式语体词",
+    "text": "因而",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "因而",
+      "count": 1,
+      "reason": "正式逻辑连接词"
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现9处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "林玄自言自语道，挽起裤腿，再次走入水中。",
+     "池底的淤泥很厚，一脚踩下去，淤泥没过了脚踝。",
+     "但刚才的那一幕，他看得清清楚楚，绝对不会有错。"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demonovel/chapters/chapter-001.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demonovel/chapters/chapter-001.md\",\n    \"exists\": true,\n    \"word_count\": 1537,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"pass\",\n    \"message\": \"字数: 1537（门禁口径（全字符））(✓ 达标，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1705字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1705.0,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 11935\n    }\n  }\n]\n"
+ }
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "id": "E-运行实证",
+  "model_used": null,
+  "tried": [
+   "z-ai/glm-5.3-flash:{'code': 'internal_error', 'message': 'P",
+   "glm-5.2:{'code': 'internal_error', 'message': \"M",
+   "deepseek/deepseek-v4-flash:{'code': 'internal_error', 'message': 'P"
+  ],
+  "elapsed": 2.6,
+  "parsed": null,
+  "raw": ""
+ },
+ {
+  "id": "S-结构冲突",
+  "model_used": null,
+  "tried": [
+   "glm-5.2:{'code': 'internal_error', 'message': \"M",
+   "z-ai/glm-5.3-flash:{'code': 'internal_error', 'message': 'P",
+   "deepseek/deepseek-v4-flash:{'code': 'internal_error', 'message': 'P"
+  ],
+  "elapsed": 1.8,
+  "parsed": null,
+  "raw": ""
+ },
+ {
+  "id": "L-语言质量",
+  "model_used": null,
+  "tried": [
+   "deepseek/deepseek-v4-flash:{'code': 'internal_error', 'message': 'P",
+   "z-ai/glm-5.3-flash:{'code': 'internal_error', 'message': 'P",
+   "glm-5.2:{'code': 'internal_error', 'message': \"M"
+  ],
+  "elapsed": 1.9,
+  "parsed": null,
+  "raw": ""
+ },
+ {
+  "id": "C-覆盖缺口",
+  "model_used": null,
+  "tried": [
+   "z-ai/glm-5.3-flash:{'code': 'internal_error', 'message': 'P",
+   "glm-5.2:{'code': 'internal_error', 'message': \"M",
+   "deepseek/deepseek-v4-flash:{'code': 'internal_error', 'message': 'P"
+  ],
+  "elapsed": 1.4,
+  "parsed": null,
+  "raw": ""
+ }
+]

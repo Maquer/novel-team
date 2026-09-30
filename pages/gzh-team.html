@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公众号团队 · Minis</title>
+<style>
+  :root { --bg: #1a1a2e; --card: #16213e; --hover: #1f3a5f; --accent: #c2453c; --text: #e0e0e0; --muted: #888; --border: #30363d; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header { padding: 20px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 24px; color: var(--accent); }
+  nav { display: flex; gap: 8px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  nav a { padding: 8px 16px; background: var(--card); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
+  nav a:hover, nav a.active { background: var(--accent); }
+  main { padding: 20px; max-width: 1000px; margin: 0 auto; }
+  .card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .card h2 { font-size: 16px; margin-bottom: 16px; color: var(--accent); }
+  .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .breadcrumb span { cursor: pointer; }
+  .breadcrumb span:hover { color: var(--accent); }
+  .file-list { list-style: none; }
+  .file-item { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid var(--border); cursor: pointer; transition: background 0.2s; }
+  .file-item:hover { background: var(--hover); }
+  .file-item .icon { font-size: 20px; margin-right: 12px; }
+  .file-item .name { flex: 1; font-size: 14px; }
+  .file-item .size { font-size: 12px; color: var(--muted); }
+  .file-item.directory .icon { color: var(--accent); }
+  .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; padding: 20px; }
+  .modal.open { display: flex; align-items: center; justify-content: center; }
+  .modal-content { background: var(--card); border-radius: 12px; max-width: 800px; width: 100%; max-height: 80vh; overflow: auto; padding: 24px; position: relative; }
+  .modal-close { position: absolute; top: 16px; right: 16px; font-size: 24px; cursor: pointer; color: var(--muted); }
+  .modal-close:hover { color: var(--text); }
+  .modal-body pre { white-space: pre-wrap; font-family: monospace; font-size: 12px; line-height: 1.6; color: var(--text); }
+  footer { padding: 20px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
+  .loading { text-align: center; padding: 40px; color: var(--muted); }
+  .stats { display: flex; gap: 24px; margin-bottom: 20px; }
+  .stat { text-align: center; }
+  .stat .value { font-size: 24px; font-weight: 600; color: var(--accent); }
+  .stat .label { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><h1>📰 公众号团队</h1></header>
+<nav>
+  <a href="/index.html">🏠 首页</a>
+  <a href="/search.html">🔍 搜索</a>
+  <a href="/dashboard.html">📊 仪表盘</a>
+  <a href="/daily-logs.html">📝 日报</a>
+  <a href="/gzh-team.html" class="active">📰 公众号</a>
+  <a href="/knowledge-graph.html">📊 知识图谱</a>
+</nav>
+<main>
+  <div class="stats" id="team-stats">
+    <div class="stat"><div class="value" id="total-files">-</div><div class="label">总文件</div></div>
+    <div class="stat"><div class="value" id="total-md">-</div><div class="label">Markdown</div></div>
+    <div class="stat"><div class="value" id="total-html">-</div><div class="label">HTML</div></div>
+  </div>
+
+  <div class="card">
+    <div class="breadcrumb" id="breadcrumb"><span onclick="navigate([])">📁 根目录</span></div>
+    <ul class="file-list" id="file-list"><li class="loading">加载中...</li></ul>
+  </div>
+</main>
+
+<div class="modal" id="file-modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal()">✕</span>
+    <h3 id="modal-title" style="margin-bottom: 16px;"></h3>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<footer>Minis Web Portal · 2026-09-25</footer>
+<script>
+let currentPath = [];
+
+async function loadDir(path) {
+  const list = document.getElementById('file-list');
+  list.innerHTML = '<li class="loading">加载中...</li>';
+  
+  try {
+    const pathStr = path.join('/');
+    const res = await fetch(`/api/gzh-team?path=${encodeURIComponent(pathStr)}`);
+    const data = await res.json();
+    
+    if (data.items) {
+      list.innerHTML = data.items.map(item => `
+        <li class="file-item ${item.is_dir ? 'directory' : ''}" onclick="${item.is_dir ? `navigate([...currentPath, '${item.name}'])` : `openFile('${item.name}', '${pathStr}/${item.name}')`}">
+          <span class="icon">${item.is_dir ? '📁' : item.type === 'document' ? '📄' : '📎'}</span>
+          <span class="name">${item.name}</span>
+          <span class="size">${item.size ? (item.size / 1024).toFixed(1) + ' KB' : ''}</span>
+        </li>
+      `).join('');
+    }
+    
+    // Update breadcrumb
+    const bc = document.getElementById('breadcrumb');
+    bc.innerHTML = '<span onclick="navigate([])">📁 根目录</span>' + 
+      path.map((p, i) => `<span> › ${p}</span>`).join('');
+    
+    currentPath = path;
+  } catch(e) {
+    list.innerHTML = `<li class="loading">加载失败: ${e.message}</li>`;
+  }
+}
+
+async function openFile(name, path) {
+  try {
+    const res = await fetch(`/api/gzh-team?path=${encodeURIComponent(path)}`);
+    const data = await res.json();
+    
+    document.getElementById('modal-title').textContent = name;
+    document.getElementById('modal-body').innerHTML = '<pre>' + 
+      (data.content || '').substring(0, 50000) + '</pre>';
+    document.getElementById('file-modal').classList.add('open');
+  } catch(e) {
+    alert('打开文件失败: ' + e.message);
+  }
+}
+
+function closeModal() {
+  document.getElementById('file-modal').classList.remove('open');
+}
+
+function navigate(path) {
+  loadDir(path);
+}
+
+async function loadStats() {
+  try {
+    const res = await fetch('/api/gzh-team');
+    const data = await res.json();
+    if (data.items) {
+      let mdCount = 0, htmlCount = 0;
+      data.items.forEach(item => {
+        if (item.name.endsWith('.md')) mdCount++;
+        if (item.name.endsWith('.html')) htmlCount++;
+      });
+      document.getElementById('total-md').textContent = mdCount;
+      document.getElementById('total-html').textContent = htmlCount;
+      document.getElementById('total-files').textContent = data.items.length;
+    }
+  } catch(e) {}
+}
+
+loadDir([]);
+loadStats();
+
+// Close modal on outside click
+document.getElementById('file-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
+</body>
+</html>

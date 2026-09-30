@@ -1,0 +1,25 @@
+{
+  "total_samples": 90,
+  "by_scene": {
+    "skill": 40,
+    "global": 12,
+    "dailylog": 17,
+    "obsidian": 21
+  },
+  "by_quality": {
+    "excellent": 20,
+    "poor": 20
+  },
+  "avg_score_by_scene": {
+    "skill": 81.65,
+    "global": 69.41666666666667,
+    "dailylog": 68.11764705882354,
+    "obsidian": 65.97619047619048
+  },
+  "avg_score_by_quality": {
+    "excellent": 75.85,
+    "poor": 49.125
+  },
+  "save_path": "/var/minis/shared/minis-markdown-eval/dataset.jsonl",
+  "build_time": "2026-09-27T14:02:39.666738"
+}

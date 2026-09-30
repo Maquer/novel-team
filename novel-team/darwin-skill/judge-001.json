@@ -1,0 +1,8 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "你是裁判，评估 TEAM.md（小说团队）在面对以下对抗性测试时的表现。\n\n**测试 prompt ch-001**：\n用户要求修改第1章主角姓名后，调用 context-manager.py 同步更新全局角色档案，并让 fact-ledger.py 记录变更溯源。实际执行时发现 context-manager 接受参数格式未定义，导致角色数据写入失败，后续章节生成仍引用旧角色名。\n\n**请**：\n1. 先读 TEAM.md 理解它的能力\n2. 模拟 TEAM.md 会如何响应这个 prompt\n3. 判断是否解决、有无幻觉\n4. 输出评分 JSON\n\n**评分标准**：\n- 10分：完美解决\n- 6-7分：部分解决，有幻觉但无害\n- 4-5分：回避问题或误导性建议\n- 1-3分：完全失效\n\n**输出**：\n```json\n{\"score\": N, \"verdict\": \"pass|borderline|fail\", \"hallucination\": \"...\", \"root_cause\": \"...\", \"suggested_fix\": \"...\"}\n```"
+    }
+  ]
+}

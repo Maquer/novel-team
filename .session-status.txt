@@ -1,0 +1,11 @@
+{
+  "session_id": "28202BD0-434B-4B35-B724-DFB161A6F07A",
+  "turns": 27,
+  "total_tool_calls": 0,
+  "total_errors": 0,
+  "error_rate_percent": 0.0,
+  "tool_calls": {},
+  "tool_errors": {},
+  "top_tools": [],
+  "generated_at": "2026-09-25T20:04:19.267685"
+}

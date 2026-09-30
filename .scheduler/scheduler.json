@@ -1,0 +1,144 @@
+{
+  "tasks": [
+    {
+      "name": "pulse",
+      "label": "训练脉冲",
+      "command": "bash /var/minis/shared/second-brain-pulse.sh",
+      "interval_hours": 12,
+      "description": "轻量训练脉冲，采样关键指标+异常检测",
+      "enabled": false,
+      "last_run": "2026-09-13T23:39:07.486914",
+      "migrated_note": "已迁至 countdown-scheduler.py 2026-09-16"
+    },
+    {
+      "name": "auto-learn",
+      "label": "自动学习",
+      "command": "python3 /var/minis/shared/obsidian-auto-learn.py",
+      "interval_hours": 24,
+      "description": "扫描Obsidian新笔记→摩擦度评分→蒸馏→审核→归档",
+      "enabled": false,
+      "last_run": "2026-09-13T23:39:07.486914",
+      "migrated_note": "已迁至 countdown-scheduler.py 2026-09-16"
+    },
+    {
+      "name": "distill-review",
+      "label": "卡片审核",
+      "command": "python3 /var/minis/shared/obsidian-distill.py --review",
+      "interval_hours": 72,
+      "description": "检查待审核知识卡片",
+      "enabled": false,
+      "last_run": "2026-09-13T23:39:07.486914",
+      "migrated_note": "已迁至 countdown-scheduler.py 2026-09-16"
+    },
+    {
+      "name": "tag-audit",
+      "label": "标签审计",
+      "command": "python3 /var/minis/shared/obsidian-tag.py --suggest",
+      "interval_hours": 168,
+      "description": "扫描缺标签笔记，建议标签",
+      "enabled": false,
+      "last_run": "2026-09-13T23:39:07.486914",
+      "migrated_note": "已迁至 countdown-scheduler.py 2026-09-16"
+    },
+    {
+      "name": "blindspot",
+      "label": "认知盲区",
+      "command": "python3 /var/minis/shared/obsidian-blindspot.py",
+      "interval_hours": 168,
+      "description": "每周扫描认知盲区和浅涉领域",
+      "enabled": false
+    },
+    {
+      "name": "model-watchdog",
+      "label": "模型健康检测",
+      "command": "python3 /var/minis/shared/model-watchdog.py check --quiet",
+      "interval_hours": 6,
+      "description": "已由独立 minis-scheduled 任务(08AE0260)覆盖，此处禁用避免 scheduler check 超时",
+      "enabled": false
+    },
+    {
+      "name": "dreaming",
+      "label": "记忆固化",
+      "command": "python3 /var/minis/shared/obsidian-dreaming.py --report --archive --link --dry-run",
+      "interval_hours": 168,
+      "description": "每周离线记忆整理：标签冗余/近重复/张力/陈旧/孤立/补链接（dry-run 只出报告）",
+      "enabled": false,
+      "last_run": "2026-09-13T23:39:07.486914",
+      "migrated_note": "已迁至 countdown-scheduler.py 2026-09-16"
+    }
+  ],
+  "events": [
+    {
+      "name": "archive-article",
+      "label": "归档新文章",
+      "trigger": "file_create",
+      "path_pattern": "03-Resources/公众号文章/*.md",
+      "command": "python3 /var/minis/shared/obsidian-distill.py --from-file {path}",
+      "description": "新文章归档后自动蒸馏知识卡片",
+      "enabled": false,
+      "migrated_note": "已停用 2026-09-16"
+    },
+    {
+      "name": "archive-tool",
+      "label": "归档新工具",
+      "trigger": "file_create",
+      "path_pattern": "03-Resources/AI工具/*.md",
+      "command": "python3 /var/minis/shared/obsidian-distill.py --from-file {path}",
+      "description": "新工具归档后自动蒸馏知识卡片",
+      "enabled": false,
+      "migrated_note": "已停用 2026-09-16"
+    },
+    {
+      "name": "post-bridge",
+      "label": "桥接后训练",
+      "trigger": "session_start",
+      "path_pattern": null,
+      "command": "bash /var/minis/shared/second-brain-pulse.sh",
+      "description": "每次对话开始时跑一次轻量脉冲",
+      "enabled": false,
+      "migrated_note": "已停用 2026-09-16"
+    }
+  ],
+  "history": [
+    {
+      "task": "pulse",
+      "label": "训练脉冲",
+      "status": "✅",
+      "exit_code": 0,
+      "summary": "🫀 训练脉冲 — 2026-09-13 23:39:07\n\n📊 状态:\n  笔记: 374 | 图谱: 438节点/119链接 | 孤立: 312\n  搜索:   总搜索: 5 次\n  命中率: 0.0%\n  点击率: 0.0%\n  待审核卡片: 1 | 缺标签: 30\n  上次全量训练: 2026-09-13 22:38:46\n\n⚠️ 发现:\n  🏝️ 孤立笔记 +3 (309→312)\n  📝",
+      "ran_at": "2026-09-13T23:39:07.486914"
+    },
+    {
+      "task": "auto-learn",
+      "label": "自动学习",
+      "status": "✅",
+      "exit_code": 0,
+      "summary": "==================================================\n  📚 自动学习管道 — 2026-09-13 23:39\n  🎛️  模式: 手动（仅建议，全部等待人工确认）\n==================================================\n\n  扫描: 374 篇笔记，117 篇新/已修改\n  ⏭️  🧠 Browser",
+      "ran_at": "2026-09-13T23:39:07.486914"
+    },
+    {
+      "task": "distill-review",
+      "label": "卡片审核",
+      "status": "✅",
+      "exit_code": 0,
+      "summary": "✅ 无待审核知识卡片",
+      "ran_at": "2026-09-13T23:39:07.486914"
+    },
+    {
+      "task": "tag-audit",
+      "label": "标签审计",
+      "status": "⚠️",
+      "exit_code": 2,
+      "summary": "",
+      "ran_at": "2026-09-13T23:39:07.486914"
+    },
+    {
+      "task": "dreaming",
+      "label": "记忆固化",
+      "status": "✅",
+      "exit_code": 0,
+      "summary": "🌙 记忆 Dreaming 报告 — 2026-09-13T23:39:35\n   总卡片: 88\n   状态: {'approved': 30, 'committed': 58}\n   类型: {'memory': 86, 'tool': 1, 'framework': 1}\n   范围: {'local': 68, 'global': 4, '(none)': 16}\n   有证据: 28/8",
+      "ran_at": "2026-09-13T23:39:07.486914"
+    }
+  ]
+}

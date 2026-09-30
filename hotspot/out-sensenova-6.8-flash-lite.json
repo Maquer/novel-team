@@ -1,0 +1,9 @@
+{
+  "content" : "\n\n[{\"id\":28,\"verdict\":\"YES\",\"match\":5,\"angle\":\"从AI创作者视角探讨模型能力跃升与人类自我认知的关系，结合内容创作实践谈AI与人的互补\",\"risk\":\"low\"},{\"id\":1,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":4,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":18,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":17,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":12,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"},{\"id\":27,\"verdict\":\"NO\",\"match\":1,\"angle\":\"\",\"risk\":\"low\"}]",
+  "model_id" : "sensenova-6.8-flash-lite",
+  "timestamp" : "2026-09-17T17:15:11Z",
+  "usage" : {
+    "input_tokens" : 401,
+    "output_tokens" : 693
+  }
+}

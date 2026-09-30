@@ -1,0 +1,15 @@
+{
+  "char_id": "char-008",
+  "name": "裴长青",
+  "role": "阵枢殿长老",
+  "realm": "元婴",
+  "rank": "长老",
+  "appearance": "阵纹袖，独眼",
+  "personality": [
+    "孤傲",
+    "只认证据"
+  ],
+  "goal": "寻万象传承，补阵枢殿残缺",
+  "relation_to_protag": "中后期真正师承",
+  "arc": "拒→验→收→授"
+}

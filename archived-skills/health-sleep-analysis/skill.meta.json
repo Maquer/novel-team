@@ -1,0 +1,8 @@
+{
+  "name": "health-sleep-analysis",
+  "version": "1.0.0",
+  "author": "user",
+  "description": "Apple HealthKit 睡眠+血氧+心率分析，自动生成中文 Markdown 报告和 matplotlib 图表",
+  "status": "published",
+  "tags": ["health", "sleep", "heart-rate", "healthkit"]
+}

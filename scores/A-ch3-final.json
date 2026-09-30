@@ -1,0 +1,63 @@
+{
+ "label": "A-ch3-final",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1505,
+  "paragraph_count": 45,
+  "total_score": 9,
+  "weighted_score": 9,
+  "tier_1a": 9,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 2.66/千字（人类0.80，AI 2.38）",
+    "text": "全文共4处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "修饰语(18字)长于被修饰语(2字)",
+    "text": "——\"  笑声未歇，幻象中那道天裂里猛地探出一只遮天蔽日的大手，朝血影当头抓下。  \"不——\"惨叫戛然而止。  黑",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现16处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "月光下，剑胎黑沉沉的，纹路蛰伏不动，",
+     "传来一声极轻的响，像瓦片被踩动，轻到像是错觉。",
+     "林玄浑身汗毛倒竖，吹熄油灯，屏住呼吸摸到窗边，"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demofinal/chapters/chapter-003.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demofinal/chapters/chapter-003.md\",\n    \"exists\": true,\n    \"word_count\": 1555,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"pass\",\n    \"message\": \"字数: 1555（门禁口径（全字符））(✓ 达标，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1335字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1335.33,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 9347\n    }\n  }\n]\n"
+ }
+}

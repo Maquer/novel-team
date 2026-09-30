@@ -1,0 +1,175 @@
+{"timestamp": "2026-08-26T05:27:56.985917+00:00", "model": "anthropic/claude-sonnet-4-6", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:56.992587+00:00", "model": "deepseek-v4", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:56.995841+00:00", "model": "deepseek-v4-flash", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:56.998514+00:00", "model": "deepseek/deepseek-v4", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.001157+00:00", "model": "google/gemini-2.5-pro", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.003782+00:00", "model": "gpt-4o-mini", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.006480+00:00", "model": "gpt-5.5", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.009156+00:00", "model": "qwen-3-max", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.011753+00:00", "model": "sensenova-6.7", "provider": "sensenova", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:27:57.013882+00:00", "model": "sensenova-6.7-flash-lite", "provider": "sensenova", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:27:57.015761+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:30:24.165791+00:00", "model": "anthropic/claude-sonnet-4-6", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-08-26T05:30:24.172084+00:00", "model": "deepseek-v4", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:30:24.175516+00:00", "model": "deepseek/deepseek-v4", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-08-26T05:30:24.178232+00:00", "model": "deepseek/deepseek-v4-flash", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:30:24.180841+00:00", "model": "google/gemini-2.5-pro", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-08-26T05:30:24.183481+00:00", "model": "gpt-4o-mini", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "not_enabled"}
+{"timestamp": "2026-08-26T05:30:24.186125+00:00", "model": "gpt-5.5", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:30:24.188761+00:00", "model": "qwen-3-max", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:30:24.191291+00:00", "model": "sensenova-6.7", "provider": "sensenova", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-08-26T05:30:24.193051+00:00", "model": "sensenova-6.7-flash-lite", "provider": "sensenova", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:30:24.194906+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:51:17.641660+00:00", "model": "anthropic/claude-sonnet-4-6", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-08-26T05:51:17.648044+00:00", "model": "deepseek-v4", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:51:17.651215+00:00", "model": "deepseek/deepseek-v4", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-08-26T05:51:17.653821+00:00", "model": "deepseek/deepseek-v4-flash", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:51:17.656441+00:00", "model": "google/gemini-2.5-pro", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-08-26T05:51:17.659020+00:00", "model": "gpt-4o", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "not_enabled"}
+{"timestamp": "2026-08-26T05:51:17.661831+00:00", "model": "gpt-4o-mini", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "not_enabled"}
+{"timestamp": "2026-08-26T05:51:17.664744+00:00", "model": "gpt-5.5", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:51:17.666714+00:00", "model": "gpt-image-1", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-08-26T05:51:17.668527+00:00", "model": "qwen-3-max", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T05:51:17.670334+00:00", "model": "sensenova-6.7", "provider": "sensenova", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-08-26T05:51:17.672163+00:00", "model": "sensenova-6.7-flash-lite", "provider": "sensenova", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:51:17.674209+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-08-26T05:56:39.294024+00:00", "model": "gpt-4o", "provider": "OpenAI", "change_type": "recovered", "old_status": "not_enabled", "new_status": "error"}
+{"timestamp": "2026-08-26T05:56:39.298826+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "recovered", "old_status": "error", "new_status": "ok"}
+{"timestamp": "2026-08-26T05:57:30.736007+00:00", "model": "deepseek/deepseek-v4", "provider": "OpenRouter", "change_type": "recovered", "old_status": "not_found", "new_status": "error"}
+{"timestamp": "2026-08-26T05:57:30.742189+00:00", "model": "gpt-4o", "provider": "OpenAI", "change_type": "degraded", "old_status": "error", "new_status": "not_enabled"}
+{"timestamp": "2026-08-26T05:57:30.745540+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "degraded", "old_status": "ok", "new_status": "error"}
+{"timestamp": "2026-08-26T06:46:14.382256+00:00", "model": "deepseek/deepseek-v4", "provider": "OpenRouter", "change_type": "degraded", "old_status": "error", "new_status": "not_found"}
+{"timestamp": "2026-08-26T06:46:14.388562+00:00", "model": "google/gemini-2.5-pro", "provider": "OpenRouter", "change_type": "recovered", "old_status": "invalid_key", "new_status": "rate_limited"}
+{"timestamp": "2026-08-26T06:46:14.392127+00:00", "model": "x-preview-f-free", "provider": "OpenCode-Free", "change_type": "recovered", "old_status": "error", "new_status": "ok"}
+{"timestamp": "2026-08-28T11:27:09.257099+00:00", "model": "anthropic/claude-sonnet-4-6", "provider": "?", "change_type": "recovered", "old_status": "invalid_key", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.259968+00:00", "model": "deepseek-v4", "provider": "?", "change_type": "recovered", "old_status": "rate_limited", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.262081+00:00", "model": "deepseek/deepseek-v4", "provider": "?", "change_type": "recovered", "old_status": "not_found", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.263905+00:00", "model": "deepseek/deepseek-v4-flash", "provider": "?", "change_type": "degraded", "old_status": "ok", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.265590+00:00", "model": "google/gemini-2.5-pro", "provider": "?", "change_type": "recovered", "old_status": "rate_limited", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.267393+00:00", "model": "gpt-4o", "provider": "?", "change_type": "recovered", "old_status": "not_enabled", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.269212+00:00", "model": "gpt-4o-mini", "provider": "?", "change_type": "recovered", "old_status": "not_enabled", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.270953+00:00", "model": "gpt-5.5", "provider": "?", "change_type": "recovered", "old_status": "rate_limited", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.272709+00:00", "model": "gpt-image-1", "provider": "?", "change_type": "recovered", "old_status": "invalid_key", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.274359+00:00", "model": "qwen-3-max", "provider": "?", "change_type": "recovered", "old_status": "rate_limited", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.276024+00:00", "model": "sensenova-6.7", "provider": "?", "change_type": "recovered", "old_status": "not_found", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.277656+00:00", "model": "sensenova-6.7-flash-lite", "provider": "?", "change_type": "degraded", "old_status": "ok", "new_status": "unknown"}
+{"timestamp": "2026-08-28T11:27:09.279290+00:00", "model": "x-preview-f-free", "provider": "?", "change_type": "degraded", "old_status": "ok", "new_status": "unknown"}
+{"timestamp": "2026-09-13T14:27:28.230251+00:00", "model": "Agents-A1", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.233806+00:00", "model": "Devstral-2-123B-Instruct-2512-int4-AutoRound", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.235377+00:00", "model": "Qwen3-Coder-Next-FP8", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.236634+00:00", "model": "Qwen3.6-35B-A3B-FP8", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.237868+00:00", "model": "Qwen3.8-27B-FP8", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.239147+00:00", "model": "agnes-2.0-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.240435+00:00", "model": "agnes-2.5-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.241665+00:00", "model": "agnes-2.5-pro", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.242918+00:00", "model": "agnes-2.5-pro-alpha", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.244155+00:00", "model": "agnes-2.5-pro-beta", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.245407+00:00", "model": "agnes-image-2.0-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-09-13T14:27:28.246654+00:00", "model": "agnes-image-2.1-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-09-13T14:27:28.247954+00:00", "model": "agnes-image-2.5-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-09-13T14:27:28.249200+00:00", "model": "agnes-video-2.5", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-09-13T14:27:28.250444+00:00", "model": "agnes-video-2.5-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "not_logged_in"}
+{"timestamp": "2026-09-13T14:27:28.251683+00:00", "model": "agnes-video-v2.0", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "unknown", "new_status": "error"}
+{"timestamp": "2026-09-13T14:27:28.252919+00:00", "model": "big-pickle", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.254161+00:00", "model": "claude-fable-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.255397+00:00", "model": "claude-fable-5-1", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.256615+00:00", "model": "claude-haiku-4-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.257877+00:00", "model": "claude-opus-4-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.259111+00:00", "model": "claude-opus-4-6", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.260342+00:00", "model": "claude-opus-4-7", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.261586+00:00", "model": "claude-opus-4-8", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.262829+00:00", "model": "claude-opus-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.264058+00:00", "model": "claude-sonnet-4", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.265293+00:00", "model": "claude-sonnet-4-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.266534+00:00", "model": "claude-sonnet-4-6", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.267768+00:00", "model": "claude-sonnet-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.268991+00:00", "model": "cohere-north-mini-code", "provider": "OpenAI", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.270202+00:00", "model": "cohere/north-mini-code:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.271425+00:00", "model": "deepseek-v4-flash", "provider": "OpenCode", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.272659+00:00", "model": "deepseek-v4-flash-0731", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.273905+00:00", "model": "deepseek-v4-flash-free", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.275134+00:00", "model": "deepseek-v4-flash-vision-exp", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.276422+00:00", "model": "deepseek-v4-pro", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.277653+00:00", "model": "deepseek/deepseek-v4-flash", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.278875+00:00", "model": "dots-studio/dots-3-note-preview:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.280101+00:00", "model": "dots3-note-prev", "provider": "Dots", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.281326+00:00", "model": "gemma-4-31B-it-fp8", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.282558+00:00", "model": "glm-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.283781+00:00", "model": "glm-5.1", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.284999+00:00", "model": "glm-5.2", "provider": "OpenCode", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.286219+00:00", "model": "glm-5.3", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.287444+00:00", "model": "glm-5.3-flash", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.288665+00:00", "model": "gpt-5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.289888+00:00", "model": "gpt-5-codex", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.291117+00:00", "model": "gpt-5-nano", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.292339+00:00", "model": "gpt-5.1", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.293570+00:00", "model": "gpt-5.1-codex", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.294809+00:00", "model": "gpt-5.1-codex-max", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.296044+00:00", "model": "gpt-5.1-codex-mini", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.297262+00:00", "model": "gpt-5.2", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.298489+00:00", "model": "gpt-5.2-codex", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.299716+00:00", "model": "gpt-5.3-codex", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.300925+00:00", "model": "gpt-5.3-codex-spark", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.302121+00:00", "model": "gpt-5.4", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.303382+00:00", "model": "gpt-5.4-mini", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.304622+00:00", "model": "gpt-5.4-nano", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.305849+00:00", "model": "gpt-5.4-pro", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.307076+00:00", "model": "gpt-5.5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.308301+00:00", "model": "gpt-5.5-pro", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.309536+00:00", "model": "gpt-5.6-luna", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.310757+00:00", "model": "gpt-5.6-sol", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.311990+00:00", "model": "gpt-5.6-terra", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.313208+00:00", "model": "gpt-6-astra", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.314434+00:00", "model": "gpt-oss-20b", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.315670+00:00", "model": "grok-4.3", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.316949+00:00", "model": "grok-4.5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.318152+00:00", "model": "grok-4.6", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.319353+00:00", "model": "grok-build-0.1", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.320549+00:00", "model": "inclusionai/ling-3.0-flash-fin:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.321748+00:00", "model": "inclusionai/ling-3.0-flash-sante:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.322970+00:00", "model": "kimi-k2.5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.324197+00:00", "model": "kimi-k2.6", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.325418+00:00", "model": "kimi-k2.7-code", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.326653+00:00", "model": "kimi-k3", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.327882+00:00", "model": "laguna-s-2.1", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.329113+00:00", "model": "ling-3.0-flash", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.330332+00:00", "model": "ling-3.0-flash-fin-free", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.331597+00:00", "model": "liquid/lfm-2.5-2.6b:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.332941+00:00", "model": "mimo-v2.5", "provider": "OpenAI", "change_type": "degraded", "old_status": "unknown", "new_status": "timeout"}
+{"timestamp": "2026-09-13T14:27:28.334145+00:00", "model": "minimax-m2.5", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.335358+00:00", "model": "minimax-m2.7", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.336590+00:00", "model": "minimax-m3", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.337830+00:00", "model": "minimax/minimax-m2.7:free", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-09-13T14:27:28.339057+00:00", "model": "minimax/minimax-m3:free", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "not_found"}
+{"timestamp": "2026-09-13T14:27:28.340275+00:00", "model": "nemotron-3-ultra-free", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.341498+00:00", "model": "nemotron-3.5-lightning-free", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.342727+00:00", "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.343960+00:00", "model": "nvidia/nemotron-3-super-120b-a12b:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.345191+00:00", "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.346423+00:00", "model": "nvidia/nemotron-3.5-content-safety:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.347656+00:00", "model": "nvidia/nemotron-3.5-lightning:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.348892+00:00", "model": "poolside/laguna-xs-2.1:free", "provider": "OpenRouter", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.350123+00:00", "model": "qwen/qwen3.8-max-0902", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.351358+00:00", "model": "qwen3.5-plus", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.352584+00:00", "model": "qwen3.6-plus", "provider": "OpenCode", "change_type": "degraded", "old_status": "unknown", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:27:28.353812+00:00", "model": "qwen38-flash-next", "provider": "OpenAI 2", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-13T14:27:28.355034+00:00", "model": "sensenova-6.8-flash-lite", "provider": "sensenova", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:27:28.356275+00:00", "model": "z-ai/glm-5.3-flash", "provider": "OpenRouter", "change_type": "recovered", "old_status": "unknown", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:55:25.405775+00:00", "model": "agnes-2.0-flash", "provider": "OpenAI 5", "change_type": "recovered", "old_status": "timeout", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:55:25.409337+00:00", "model": "agnes-2.5-flash", "provider": "OpenAI 5", "change_type": "recovered", "old_status": "timeout", "new_status": "ok"}
+{"timestamp": "2026-09-13T14:55:25.412479+00:00", "model": "agnes-2.5-pro-alpha", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "rate_limited", "new_status": "invalid_key"}
+{"timestamp": "2026-09-13T14:55:25.414295+00:00", "model": "agnes-video-2.5-flash", "provider": "OpenAI 5", "change_type": "recovered", "old_status": "not_logged_in", "new_status": "error"}
+{"timestamp": "2026-09-13T14:55:25.416274+00:00", "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "provider": "OpenRouter", "change_type": "degraded", "old_status": "ok", "new_status": "error"}
+{"timestamp": "2026-09-23T00:44:11.943456+00:00", "model": "agnes-image-2.5-flash", "provider": "OpenAI 5", "change_type": "degraded", "old_status": "error", "new_status": "not_found"}
+{"timestamp": "2026-09-23T00:44:11.947486+00:00", "model": "claude-opus-4-5", "provider": "OpenCode", "change_type": "recovered", "old_status": "invalid_key", "new_status": "timeout"}
+{"timestamp": "2026-09-23T00:44:11.949838+00:00", "model": "cohere-north-mini-code", "provider": "OpenAI", "change_type": "degraded", "old_status": "ok", "new_status": "rate_limited"}
+{"timestamp": "2026-09-23T00:44:11.951839+00:00", "model": "deepseek-v4-flash", "provider": "sensenova", "change_type": "degraded", "old_status": "ok", "new_status": "invalid_key"}
+{"timestamp": "2026-09-23T00:44:11.953639+00:00", "model": "glm-5.2", "provider": "sensenova", "change_type": "degraded", "old_status": "ok", "new_status": "invalid_key"}
+{"timestamp": "2026-09-23T00:44:11.955316+00:00", "model": "laguna-s-2.1", "provider": "OpenAI", "change_type": "recovered", "old_status": "timeout", "new_status": "rate_limited"}
+{"timestamp": "2026-09-23T00:44:11.956875+00:00", "model": "minimax/minimax-m2.7:free", "provider": "?", "change_type": "recovered", "old_status": "not_found", "new_status": "unknown"}
+{"timestamp": "2026-09-23T00:44:11.958437+00:00", "model": "minimax/minimax-m3:free", "provider": "?", "change_type": "recovered", "old_status": "not_found", "new_status": "unknown"}
+{"timestamp": "2026-09-23T00:44:11.959966+00:00", "model": "nvidia/nemotron-3-ultra-550b-a55b:free", "provider": "OpenRouter", "change_type": "recovered", "old_status": "error", "new_status": "ok"}
+{"timestamp": "2026-09-23T00:44:11.961550+00:00", "model": "nvidia/nemotron-3.5-content-safety:free", "provider": "OpenRouter", "change_type": "degraded", "old_status": "ok", "new_status": "timeout"}
+{"timestamp": "2026-09-23T00:44:11.963104+00:00", "model": "sensenova-6.8-flash-lite", "provider": "sensenova", "change_type": "degraded", "old_status": "ok", "new_status": "rate_limited"}
+{"timestamp": "2026-09-23T00:44:11.964644+00:00", "model": "sensenova-u1-fast", "provider": "sensenova", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}
+{"timestamp": "2026-09-23T00:44:11.966220+00:00", "model": "sensenova-u1.5-lite", "provider": "sensenova", "change_type": "degraded", "old_status": "unknown", "new_status": "rate_limited"}

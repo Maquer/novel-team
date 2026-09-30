@@ -1,0 +1,93 @@
+{
+ "label": "B-ch1",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [
+   "字数过短：1317 < 软下限 1500（信息密度不足）"
+  ],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1317,
+  "paragraph_count": 32,
+  "total_score": 12,
+  "weighted_score": 12,
+  "tier_1a": 12,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 3.80/千字（人类0.80，AI 2.38）",
+    "text": "全文共5处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "修饰语(16字)长于被修饰语(3字)",
+    "text": "的苍玄界有关？\"  剑心宗的藏经阁里有残卷记载：如今的苍玄界，在数万年前曾是一个远比现在辽阔的大世界，后来不知因",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "修饰语(15字)长于被修饰语(3字)",
+    "text": "记载：如今的苍玄界，在数万年前曾是一个远比现在辽阔的大世界，后来不知因何破碎，只剩下这一界。残卷语焉不详，师兄",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "lieflat·规则10·翻译腔",
+    "desc": "\"当…时\"前置时间从句",
+    "text": "转动身体。当剑尖指向后山方向时，那股热意骤然强烈起来，烫得他掌心发红。 ",
+    "score": 1,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category3·意义膨胀",
+    "desc": "发现1类意义膨胀词",
+    "text": "意味深长",
+    "score": 1,
+    "details": [
+     {
+      "phrase": "意味深长",
+      "count": 1,
+      "reason": "意义膨胀"
+     }
+    ],
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现12处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "宗处置废剑的地方，外门弟子轮值清理，他这个月轮到夜班。",
+     "池水冰凉，混着铁锈味，月光照下来，",
+     "是一块黑色的剑胎，约莫巴掌长短，形如未开锋的短剑，"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demob/chapters/chapter-001.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demob/chapters/chapter-001.md\",\n    \"exists\": true,\n    \"word_count\": 1369,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"pass\",\n    \"message\": \"字数: 1369（门禁口径（全字符））(✓ 达标，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1600字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1599.67,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 11197\n    }\n  }\n]\n"
+ }
+}

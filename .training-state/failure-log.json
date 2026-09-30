@@ -1,0 +1,352 @@
+[
+  {
+    "ts": "2026-08-22T12:13:41.284326",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "auto-learn 状态问题 (2 条): 统计不一致: approved(281) + skipped(399) != total(0); 异常: total=0 但 skipped=399",
+    "detail": "",
+    "step": "auto_learn_state",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.424327"
+  },
+  {
+    "ts": "2026-08-22T12:13:41.288437",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (644 条): 任务看板 主张过短: '🟡 待办'; 任务看板 主张过短: '规则：'; Obsidian 个人操作系统 — 自我优化蒸馏报告 主张过短: '可选增强'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711075"
+  },
+  {
+    "ts": "2026-08-22T12:13:41.291386",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (38 条): 重复标题: '🏗️ PARA体系四阶进化 — 框架'; 重复标题: '🔧 🏗️ 第二大脑的核心主张：每次对话都是一次训练 — 框架 — 工具'; 重复标题: '🧠 🧠 Obsidian 第二大脑的核心思路：用 — 概念 — 概念'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449514"
+  },
+  {
+    "ts": "2026-08-22T12:15:43.949339",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "auto-learn 状态问题 (2 条): 统计不一致: approved(281) + skipped(399) != total(0); 异常: total=0 但 skipped=399",
+    "detail": "",
+    "step": "auto_learn_state",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.424426"
+  },
+  {
+    "ts": "2026-08-22T12:15:43.954688",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (644 条): 任务看板 主张过短: '🟡 待办'; 任务看板 主张过短: '规则：'; Obsidian 个人操作系统 — 自我优化蒸馏报告 主张过短: '可选增强'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711245"
+  },
+  {
+    "ts": "2026-08-22T12:15:43.958603",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (38 条): 重复标题: '🏗️ PARA体系四阶进化 — 框架'; 重复标题: '🔧 🏗️ 第二大脑的核心主张：每次对话都是一次训练 — 框架 — 工具'; 重复标题: '🧠 🧠 Obsidian 第二大脑的核心思路：用 — 概念 — 概念'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449593"
+  },
+  {
+    "ts": "2026-08-22T12:15:54.908714",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "auto-learn 状态问题 (2 条): 统计不一致: approved(281) + skipped(399) != total(0); 异常: total=0 但 skipped=399",
+    "detail": "",
+    "step": "auto_learn_state",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.424492"
+  },
+  {
+    "ts": "2026-08-22T12:15:54.914286",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (644 条): 任务看板 主张过短: '🟡 待办'; 任务看板 主张过短: '规则：'; Obsidian 个人操作系统 — 自我优化蒸馏报告 主张过短: '可选增强'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711314"
+  },
+  {
+    "ts": "2026-08-22T12:15:54.918794",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (38 条): 重复标题: '🏗️ PARA体系四阶进化 — 框架'; 重复标题: '🔧 🏗️ 第二大脑的核心主张：每次对话都是一次训练 — 框架 — 工具'; 重复标题: '🧠 🧠 Obsidian 第二大脑的核心思路：用 — 概念 — 概念'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449658"
+  },
+  {
+    "ts": "2026-08-22T12:16:11.549048",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "auto-learn 状态问题 (2 条): 统计不一致: approved(281) + skipped(399) != total(0); 异常: total=0 但 skipped=399",
+    "detail": "",
+    "step": "auto_learn_state",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.424555"
+  },
+  {
+    "ts": "2026-08-22T12:16:11.555103",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (644 条): 任务看板 主张过短: '🟡 待办'; 任务看板 主张过短: '规则：'; Obsidian 个人操作系统 — 自我优化蒸馏报告 主张过短: '可选增强'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711375"
+  },
+  {
+    "ts": "2026-08-22T12:16:11.560373",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (38 条): 重复标题: '🏗️ PARA体系四阶进化 — 框架'; 重复标题: '🔧 🏗️ 第二大脑的核心主张：每次对话都是一次训练 — 框架 — 工具'; 重复标题: '🧠 🧠 Obsidian 第二大脑的核心思路：用 — 概念 — 概念'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449721"
+  },
+  {
+    "ts": "2026-08-22T12:20:39.741679",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "auto-learn 状态问题 (2 条): 统计不一致: approved(281) + skipped(399) != total(0); 异常: total=0 但 skipped=399",
+    "detail": "",
+    "step": "auto_learn_state",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.424617"
+  },
+  {
+    "ts": "2026-08-22T12:20:39.749823",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (644 条): 任务看板 主张过短: '🟡 待办'; 任务看板 主张过短: '规则：'; Obsidian 个人操作系统 — 自我优化蒸馏报告 主张过短: '可选增强'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711439"
+  },
+  {
+    "ts": "2026-08-22T12:20:39.756272",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (38 条): 重复标题: '🏗️ PARA体系四阶进化 — 框架'; 重复标题: '🔧 🏗️ 第二大脑的核心主张：每次对话都是一次训练 — 框架 — 工具'; 重复标题: '🧠 🧠 Obsidian 第二大脑的核心思路：用 — 概念 — 概念'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449781"
+  },
+  {
+    "ts": "2026-08-24T10:35:56.274898",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (14 条): 重复主张: '归档 Cactus Compute 的 Needle 2（cactus-compute/needle）到 `03-Resources/AI工具/Needle 微型端侧工具调用模型 cactus-com' (also in Needle 归档（2026-08-22 18:10）); 重复主张: '45M 参数 / 14MB 二进制 / 28MB RAM / 2-bit 量化' (also in Needle 归档（2026-08-22 18:10）); 重复主张: '架构：Simple Attention Network（Hadamard MLP + GQA + Engram KV + 多车道超连接）' (also in Needle 归档（2026-08-22 18:10）)",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711499"
+  },
+  {
+    "ts": "2026-08-24T10:35:56.284338",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "标题含危险字符 (12 条): 女娲蒸馏技能集成（2026-08-22 19:35）; 第二大脑 MCP 接口落地（2026-08-22 18:55）; 知识库装上大脑——三个 Skill 让知识库活起来（2026-08-22 19:01）",
+    "detail": "",
+    "step": "file_path_safety",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.438135"
+  },
+  {
+    "ts": "2026-08-24T10:35:56.292665",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "图谱一致性问题 (1 条): 重复标题: 'Needle 归档（2026-08-22 18:10）'",
+    "detail": "",
+    "step": "graph_consistency",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.449843"
+  },
+  {
+    "ts": "2026-08-24T10:35:56.301133",
+    "type": "schema",
+    "type_label": "Schema 校验失败",
+    "reason": "Schema 校验失败 (29 条): 卡片[0] 未知状态: committed; 卡片[1] 未知状态: committed; 卡片[2] 未知状态: committed",
+    "detail": "",
+    "step": "store_schema",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.463869"
+  },
+  {
+    "ts": "2026-09-06T20:49:46.437170",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711559"
+  },
+  {
+    "ts": "2026-09-06T20:49:46.447671",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "标题含危险字符 (8 条): Karpathy CLAUDE.md Skill 创建（2026-08-24 21:00）; references 缺失修复 + skill-eval-gate 12/12 PASS（2026-08-24）; OpenOPC 三件套借鉴落地（2026-08-24 20:25）",
+    "detail": "",
+    "step": "file_path_safety",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.438211"
+  },
+  {
+    "ts": "2026-09-06T20:49:46.457181",
+    "type": "schema",
+    "type_label": "Schema 校验失败",
+    "reason": "Schema 校验失败 (42 条): 卡片[30] 未知状态: committed; 卡片[31] 未知状态: committed; 卡片[32] 未知状态: committed",
+    "detail": "",
+    "step": "store_schema",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.463947"
+  },
+  {
+    "ts": "2026-09-13T21:15:10.409591",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711620"
+  },
+  {
+    "ts": "2026-09-13T21:15:10.421348",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "标题含危险字符 (8 条): Karpathy CLAUDE.md Skill 创建（2026-08-24 21:00）; references 缺失修复 + skill-eval-gate 12/12 PASS（2026-08-24）; OpenOPC 三件套借鉴落地（2026-08-24 20:25）",
+    "detail": "",
+    "step": "file_path_safety",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.438272"
+  },
+  {
+    "ts": "2026-09-13T21:15:10.431887",
+    "type": "schema",
+    "type_label": "Schema 校验失败",
+    "reason": "Schema 校验失败 (42 条): 卡片[30] 未知状态: committed; 卡片[31] 未知状态: committed; 卡片[32] 未知状态: committed",
+    "detail": "",
+    "step": "store_schema",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.464010"
+  },
+  {
+    "ts": "2026-09-13T21:28:46.348862",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711681"
+  },
+  {
+    "ts": "2026-09-13T21:28:46.359929",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "标题含危险字符 (8 条): Karpathy CLAUDE.md Skill 创建（2026-08-24 21:00）; references 缺失修复 + skill-eval-gate 12/12 PASS（2026-08-24）; OpenOPC 三件套借鉴落地（2026-08-24 20:25）",
+    "detail": "",
+    "step": "file_path_safety",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.438335"
+  },
+  {
+    "ts": "2026-09-13T21:28:46.369814",
+    "type": "schema",
+    "type_label": "Schema 校验失败",
+    "reason": "Schema 校验失败 (42 条): 卡片[30] 未知状态: committed; 卡片[31] 未知状态: committed; 卡片[32] 未知状态: committed",
+    "detail": "",
+    "step": "store_schema",
+    "resolved": true,
+    "resolved_at": "2026-09-13T23:03:12.464073"
+  },
+  {
+    "ts": "2026-09-13T21:29:12.782899",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711742"
+  },
+  {
+    "ts": "2026-09-13T21:32:54.334259",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711801"
+  },
+  {
+    "ts": "2026-09-13T23:03:12.411482",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (20 条): Palmier Pro 归档（2026-08-24） 主张过短: '核心功能'; Palmier Pro 归档（2026-08-24） 主张过短: '开源分层'; AgentBro 归档（2026-08-24） 主张过短: '核心功能'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711859"
+  },
+  {
+    "ts": "2026-09-13T23:06:13.421246",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (45 条): 第二大脑 MCP 接口落地（2026-08-22 18-55） 主张过短: '4 个 Tools：'; Skill 三件套 v2 审计修复（2026-08-22 18-35） 主张过短: '成熟度估算不诚实'; Agent Skills 自演化三件套落地（2026-08-22 18-15） 主张过短: '8 阶段 Loop'",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711916"
+  },
+  {
+    "ts": "2026-09-13T23:20:56.629075",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (6 条): SOUL.md 多模型审计关键发现（20 超长无终止符: '发现21个问题（Major 9 / Minor 10 / Info 2）：\n\n结...'; 重复主张: '核心功能' (also in Palmier Pro 归档（2026-08-24）); 重复主张: 'deepseek-v4-flash' (also in 多模型全量审计（2026-08-24）)",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.711970"
+  },
+  {
+    "ts": "2026-09-19T21:31:40.139298",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (6 条): SOUL.md 多模型审计关键发现（20 超长无终止符: '发现21个问题（Major 9 / Minor 10 / Info 2）：\n\n结...'; 重复主张: '核心功能' (also in Palmier Pro 归档（2026-08-24）); 重复主张: 'deepseek-v4-flash' (also in 多模型全量审计（2026-08-24）)",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.712024"
+  },
+  {
+    "ts": "2026-09-19T21:59:10.575332",
+    "type": "state",
+    "type_label": "状态一致性失败",
+    "reason": "主张完整性问题 (7 条): SOUL.md 多模型审计关键发现（20 超长无终止符: '发现21个问题（Major 9 / Minor 10 / Info 2）：\n\n结...'; 重复主张: '核心功能' (also in Palmier Pro 归档（2026-08-24）); 重复主张: 'deepseek-v4-flash' (also in 多模型全量审计（2026-08-24）)",
+    "detail": "",
+    "step": "claim_integrity",
+    "resolved": true,
+    "resolved_at": "2026-09-19T22:00:33.712078"
+  }
+]

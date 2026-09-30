@@ -1,0 +1,31 @@
+{
+  "provider": "Radeon Cloud",
+  "tested_at": "2026-09-23 11:13",
+  "models": {
+    "DeepSeek-V4-Flash": {
+      "status": "OK",
+      "tokens": 10,
+      "cost": 1.82e-06
+    },
+    "MiMo-V2.6-Flash": {
+      "status": "OK",
+      "tokens": 25,
+      "cost": 4.592e-06
+    },
+    "MiniCPM5-2B": {
+      "status": "OK",
+      "tokens": 48,
+      "cost": 2.6981000000000005e-05
+    },
+    "Qwen3.8-27B": {
+      "status": "OK",
+      "tokens": 81,
+      "cost": 0.0001715
+    },
+    "Qwen3.8-Flash-Next": {
+      "status": "OK",
+      "tokens": 80,
+      "cost": 2.9869999999999997e-05
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日报 · Minis</title>
+<style>
+  :root { --bg: #1a1a2e; --card: #16213e; --hover: #1f3a5f; --accent: #c2453c; --text: #e0e0e0; --muted: #888; --border: #30363d; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header { padding: 20px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 24px; color: var(--accent); }
+  nav { display: flex; gap: 8px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  nav a { padding: 8px 16px; background: var(--card); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
+  nav a:hover, nav a.active { background: var(--accent); }
+  main { padding: 20px; max-width: 900px; margin: 0 auto; }
+  .card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .card h2 { font-size: 16px; margin-bottom: 16px; color: var(--accent); }
+  .entry { padding: 16px; border-bottom: 1px solid var(--border); }
+  .entry:last-child { border-bottom: none; }
+  .entry-date { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .entry-title { font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+  .entry-preview { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .entry-meta { margin-top: 12px; display: flex; gap: 12px; font-size: 11px; }
+  .entry-meta span { padding: 2px 8px; background: var(--border); border-radius: 4px; }
+  footer { padding: 20px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
+  .loading { text-align: center; padding: 40px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header><h1>📝 每日日志</h1></header>
+<nav>
+  <a href="/index.html">🏠 首页</a>
+  <a href="/search.html">🔍 搜索</a>
+  <a href="/dashboard.html">📊 仪表盘</a>
+  <a href="/daily-logs.html" class="active">📝 日报</a>
+  <a href="/gzh-team.html">📰 公众号</a>
+  <a href="/knowledge-graph.html">📊 知识图谱</a>
+</nav>
+<main>
+  <div class="card">
+    <h2>最近日志</h2>
+    <div id="logs-list"><div class="loading">加载中...</div></div>
+  </div>
+  
+  <div class="card">
+    <h2>记忆系统统计</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: center;">
+      <div><div style="font-size: 28px; color: var(--accent);" id="total-logs">-</div><div style="font-size: 12px; color: var(--muted);">总日志数</div></div>
+      <div><div style="font-size: 28px; color: var(--accent);" id="total-sessions">-</div><div style="font-size: 12px; color: var(--muted);">会话数</div></div>
+      <div><div style="font-size: 28px; color: var(--accent);" id="latest-date">-</div><div style="font-size: 12px; color: var(--muted);">最新日期</div></div>
+    </div>
+  </div>
+</main>
+<footer>Minis Web Portal · 2026-09-25</footer>
+<script>
+async function loadLogs() {
+  try {
+    const res = await fetch('/api/daily-logs?limit=20');
+    const data = await res.json();
+    
+    const list = document.getElementById('logs-list');
+    if (data.logs && data.logs.length > 0) {
+      list.innerHTML = data.logs.map(log => `
+        <div class="entry">
+          <div class="entry-date">${log.date}</div>
+          <div class="entry-title">${log.filename.replace('.md', '')}</div>
+          <div class="entry-preview">${log.content_preview.substring(0, 200)}...</div>
+          <div class="entry-meta">
+            <span>${(log.size / 1024).toFixed(1)} KB</span>
+          </div>
+        </div>
+      `).join('');
+      
+      document.getElementById('total-logs').textContent = data.total;
+      document.getElementById('latest-date').textContent = data.logs[0]?.date || '-';
+    } else {
+      list.innerHTML = '<div class="loading">暂无日志</div>';
+    }
+  } catch(e) {
+    document.getElementById('logs-list').innerHTML = `<div class="loading">加载失败: ${e.message}</div>`;
+  }
+}
+
+loadLogs();
+</script>
+</body>
+</html>

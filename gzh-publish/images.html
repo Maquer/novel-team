@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>公众号正文配图 x4</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "PingFangSC-Light", "Helvetica Neue", sans-serif; }
+  .bg {
+    position: relative; width: 1600px; height: 900px; overflow: hidden;
+    background: radial-gradient(1100px 500px at 30% 18%, #16245e 0%, #0d1440 45%, #070b28 100%);
+  }
+  .glow { position: absolute; border-radius: 50%; filter: blur(55px); opacity: .3; }
+  .gc { width: 420px; height: 420px; background: #22d3ee; top: -100px; right: -60px; }
+  .ga { width: 360px; height: 360px; background: #f59e0b; bottom: -120px; left: 15%; }
+
+  /* ============ 图1：筛选概念 ============ */
+  .f1 { display: flex; align-items: center; justify-content: center; gap: 90px; height: 100%; }
+  .f1-left { text-align: left; }
+  .f1-title { font-size: 52px; font-weight: 700; color: #f8fafc; letter-spacing: 2px; line-height: 1.35; }
+  .f1-title .num { color: #fbbf24; }
+  .f1-sub { margin-top: 18px; font-size: 26px; color: rgba(203,213,225,.8); letter-spacing: 4px; }
+  .f1-mid { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .f1-cluster { display: grid; grid-template-columns: repeat(5, 46px); grid-template-rows: repeat(4, 38px); gap: 10px; width: 270px; }
+  .f1-dust { background: rgba(148,163,184,.55); border-radius: 6px; }
+  .f1-arrow { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .f1-funnel {
+    width: 0; height: 0; border-left: 70px solid transparent; border-right: 70px solid transparent;
+    border-top: 130px solid rgba(34,211,238,.25); filter: drop-shadow(0 0 14px rgba(34,211,238,.3));
+  }
+  .f1-line { width: 16px; height: 56px; background: linear-gradient(180deg, rgba(34,211,238,.5), rgba(34,211,238,.12)); border-radius: 0 0 5px 5px; }
+  .f1-gems { display: grid; grid-template-columns: repeat(6, 56px); gap: 14px; }
+  .f1-gem {
+    width: 56px; height: 56px; border-radius: 12px;
+    background: linear-gradient(145deg, #fbbf24, #f59e0b 55%, #b45309);
+    box-shadow: 0 8px 24px rgba(245,158,11,.5), inset 0 2px 2px rgba(255,255,255,.5);
+    position: relative;
+  }
+  .f1-gem::after { content:''; position:absolute; inset:0; border-radius:12px; background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.5), transparent 55%); }
+
+  /* ============ 图2：一切皆插件 ============ */
+  .f2 { display: flex; align-items: center; justify-content: center; gap: 100px; height: 100%; position: relative; }
+  .f2-core {
+    width: 220px; height: 220px; border-radius: 28px;
+    background: linear-gradient(145deg, #22d3ee, #0891b2 60%, #0e7490);
+    box-shadow: 0 0 60px rgba(34,211,238,.5), inset 0 3px 3px rgba(255,255,255,.4);
+    display: flex; align-items: center; justify-content: center; position: relative;
+  }
+  .f2-core span { font-size: 30px; color: #08243a; font-weight: 700; letter-spacing: 2px; position: relative; z-index: 2; }
+  .f2-core::before {
+    content:''; position:absolute; inset:0; border-radius:28px;
+    background: radial-gradient(circle at 60% 35%, rgba(255,255,255,.35), transparent 60%);
+  }
+  .f2-plugins { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .f2-plug {
+    width: 210px; height: 150px; border-radius: 18px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 10px;
+    background: rgba(30,41,82,.65); border: 1.5px solid rgba(34,211,238,.35);
+    box-shadow: inset 0 0 24px rgba(34,211,238,.08);
+  }
+  .f2-plug svg { width: 44px; height: 44px; }
+  .f2-plug p { font-size: 21px; color: #e2e8f0; letter-spacing: 2px; }
+  .f2-tag {
+    position: absolute; top: 88px; font-size: 30px; color: #fbbf24; letter-spacing: 6px; font-weight: 600;
+  }
+
+  /* ============ 图3：网页转文本 ============ */
+  .f3 { display: flex; align-items: center; justify-content: center; gap: 60px; height: 100%; position: relative; }
+  .f3-tag { position: absolute; top: 88px; font-size: 30px; color: #fbbf24; letter-spacing: 6px; font-weight: 600; }
+  .f3-browser {
+    width: 500px; height: 330px; border-radius: 18px; overflow: hidden;
+    background: #0b1231; border: 1.5px solid rgba(148,163,184,.35); box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .f3-bar { height: 52px; background: rgba(148,163,184,.12); display: flex; align-items: center; gap: 10px; padding: 0 18px; }
+  .f3-dot { width: 13px; height: 13px; border-radius: 50%; }
+  .f3-addr { flex: 1; height: 26px; background: rgba(148,163,184,.18); border-radius: 13px; }
+  .f3-body { padding: 22px; display: grid; gap: 16px; }
+  .f3-line-g { height: 16px; background: rgba(34,211,238,.4); border-radius: 4px; }
+  .f3-line-m { height: 16px; background: rgba(148,163,184,.3); border-radius: 4px; }
+  .f3-img-blk { height: 86px; background: linear-gradient(120deg, rgba(34,211,238,.25), rgba(99,102,241,.25)); border-radius: 10px; }
+  .f3-arrow { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .f3-arr { font-size: 84px; color: #22d3ee; text-shadow: 0 0 30px rgba(34,211,238,.6); line-height: 1; }
+  .f3-arrsub { font-size: 22px; color: rgba(203,213,225,.8); letter-spacing: 3px; }
+  .f3-md {
+    width: 540px; height: 330px; border-radius: 18px; padding: 30px 34px;
+    background: #0b1231; border: 1.5px solid rgba(245,158,11,.4); box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    display: grid; align-content: start; gap: 18px;
+  }
+  .f3-h1 { width: 60%; height: 26px; background: rgba(245,158,11,.75); border-radius: 5px; }
+  .f3-p1 { width: 96%; height: 14px; background: rgba(226,232,240,.5); border-radius: 4px; }
+  .f3-p2 { width: 82%; height: 14px; background: rgba(226,232,240,.35); border-radius: 4px; }
+  .f3-p3 { width: 90%; height: 14px; background: rgba(226,232,240,.35); border-radius: 4px; }
+  .f3-code { width: 56%; height: 44px; background: rgba(34,211,238,.22); border-radius: 6px; border: 1px dashed rgba(34,211,238,.5); }
+  .f3-cmt { display: flex; align-items: center; gap: 12px; }
+  .f3-hash { width: 42px; height: 42px; border-radius: 10px; background: rgba(34,211,238,.25); }
+  .f3-hash-txt { height: 14px; width: 70%; background: rgba(226,232,240,.4); border-radius: 4px; }
+
+  /* ============ 图4：金句 ============ */
+  .f4 { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px; height: 100%; text-align: center; position: relative; }
+  .f4-deco {
+    position: absolute; top: 110px; font-size: 26px; color: rgba(34,211,238,.55);
+    letter-spacing: 14px; font-weight: 600;
+  }
+  .f4-line1 { font-size: 68px; font-weight: 700; color: #f8fafc; letter-spacing: 3px; line-height: 1.4; text-shadow: 0 6px 30px rgba(0,0,0,.55); }
+  .f4-line2 { font-size: 68px; font-weight: 700; letter-spacing: 3px; line-height: 1.4; }
+  .f4-line2 .hl { color: #fbbf24; text-shadow: 0 0 40px rgba(245,158,11,.45); }
+  .f4-bar { width: 130px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #22d3ee, #f59e0b); }
+</style>
+</head>
+<body>
+
+<!-- 图1 -->
+<div class="bg">
+  <div class="glow gc"></div><div class="glow ga"></div>
+  <div class="f1">
+    <div class="f1-left">
+      <div class="f1-title">AI 工具很多，<br>值得用的<span class="num">极少</span></div>
+      <div class="f1-sub">筛掉 100+ 只留 6 个</div>
+    </div>
+    <div class="f1-mid">
+      <div class="f1-cluster">
+        <div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div>
+        <div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div>
+        <div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div>
+        <div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div><div class="f1-dust"></div>
+      </div>
+      <span style="font-size:20px;color:rgba(203,213,225,.7);letter-spacing:3px;">100+ 个工具</span>
+    </div>
+    <div class="f1-arrow">
+      <div class="f1-funnel"></div>
+      <div class="f1-line"></div>
+      <span style="font-size:22px;color:rgba(203,213,225,.8);letter-spacing:2px;">筛选</span>
+    </div>
+    <div class="f1-gems">
+      <div class="f1-gem"></div><div class="f1-gem"></div><div class="f1-gem"></div>
+      <div class="f1-gem"></div><div class="f1-gem"></div><div class="f1-gem"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 图2 -->
+<div class="bg">
+  <div class="glow gc"></div><div class="glow ga"></div>
+  <div class="f2">
+    <div class="f2-tag">DeepSeek Harness</div>
+    <div class="f2-core"><span>核心</span></div>
+    <div class="f2-plugins">
+      <div class="f2-plug">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-9-9"/><path d="M21 3v8h-8"/></svg>
+        <p>模型适配器</p>
+      </div>
+      <div class="f2-plug">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 18l9 5 9-5" opacity=".4"/></svg>
+        <p>工具注册表</p>
+      </div>
+      <div class="f2-plug">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33h.01a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51h.01a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v.01a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        <p>会话日志</p>
+      </div>
+      <div class="f2-plug">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <p>Agent 循环</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 图3 -->
+<div class="bg">
+  <div class="glow gc"></div><div class="glow ga"></div>
+  <div class="f3">
+    <div class="f3-tag">Firecrawl</div>
+    <div class="f3-browser">
+      <div class="f3-bar">
+        <div class="f3-dot" style="background:#f87171;"></div>
+        <div class="f3-dot" style="background:#fbbf24;"></div>
+        <div class="f3-dot" style="background:#34d399;"></div>
+        <div class="f3-addr"></div>
+      </div>
+      <div class="f3-body">
+        <div class="f3-line-g" style="width:64%;"></div>
+        <div class="f3-line-m"></div>
+        <div class="f3-img-blk"></div>
+        <div class="f3-line-m" style="width:78%;"></div>
+        <div class="f3-line-m" style="width:58%;"></div>
+      </div>
+    </div>
+    <div class="f3-arrow">
+      <div class="f3-arr">→</div>
+      <div class="f3-arrsub">任意网页 → 干净文本</div>
+    </div>
+    <div class="f3-md">
+      <div class="f3-h1"></div>
+      <div class="f3-p1"></div>
+      <div class="f3-p2"></div>
+      <div class="f3-code"></div>
+      <div class="f3-cmt">
+        <div class="f3-hash"></div>
+        <div class="f3-hash-txt"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 图4 -->
+<div class="bg">
+  <div class="glow gc"></div><div class="glow ga"></div>
+  <div class="f4">
+    <div class="f4-deco">· 写 在 最 后 ·</div>
+    <div class="f4-line1">工具的意义<br>不是让你看起来很忙</div>
+    <div class="f4-bar"></div>
+    <div class="f4-line2">而是省下时间<br>做<span class="hl">真正重要</span>的事</div>
+  </div>
+</div>
+
+</body>
+</html>

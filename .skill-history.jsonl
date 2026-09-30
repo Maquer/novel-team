@@ -1,0 +1,85 @@
+{"event": "skill_added", "name": "apple-reminders", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "douyin-downloader", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "exa-search", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "health-sleep-analysis", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "jue-ce-bi-huan", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "web-content-extractor", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "xiaohongshu-hub", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "yuwen-publish-precheck", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "airtap", "field": "SKILL.md", "old_hash": "05071285a7bcae08", "new_hash": "a8aa1a9a2f2b80b2", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "bao-kuai-xie-zuo", "field": "SKILL.md", "old_hash": "302e47d4b2352d94", "new_hash": "2259705e8e84d6fc", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "component_added", "name": "bao-kuai-xie-zuo", "component": "references", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "darwin-skill", "field": "SKILL.md", "old_hash": "0f46eb9056c4f937", "new_hash": "22280744864eaa62", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "component_added", "name": "darwin-skill", "component": "SKILL.md.bak.20260830", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "gongzhonghao-publish", "field": "SKILL.md", "old_hash": "180c1d77b3e50700", "new_hash": "d0e0f0a7157f3612", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "grill-me", "field": "SKILL.md", "old_hash": "b4d862a8a52e8a0f", "new_hash": "f9f282267b589f76", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "hai-bao-she-ji", "field": "SKILL.md", "old_hash": "2d7b07cae7c85edc", "new_hash": "78845db5c3c2ffe4", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "component_added", "name": "hai-bao-she-ji", "component": "mix", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "component_added", "name": "hai-bao-she-ji", "component": "scripts", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "ponytail", "field": "SKILL.md", "old_hash": "fde97f9e3d951366", "new_hash": "ab6d813aec0e7a35", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_modified", "name": "skill-creator", "field": "SKILL.md", "old_hash": "1cd07d0be1573886", "new_hash": "81e8b0e8f9b898bd", "timestamp": "2026-09-06T16:20:38.906715+00:00"}
+{"event": "skill_added", "name": "anysearch", "timestamp": "2026-09-16T12:53:40.375765+00:00"}
+{"event": "skill_added", "name": "re-souo-ju-he", "timestamp": "2026-09-16T12:53:40.375765+00:00"}
+{"event": "skill_modified", "name": "bao-kuai-xie-zuo", "field": "SKILL.md", "old_hash": "2259705e8e84d6fc", "new_hash": "b46d35dac62ea74a", "timestamp": "2026-09-16T12:53:40.375765+00:00"}
+{"event": "component_added", "name": "darwin-skill", "component": "references", "timestamp": "2026-09-16T12:53:40.375765+00:00"}
+{"event": "skill_modified", "name": "gongzhonghao-publish", "field": "SKILL.md", "old_hash": "d0e0f0a7157f3612", "new_hash": "72e2d3566cc80394", "timestamp": "2026-09-16T12:53:40.375765+00:00"}
+{"event": "skill_added", "name": "archify", "timestamp": "2026-09-18T10:52:23.786500+00:00"}
+{"event": "skill_added", "name": "gzh-api-tui-song", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_added", "name": "gzh-chuang-gao", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_added", "name": "gzh-fa-qian-jian-cha", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_added", "name": "gzh-pai-ban", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_added", "name": "report-generator", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_removed", "name": "archify", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_removed", "name": "douyin-downloader", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_removed", "name": "explanation-skill", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_removed", "name": "health-sleep-analysis", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "airtap", "field": "SKILL.md", "old_hash": "a8aa1a9a2f2b80b2", "new_hash": "8ab4c0130a8fb85d", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "anysearch", "field": "SKILL.md", "old_hash": "54702f6066dc76cb", "new_hash": "c532c07b3dd14fc8", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "anysearch", "component": "skill.meta.json", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "apple-reminders", "field": "SKILL.md", "old_hash": "6331557e24e3c1be", "new_hash": "eb60535c4d382166", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "apple-reminders", "component": "skill.meta.json", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "bao-kuai-xie-zuo", "field": "SKILL.md", "old_hash": "b46d35dac62ea74a", "new_hash": "7d4ba06947d634a2", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_removed", "name": "darwin-skill", "component": "SKILL.md.bak.20260830", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_removed", "name": "darwin-skill", "component": "references", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "exa-search", "field": "SKILL.md", "old_hash": "b088abbf2d7d5ef5", "new_hash": "1b2eb96d7206098e", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "exa-search", "component": "skill.meta.json", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "gongzhonghao-publish", "field": "SKILL.md", "old_hash": "72e2d3566cc80394", "new_hash": "b03bbcf0ee734790", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "hai-bao-she-ji", "field": "SKILL.md", "old_hash": "78845db5c3c2ffe4", "new_hash": "f7ebffa3aa01e3cc", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "hai-bao-she-ji", "component": "training", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "nei-rong-zhuan-hua", "field": "SKILL.md", "old_hash": "438e6fe9619cb411", "new_hash": "0077e549c912c6be", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_removed", "name": "nuwa-skill", "component": "examples", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_removed", "name": "nuwa-skill", "component": "scripts", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "ponytail", "field": "SKILL.md", "old_hash": "ab6d813aec0e7a35", "new_hash": "5691906fb6e380f7", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "web-content-extractor", "field": "SKILL.md", "old_hash": "ba2e261e46a86201", "new_hash": "1371aa0ca01caedf", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "web-content-extractor", "component": "skill.meta.json", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_modified", "name": "xiaohongshu-hub", "field": "SKILL.md", "old_hash": "2f4acf7b6f4838e5", "new_hash": "cf8ac4d9abf16a8b", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "component_added", "name": "xiaohongshu-hub", "component": "skill.meta.json", "timestamp": "2026-09-23T09:34:13.549256+00:00"}
+{"event": "skill_added", "name": "archify", "timestamp": "2026-09-23T10:13:31.939684+00:00"}
+{"event": "skill_added", "name": "product-review-writer", "timestamp": "2026-09-23T11:32:59.023077+00:00"}
+{"event": "skill_added", "name": "photo-shotlist", "timestamp": "2026-09-23T12:08:36.196659+00:00"}
+{"event": "skill_modified", "name": "product-review-writer", "field": "SKILL.md", "old_hash": "fd5300ce25712f0f", "new_hash": "e15cfc3fe45d89c8", "timestamp": "2026-09-23T12:08:36.196659+00:00"}
+{"event": "component_added", "name": "product-review-writer", "component": "skill.meta.json", "timestamp": "2026-09-23T12:08:36.196659+00:00"}
+{"event": "skill_modified", "name": "photo-shotlist", "field": "SKILL.md", "old_hash": "69f869e7bf2d65a7", "new_hash": "c6e20dcd40e868ef", "timestamp": "2026-09-23T12:11:45.911839+00:00"}
+{"event": "skill_modified", "name": "bao-kuai-xie-zuo", "field": "SKILL.md", "old_hash": "7d4ba06947d634a2", "new_hash": "8c4ca57629f4ac4e", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "skill_modified", "name": "hai-bao-she-ji", "field": "SKILL.md", "old_hash": "f7ebffa3aa01e3cc", "new_hash": "181efd83815be0b8", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "skill_modified", "name": "skill-creator", "field": "SKILL.md", "old_hash": "81e8b0e8f9b898bd", "new_hash": "9d601c0e76033edd", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "skill_modified", "name": "wu-ceng-jue-ce", "field": "SKILL.md", "old_hash": "949d8061b7663e40", "new_hash": "2d975fde1899596c", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "component_added", "name": "wu-ceng-jue-ce", "component": "meta.json", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "component_added", "name": "wu-ceng-jue-ce", "component": "red-blue", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "skill_modified", "name": "xiaohongshu-hub", "field": "SKILL.md", "old_hash": "cf8ac4d9abf16a8b", "new_hash": "b7e5931fa770b810", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "component_added", "name": "xiaohongshu-hub", "component": ".venv", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "component_added", "name": "xiaohongshu-hub", "component": "uv.lock", "timestamp": "2026-09-24T08:11:36.451710+00:00"}
+{"event": "skill_modified", "name": "product-review-writer", "field": "SKILL.md", "old_hash": "e15cfc3fe45d89c8", "new_hash": "00f475f68dcabedc", "timestamp": "2026-09-24T08:12:20.112846+00:00"}
+{"event": "component_added", "name": "anysearch", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "component_added", "name": "apple-reminders", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "component_added", "name": "archify", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "component_added", "name": "exa-search", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "component_added", "name": "web-content-extractor", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "component_added", "name": "xiaohongshu-hub", "component": "CHANGELOG.md", "timestamp": "2026-09-25T01:54:19.966458+00:00"}
+{"event": "skill_added", "name": "second-brain-guide", "timestamp": "2026-09-25T11:34:14.939720+00:00"}
+{"event": "skill_modified", "name": "hai-bao-she-ji", "field": "SKILL.md", "old_hash": "181efd83815be0b8", "new_hash": "d9874160793e4bed", "timestamp": "2026-09-25T11:34:14.939720+00:00"}
+{"event": "skill_modified", "name": "second-brain-guide", "field": "SKILL.md", "old_hash": "f916eabff5411598", "new_hash": "9fc2bd8aa9c155ec", "timestamp": "2026-09-25T11:39:44.899450+00:00"}
+{"event": "component_added", "name": "second-brain-guide", "component": "CHANGELOG.md", "timestamp": "2026-09-25T11:39:44.899450+00:00"}
+{"event": "component_added", "name": "second-brain-guide", "component": "skill.meta.json", "timestamp": "2026-09-25T11:39:44.899450+00:00"}
+{"event": "skill_added", "name": "gzh-cover-gen", "timestamp": "2026-09-26T05:49:22.988239+00:00"}
+{"event": "component_added", "name": "darwin-skill", "component": "reports", "timestamp": "2026-09-27T07:45:47.637575+00:00"}

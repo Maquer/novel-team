@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仪表盘 · Minis</title>
+<style>
+  :root { --bg: #1a1a2e; --card: #16213e; --hover: #1f3a5f; --accent: #c2453c; --text: #e0e0e0; --muted: #888; --border: #30363d; --success: #4caf50; --warning: #ff9800; --danger: #f44336; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header { padding: 20px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 24px; color: var(--accent); }
+  nav { display: flex; gap: 8px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  nav a { padding: 8px 16px; background: var(--card); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; }
+  nav a:hover, nav a.active { background: var(--accent); }
+  main { padding: 20px; max-width: 1000px; margin: 0 auto; }
+  .card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .card h2 { font-size: 16px; margin-bottom: 16px; color: var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .stat { text-align: center; }
+  .stat .value { font-size: 32px; font-weight: 600; color: var(--accent); }
+  .stat .label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .status-item { padding: 12px; background: rgba(255,255,255,0.03); border-radius: 8px; }
+  .status-item .name { font-size: 13px; color: var(--muted); }
+  .status-item .value { font-size: 18px; margin-top: 4px; }
+  .status-item .value.ok { color: var(--success); }
+  .status-item .value.warn { color: var(--warning); }
+  .status-item .value.err { color: var(--danger); }
+  .progress-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-top: 8px; }
+  .progress-bar .fill { height: 100%; background: var(--accent); transition: width 0.3s; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
+  th { color: var(--muted); font-weight: 500; }
+  footer { padding: 20px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
+  .refresh-btn { padding: 8px 16px; background: var(--accent); border: none; border-radius: 6px; color: white; cursor: pointer; }
+</style>
+</head>
+<body>
+<header><h1>📊 系统仪表盘</h1></header>
+<nav>
+  <a href="/index.html">🏠 首页</a>
+  <a href="/search.html">🔍 搜索</a>
+  <a href="/dashboard.html" class="active">📊 仪表盘</a>
+  <a href="/daily-logs.html">📝 日报</a>
+  <a href="/gzh-team.html">📰 公众号</a>
+  <a href="/knowledge-graph.html">📊 知识图谱</a>
+</nav>
+<main>
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h3 style="font-size: 14px; color: var(--muted);">最后更新: <span id="last-update">-</span></h3>
+    <button class="refresh-btn" onclick="loadDashboard()">刷新</button>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>🧠 记忆系统</h2>
+      <div class="status-grid" id="memory-stats">
+        <div class="status-item"><div class="name">Daily Logs</div><div class="value" id="m-daily">-</div></div>
+        <div class="status-item"><div class="name">L2 周报</div><div class="value" id="m-l2">-</div></div>
+        <div class="status-item"><div class="name">L3 图谱</div><div class="value" id="m-l3">-</div></div>
+        <div class="status-item"><div class="name">GLOBAL</div><div class="value" id="m-global">-</div></div>
+        <div class="status-item"><div class="name">SOUL</div><div class="value" id="m-soul">-</div></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>📁 工作区</h2>
+      <div class="stat">
+        <div class="value" id="ws-count">-</div>
+        <div class="label">文件数</div>
+        <div class="progress-bar"><div class="fill" id="ws-progress" style="width: 0%"></div></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>📦 共享区</h2>
+      <div class="stat">
+        <div class="value" id="shared-count">-</div>
+        <div class="label">文件数</div>
+        <div class="progress-bar"><div class="fill" id="shared-progress" style="width: 50%"></div></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>⚡ Skill 系统</h2>
+      <div class="stat">
+        <div class="value" id="skill-count">-</div>
+        <div class="label">已安装</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔌 隧道状态</h2>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <div id="tunnel-status" style="font-size: 24px;">-</div>
+      <div>
+        <div style="font-size: 13px; color: var(--muted);">公网地址</div>
+        <div style="font-size: 15px;"><a href="https://minis.maquer.eu.org" target="_blank" style="color: var(--accent);">https://minis.maquer.eu.org</a></div>
+      </div>
+      <div style="margin-left: auto; text-align: right;">
+        <div style="font-size: 13px; color: var(--muted);">连接 Edge</div>
+        <div style="font-size: 15px;" id="tunnel-edges">-</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🛠️ 工具链</h2>
+    <table>
+      <thead><tr><th>工具</th><th>路径</th><th>状态</th></tr></thead>
+      <tbody id="tools-table">
+        <tr><td>Obsidian 搜索</td><td>obsidian-search.py</td><td><span style="color: var(--success)">✅</span></td></tr>
+        <tr><td>健康仪表盘</td><td>minis-dashboard.sh</td><td><span style="color: var(--success)">✅</span></td></tr>
+        <tr><td>知识图谱</td><td>knowledge-graph.html</td><td><span style="color: var(--success)">✅</span></td></tr>
+        <tr><td>倒计时调度器</td><td>countdown-scheduler.py</td><td><span style="color: var(--success)">✅</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer>Minis Web Portal · 2026-09-25</footer>
+<script>
+async function loadDashboard() {
+  try {
+    const res = await fetch('/api/dashboard');
+    const data = await res.json();
+    
+    document.getElementById('last-update').textContent = new Date().toLocaleString('zh-CN');
+    
+    // 记忆系统
+    document.getElementById('m-daily').textContent = data.memory.daily_logs;
+    document.getElementById('m-l2').innerHTML = data.memory.l2_weekly;
+    document.getElementById('m-l2').className = 'value ' + (data.memory.l2_weekly === '✅' ? 'ok' : 'err');
+    document.getElementById('m-l3').innerHTML = data.memory.l3_graph;
+    document.getElementById('m-l3').className = 'value ' + (data.memory.l3_graph === '✅' ? 'ok' : 'err');
+    document.getElementById('m-global').innerHTML = data.memory.global;
+    document.getElementById('m-global').className = 'value ' + (data.memory.global === '✅' ? 'ok' : 'err');
+    document.getElementById('m-soul').innerHTML = data.memory.soul;
+    document.getElementById('m-soul').className = 'value ' + (data.memory.soul === '✅' ? 'ok' : 'err');
+    
+    // 工作区
+    document.getElementById('ws-count').textContent = data.workspace.file_count;
+    document.getElementById('ws-progress').style.width = Math.min(data.workspace.file_count / 100 * 100, 100) + '%';
+    
+    // 共享区
+    document.getElementById('shared-count').textContent = data.shared.file_count;
+    document.getElementById('shared-progress').style.width = Math.min(data.shared.file_count / 500 * 100, 100) + '%';
+    
+    // Skills
+    document.getElementById('skill-count').textContent = data.skills.count;
+    
+    // Tunnel
+    const tunnelStatus = data.tunnel.status;
+    document.getElementById('tunnel-status').innerHTML = tunnelStatus === 'online' 
+      ? '<span style="color: var(--success);">● 在线</span>' 
+      : '<span style="color: var(--danger);">● 离线</span>';
+    document.getElementById('tunnel-edges').textContent = 'lax10, sjc07';
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+loadDashboard();
+</script>
+</body>
+</html>

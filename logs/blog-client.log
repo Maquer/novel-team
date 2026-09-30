@@ -1,0 +1,2 @@
+Warning: disabling flag --expose_wasm due to conflicting flags
+npm warn exec The following package was not found and will be installed: vite@8.3.1

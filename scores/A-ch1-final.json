@@ -1,0 +1,58 @@
+{
+ "label": "A-ch1-final",
+ "gate": {
+  "passed": true,
+  "tier_1a": null,
+  "will_block": false,
+  "p0": [],
+  "p1": [
+   "字数过短：1142 < 软下限 1500（信息密度不足）"
+  ],
+  "p2": [
+   "纪律5「反乒乓链」命中1处"
+  ]
+ },
+ "humanizer": {
+  "char_count": 1142,
+  "paragraph_count": 31,
+  "total_score": 8,
+  "weighted_score": 8,
+  "tier_1a": 8,
+  "tier_1b": 0,
+  "level": "🟡 轻微AI味",
+  "color": "🟡",
+  "threshold": 15.0,
+  "hits": [
+   {
+    "rule": "lieflat·规则4·破折号滥用",
+    "desc": "破折号 2.63/千字（人类0.80，AI 2.38）",
+    "text": "全文共3处",
+    "score": 3,
+    "tier": "1A"
+   },
+   {
+    "rule": "nc·Category7·排比三连",
+    "desc": "发现13处三元排比",
+    "text": "句式结构雷同",
+    "score": 5,
+    "examples": [
+     "池水冰凉，混着铁锈味，月光照在水面上，",
+     "池底淤泥很厚，一脚下去，没过脚踝。",
+     "两个字只停了三息，便如潮水退去，剑胎重归黝黑。"
+    ],
+    "tier": "1A"
+   }
+  ],
+  "source": "lieflat 11条 + Novel-Creator 7大类"
+ },
+ "logic": {
+  "file": "/tmp/novelwrite/projects/demofinal/chapters/chapter-001.md",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "issues": []
+ },
+ "wordcount": {
+  "_raw": "[\n  {\n    \"file\": \"/tmp/novelwrite/projects/demofinal/chapters/chapter-001.md\",\n    \"exists\": true,\n    \"word_count\": 1194,\n    \"min_words\": 2500,\n    \"caliber\": \"门禁口径（全字符）\",\n    \"status\": \"fail\",\n    \"message\": \"字数: 1194（门禁口径（全字符））(✗ 不足，低于门禁线1350字，目标2500字)\",\n    \"prediction\": {\n      \"status\": \"behind\",\n      \"message\": \"当前日均产量1335字，远低于目标（目标2500字），预计延期\",\n      \"daily_output\": 1335.33,\n      \"target_daily\": 2500,\n      \"estimated_days_per_chapter\": 1,\n      \"days_ahead\": 7,\n      \"projected_total\": 9347\n    }\n  }\n]\n"
+ }
+}

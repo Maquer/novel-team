@@ -1,0 +1,16 @@
+{
+  "char_id": "char-006",
+  "name": "孙鹤",
+  "role": "执事",
+  "realm": "金丹",
+  "rank": "执事",
+  "appearance": "丹袍灰，从不看杂役一眼",
+  "personality": [
+    "冷漠",
+    "守序",
+    "护短"
+  ],
+  "goal": "丹房不出事，向上交付",
+  "relation_to_protag": "直接上司，第一道体制压制",
+  "arc": "冷→压→护→反水"
+}

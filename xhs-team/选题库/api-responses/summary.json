@@ -1,0 +1,22 @@
+{
+  "t1_caozhong": {
+    "name": "T1-种草文案",
+    "success": false,
+    "error": "HTTP Error 402: Payment Required"
+  },
+  "t2_changwen": {
+    "name": "T2-长文写作",
+    "success": false,
+    "error": "HTTP Error 402: Payment Required"
+  },
+  "t3_logic": {
+    "name": "T3-逻辑推理",
+    "success": false,
+    "error": "HTTP Error 402: Payment Required"
+  },
+  "t4_runse": {
+    "name": "T4-润色改写",
+    "success": false,
+    "error": "HTTP Error 402: Payment Required"
+  }
+}

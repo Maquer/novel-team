@@ -1,0 +1,66 @@
+{"ts": "2026-09-06T19:57:58", "event": "archive-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T19:57:58", "event": "merge-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T19:57:58", "event": "link-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T20:04:41", "event": "link-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T20:05:00", "event": "link-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T20:05:01", "event": "link-summary", "count": 0, "dry_run": false}
+{"ts": "2026-09-06T20:07:36", "event": "link-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-06T20:11:07", "event": "link-summary", "count": 19, "dry_run": true}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-e309", "b": "SC-2026-08-24-6303", "title_a": "SOUL.md 第二轮多模型审计后应用（2026-08-24）", "title_b": "SOUL.md 多模型全量迭代升级（2026-08-24）", "sim": 0.205}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-aedb", "b": "SC-2026-08-24-451d", "title_a": "CLI-Anything 借鉴 三方审计 + 修复（2026-08-24）", "title_b": "ELI5 第三方审计 + 修复（2026-08-24）", "sim": 0.192}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-22-09aa", "b": "SC-2026-08-22-77e2", "title_a": "train.sh 升级为 11 步训练流水线（2026-08-22）", "title_b": "第二大脑三模块补齐：错误模式学习 + Skill生命周期 + 渐进式策略（2026-08-22）", "sim": 0.186}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-64ed", "b": "SC-2026-08-24-27e3", "title_a": "skill-migrate.py bug 修复（2026-08-24 19:35）", "title_b": "Skill 生态全量修复（2026-08-24）", "sim": 0.178}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-6303", "b": "SC-2026-08-24-d763", "title_a": "SOUL.md 多模型全量迭代升级（2026-08-24）", "title_b": "多模型全量审计（2026-08-24）", "sim": 0.158}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "KD-20260824-185009-90cc", "b": "SC-2026-08-24-e309", "title_a": "SOUL.md 多模型审计关键发现（20", "title_b": "SOUL.md 第二轮多模型审计后应用（2026-08-24）", "sim": 0.153}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-6f63", "b": "SC-2026-08-24-ba9e", "title_a": "OpenWiki P0/P1 落地（2026-08-24 08:59）", "title_b": "SkillWeaver 借鉴落地：Skill 路由引擎（2026-08-24）", "sim": 0.146}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-22-4bcb", "b": "SC-2026-08-22-d26f", "title_a": "The Agency 归档（2026-08-22 09-00）", "title_b": "MagicMirror² 归档 + 第二大脑对接（2026-08-22 08-45）", "sim": 0.137}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-03f3", "b": "SC-2026-08-24-6e13", "title_a": "skill-eval-gate.py v4 升级（2026-08-24）", "title_b": "AI 开发者日常《别凭感觉改 Skill：如何给 Agent Skill 做自动化测试和回归评测？》归档（2026-08", "sim": 0.137}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-8743", "b": "SC-2026-08-24-6b8c", "title_a": "bb-browser + bb-sites 归档 + 分析（2026-08-24）", "title_b": "OpenWiki 归档（2026-08-24）", "sim": 0.136}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-ba3a", "b": "SC-2026-08-24-ba9e", "title_a": "OpenHands 借鉴落地：Agent 后端注册表 + 自动化模板注册表（2026-08-24）", "title_b": "SkillWeaver 借鉴落地：Skill 路由引擎（2026-08-24）", "sim": 0.132}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-ba9e", "b": "SC-2026-08-24-0ed6", "title_a": "SkillWeaver 借鉴落地：Skill 路由引擎（2026-08-24）", "title_b": "CLI-Anything 借鉴落地：Skill-Hub + JSON 输出模式 + Skill Harness 方法论（", "sim": 0.132}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-c49a", "b": "SC-2026-08-24-03f3", "title_a": "skill-eval-gate.py v5 — LLM Trigger Eval（2026-08-24）", "title_b": "skill-eval-gate.py v4 升级（2026-08-24）", "sim": 0.129}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-aedb", "b": "SC-2026-08-24-0ed6", "title_a": "CLI-Anything 借鉴 三方审计 + 修复（2026-08-24）", "title_b": "CLI-Anything 借鉴落地：Skill-Hub + JSON 输出模式 + Skill Harness 方法论（", "sim": 0.129}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-6b8c", "b": "SC-2026-08-24-55d5", "title_a": "OpenWiki 归档（2026-08-24）", "title_b": "OpenHands / Agent Canvas 归档（2026-08-24）", "sim": 0.128}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-22-1ef5", "b": "SC-2026-08-24-6b8c", "title_a": "DeerFlow 归档（2026-08-22 09-13）", "title_b": "OpenWiki 归档（2026-08-24）", "sim": 0.127}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-22-1ef5", "b": "SC-2026-08-22-d26f", "title_a": "DeerFlow 归档（2026-08-22 09-13）", "title_b": "MagicMirror² 归档 + 第二大脑对接（2026-08-22 08-45）", "sim": 0.123}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-22-af7b", "b": "SC-2026-08-24-451d", "title_a": "第二大脑审计修复（2026-08-22）", "title_b": "ELI5 第三方审计 + 修复（2026-08-24）", "sim": 0.122}
+{"ts": "2026-09-06T20:11:30", "event": "link", "a": "SC-2026-08-24-e309", "b": "SC-2026-08-24-d763", "title_a": "SOUL.md 第二轮多模型审计后应用（2026-08-24）", "title_b": "多模型全量审计（2026-08-24）", "sim": 0.121}
+{"ts": "2026-09-06T20:11:30", "event": "link-summary", "count": 19, "dry_run": false}
+{"ts": "2026-09-06T20:12:22", "event": "test", "x": 1}
+{"ts": "2026-09-13T23:29:46", "event": "archive-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-13T23:29:46", "event": "link-summary", "count": 29, "dry_run": true}
+{"ts": "2026-09-13T23:39:35", "event": "archive-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-13T23:39:35", "event": "link-summary", "count": 29, "dry_run": true}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-390d", "b": "SC-2026-09-13-6d9d", "title_a": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.25}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e2d0", "b": "SC-2026-09-13-390d", "title_a": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.231}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-dc36", "b": "SC-2026-09-13-390d", "title_a": "归档 Prism Browser Community（DFarm6/Prism-Browser-Community）（2", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.209}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-24-aedb", "b": "SC-2026-08-24-ba9e", "title_a": "CLI-Anything 借鉴 三方审计 + 修复（2026-08-24）", "title_b": "SkillWeaver 借鉴落地：Skill 路由引擎（2026-08-24）", "sim": 0.174}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-dc36", "b": "SC-2026-09-13-6d9d", "title_a": "归档 Prism Browser Community（DFarm6/Prism-Browser-Community）（2", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.164}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-8a1a", "b": "SC-2026-09-13-6d9d", "title_a": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.164}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-ae24", "b": "SC-2026-09-13-390d", "title_a": "归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.16}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-dc36", "b": "SC-2026-09-13-e2d0", "title_a": "归档 Prism Browser Community（DFarm6/Prism-Browser-Community）（2", "title_b": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "sim": 0.156}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-8a1a", "b": "SC-2026-09-13-390d", "title_a": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.156}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-22-1ef5", "b": "SC-2026-08-22-4bcb", "title_a": "DeerFlow 归档（2026-08-22 09-13）", "title_b": "The Agency 归档（2026-08-22 09-00）", "sim": 0.154}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e2d0", "b": "SC-2026-09-13-6d9d", "title_a": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.154}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-dc36", "b": "SC-2026-09-13-ae24", "title_a": "归档 Prism Browser Community（DFarm6/Prism-Browser-Community）（2", "title_b": "归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）", "sim": 0.148}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-80db", "b": "SC-2026-09-13-5070", "title_a": "AgentRouter 迁 Cloudflare Worker（B2 路线）（2026-09-13 13:00+）", "title_b": "AgentRouter 定时方案落地（2026-09-13 补）", "sim": 0.148}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-dc36", "b": "SC-2026-09-13-8a1a", "title_a": "归档 Prism Browser Community（DFarm6/Prism-Browser-Community）（2", "title_b": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "sim": 0.143}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e9bc", "b": "SC-2026-09-13-ae24", "title_a": "归档 AnySearch Skill（anysearch-ai/anysearch-skill）（2026-09-13）", "title_b": "归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）", "sim": 0.14}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-2bc4", "b": "SC-2026-09-13-8a1a", "title_a": "归档 GLaDOS Worker（sxxsoo/glados_worker）（2026-09-13）", "title_b": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "sim": 0.14}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-19-31fe", "b": "SC-2026-09-19-b8ff", "title_a": "公众号选题：ASC skill 分发治理（2026-09-19）", "title_b": "文件位置", "sim": 0.14}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e9bc", "b": "SC-2026-09-13-8a1a", "title_a": "归档 AnySearch Skill（anysearch-ai/anysearch-skill）（2026-09-13）", "title_b": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "sim": 0.135}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-22-1ef5", "b": "SC-2026-08-24-8743", "title_a": "DeerFlow 归档（2026-08-22 09-13）", "title_b": "bb-browser + bb-sites 归档 + 分析（2026-08-24）", "sim": 0.133}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e2d0", "b": "SC-2026-09-13-8a1a", "title_a": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "title_b": "归档 WorkBuddy Daily（L0NE-6/WorkBuddy-Daily）（2026-09-13）", "sim": 0.13}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-24-3ef6", "b": "SC-2026-08-24-03f3", "title_a": "references 缺失修复 + skill-eval-gate 12/12 PASS（2026-08-24）", "title_b": "skill-eval-gate.py v4 升级（2026-08-24）", "sim": 0.129}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-ae24", "b": "SC-2026-09-13-6d9d", "title_a": "归档 DSH iOS（ZSeven-W/dsh-ios）（2026-09-13）", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.129}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e2d0", "b": "SC-2026-09-13-2bc4", "title_a": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "title_b": "归档 GLaDOS Worker（sxxsoo/glados_worker）（2026-09-13）", "sim": 0.128}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-2bc4", "b": "SC-2026-09-13-390d", "title_a": "归档 GLaDOS Worker（sxxsoo/glados_worker）（2026-09-13）", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.128}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-5070", "b": "SC-2026-09-13-7792", "title_a": "AgentRouter 定时方案落地（2026-09-13 补）", "title_b": "AgentRouter 签到部署（2026-09-13）", "sim": 0.125}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-24-6f63", "b": "SC-2026-08-24-ba3a", "title_a": "OpenWiki P0/P1 落地（2026-08-24 08:59）", "title_b": "OpenHands 借鉴落地：Agent 后端注册表 + 自动化模板注册表（2026-08-24）", "sim": 0.123}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e9bc", "b": "SC-2026-09-13-e2d0", "title_a": "归档 AnySearch Skill（anysearch-ai/anysearch-skill）（2026-09-13）", "title_b": "归档 OmniGet（tonhowtf/omniget）（2026-09-13）", "sim": 0.122}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-e9bc", "b": "SC-2026-09-13-390d", "title_a": "归档 AnySearch Skill（anysearch-ai/anysearch-skill）（2026-09-13）", "title_b": "归档 SmartSub 妙幕（buxuku/SmartSub）（2026-09-13）", "sim": 0.122}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-08-24-6f63", "b": "SC-2026-08-24-0ed6", "title_a": "OpenWiki P0/P1 落地（2026-08-24 08:59）", "title_b": "CLI-Anything 借鉴落地：Skill-Hub + JSON 输出模式 + Skill Harness 方法论（", "sim": 0.121}
+{"ts": "2026-09-19T22:37:36", "event": "link", "a": "SC-2026-09-13-2bc4", "b": "SC-2026-09-13-6d9d", "title_a": "归档 GLaDOS Worker（sxxsoo/glados_worker）（2026-09-13）", "title_b": "归档 Videdown（cshuangyy/videdown）（2026-09-13）", "sim": 0.121}
+{"ts": "2026-09-19T22:37:36", "event": "link-summary", "count": 30, "dry_run": false}
+{"ts": "2026-09-23T15:44:31", "event": "archive-summary", "count": 0, "dry_run": true}
+{"ts": "2026-09-23T15:44:31", "event": "link-summary", "count": 13, "dry_run": true}

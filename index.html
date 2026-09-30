@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minis · 第二大脑</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #1a1a2e; --card: #16213e; --hover: #1f3a5f;
+    --accent: #c2453c; --text: #e0e0e0; --muted: #888;
+    --border: #30363d; --success: #4caf50;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  
+  /* Header */
+  header { padding: 20px; border-bottom: 1px solid var(--border); background: var(--card); }
+  header h1 { font-size: 24px; color: var(--accent); }
+  header p { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  
+  /* Nav */
+  nav { display: flex; gap: 8px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  nav a { padding: 8px 16px; background: var(--card); border-radius: 8px; color: var(--text); text-decoration: none; font-size: 14px; transition: all 0.2s; }
+  nav a:hover, nav a.active { background: var(--accent); }
+  
+  /* Main */
+  main { padding: 20px; max-width: 1200px; margin: 0 auto; }
+  
+  /* Cards */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border-radius: 12px; padding: 20px; text-decoration: none; color: inherit; transition: transform 0.2s, background 0.2s; }
+  .card:hover { transform: translateY(-2px); background: var(--hover); }
+  .card .icon { font-size: 32px; margin-bottom: 12px; }
+  .card h2 { font-size: 18px; margin-bottom: 6px; }
+  .card p { font-size: 13px; color: var(--muted); }
+  
+  /* Stats */
+  .stats { display: flex; gap: 24px; padding: 16px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 8px; }
+  .stat .value { font-size: 20px; font-weight: 600; color: var(--accent); }
+  .stat .label { font-size: 12px; color: var(--muted); }
+  
+  /* Status dot */
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot.online { background: var(--success); }
+  .dot.offline { background: #f44336; }
+  
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; }
+  th { color: var(--muted); font-weight: 500; }
+  tr:hover { background: var(--card); }
+  
+  /* Search */
+  .search-box { position: relative; margin-bottom: 20px; }
+  .search-box input { width: 100%; padding: 12px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 15px; }
+  .search-box input:focus { outline: none; border-color: var(--accent); }
+  .search-box button { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); padding: 6px 12px; background: var(--accent); border: none; border-radius: 6px; color: white; cursor: pointer; }
+  
+  /* Tags */
+  .tag { display: inline-block; padding: 2px 8px; background: var(--border); border-radius: 4px; font-size: 11px; color: var(--muted); }
+  
+  /* Loading */
+  .loading { text-align: center; padding: 40px; color: var(--muted); }
+  
+  /* Footer */
+  footer { padding: 20px; text-align: center; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 40px; }
+  
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: 1fr; }
+    .stats { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🧠 Minis · 第二大脑</h1>
+  <p>小蒋的个人知识操作系统 · Cloudflare Tunnel</p>
+</header>
+
+<nav>
+  <a href="/index.html" class="active">🏠 首页</a>
+  <a href="/search.html">🔍 搜索</a>
+  <a href="/dashboard.html">📊 仪表盘</a>
+  <a href="/daily-logs.html">📝 日报</a>
+  <a href="/gzh-team.html">📰 公众号</a>
+  <a href="/knowledge-graph.html">📊 知识图谱</a>
+</nav>
+
+<main>
+  <div class="stats" id="stats-bar">
+    <div class="stat"><span class="value" id="stat-memory">-</span><span class="label">记忆文件</span></div>
+    <div class="stat"><span class="value" id="stat-skills">-</span><span class="label">Skills</span></div>
+    <div class="stat"><span class="value" id="stat-shared">-</span><span class="label">共享文件</span></div>
+    <div class="stat"><span class="dot offline" id="tunnel-dot"></span><span class="label" id="tunnel-status">隧道离线</span></div>
+  </div>
+
+  <div class="grid" style="margin-top: 24px;">
+    <a class="card" href="/search.html">
+      <div class="icon">🔍</div>
+      <h2>Obsidian 搜索</h2>
+      <p>全文检索笔记，支持自然语言查询</p>
+    </a>
+    <a class="card" href="/dashboard.html">
+      <div class="icon">📊</div>
+      <h2>系统仪表盘</h2>
+      <p>健康检查、资源统计、隧道状态</p>
+    </a>
+    <a class="card" href="/daily-logs.html">
+      <div class="icon">📝</div>
+      <h2>每日日志</h2>
+      <p>查看最近的会话记录</p>
+    </a>
+    <a class="card" href="/gzh-team.html">
+      <div class="icon">📰</div>
+      <h2>公众号团队</h2>
+      <p>选题、稿件、排版稿管理</p>
+    </a>
+    <a class="card" href="/knowledge-graph.html">
+      <div class="icon">📊</div>
+      <h2>知识图谱</h2>
+      <p>Obsidian 笔记网络可视化</p>
+    </a>
+    <a class="card" href="https://dash.cloudflare.com/6ddb238e2db8f43a4e974040d1437c2f/tunnels" target="_blank">
+      <div class="icon">🔌</div>
+      <h2>Cloudflare 管理</h2>
+      <p>隧道配置与监控</p>
+    </a>
+  </div>
+
+  <h3 style="margin-top: 32px; margin-bottom: 16px; font-size: 16px;">📌 最近动态</h3>
+  <table id="recent-table">
+    <thead><tr><th>日期</th><th>标题</th><th>预览</th></tr></thead>
+    <tbody id="recent-body"><tr><td colspan="3" class="loading">加载中...</td></tr></tbody>
+  </table>
+</main>
+
+<footer>
+  <span>Minis Web Portal · Cloudflare Tunnel · 2026-09-25</span>
+</footer>
+
+<script>
+async function loadStats() {
+  try {
+    const res = await fetch('/api/dashboard');
+    const data = await res.json();
+    document.getElementById('stat-memory').textContent = data.memory.daily_logs;
+    document.getElementById('stat-skills').textContent = data.skills.count;
+    document.getElementById('stat-shared').textContent = data.shared.file_count;
+    
+    const tunnelStatus = data.tunnel.status;
+    const dot = document.getElementById('tunnel-dot');
+    const status = document.getElementById('tunnel-status');
+    dot.className = 'dot ' + tunnelStatus;
+    status.textContent = tunnelStatus === 'online' ? '隧道在线' : '隧道离线';
+  } catch(e) { console.error(e); }
+}
+
+async function loadRecent() {
+  try {
+    const res = await fetch('/api/daily-logs?limit=7');
+    const data = await res.json();
+    const tbody = document.getElementById('recent-body');
+    if (data.logs && data.logs.length > 0) {
+      tbody.innerHTML = data.logs.map(log => `
+        <tr>
+          <td>${log.date}</td>
+          <td>${log.filename.replace('.md', '')}</td>
+          <td style="color: var(--muted); font-size: 12px;">${log.content_preview.substring(0, 60)}...</td>
+        </tr>
+      `).join('');
+    } else {
+      tbody.innerHTML = '<tr><td colspan="3" class="loading">暂无日志</td></tr>';
+    }
+  } catch(e) { console.error(e); }
+}
+
+loadStats();
+loadRecent();
+</script>
+</body>
+</html>

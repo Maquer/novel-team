@@ -1,0 +1,12 @@
+Warning: disabling flag --expose_wasm due to conflicting flags
+Warning: disabling flag --expose_wasm due to conflicting flags
+
+ ⛅️ wrangler 4.136.1
+────────────────────
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mRunning configuration file validation for Pages:[0m
+
+    - Configuration file for Pages projects does not support "account_id"
+
+
+🪵  Logs were written to "/root/.config/.wrangler/logs/wrangler-2026-09-27_02-12-55_677.log"

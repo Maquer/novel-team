@@ -1,0 +1,140 @@
+--workerbundle-6c9392cf0da445f5bbe0b7e070b42cdd
+Content-Disposition: form-data; name="metadata"
+
+{"main_module": "_worker.mjs", "bindings": [{"name": "VIEWS", "type": "kv_namespace", "namespace_id": "7c781ffaf51147e09d71b3f9ee4c9b3c"}], "compatibility_date": "2025-01-01"}
+--workerbundle-6c9392cf0da445f5bbe0b7e070b42cdd
+Content-Disposition: form-data; name="_worker.mjs"; filename="_worker.mjs"
+Content-Type: text/javascript
+
+// 由 build-functions-bundle.py 自动生成
+// 所有路由 -> 处理函数 的映射（Pages Functions 路由约定）
+
+// ===== 数据（内联，无 JSON 模块依赖）=====
+const data = {
+  "articles": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "slug": "hello-world",
+      "excerpt": "这是我的第一篇文章，关于如何开始学习编程。",
+      "content": "# Hello World\n\n欢迎来到我的个人博客！\n\n## 为什么写博客？\n\n写博客是一个很好的学习方式，费曼学习法的核心就是\"教别人\"。\n\n## 技术栈\n\n- 前端：React + Vite\n- 后端：Node.js + Express\n- 部署：Cloudflare Pages + Render\n\n## 下一步\n\n这篇文章是个模板，后面会持续更新更多内容。",
+      "date": "2026-09-27",
+      "category": "技术",
+      "tags": [
+        "React",
+        "Node.js",
+        "博客"
+      ],
+      "views": 104
+    },
+    {
+      "id": 2,
+      "title": "探索 AI 编程助手",
+      "slug": "ai-programming-assistants",
+      "excerpt": "AI 正在改变我们编写代码的方式，本文盘点主流 AI 编程助手。",
+      "content": "# 探索 AI 编程助手\n\n## 背景\n\n2024-2026 年，AI 编程助手快速发展，从代码补全到完整的代码生成。\n\n## 主流工具\n\n### GitHub Copilot\n- 微软出品，IntelliJ 生态支持最好\n- 价格：$10/月 个人版\n\n### Cursor\n- 基于 VS Code，AI 原生 IDE\n- 支持多模型切换\n\n### Claude Code / Codex\n- 命令行优先的 AI 编程工具\n\n## 使用心得\n\nAI 编程助手适合：\n- 快速原型开发\n- Boilerplate 代码生成\n- 代码审查建议\n\n不太适合：\n- 复杂架构决策\n- 核心业务逻辑（需人工审核）\n\n## 结论\n\nAI 编程助手是放大器，不是替代品。",
+      "date": "2026-09-26",
+      "category": "AI",
+      "tags": [
+        "AI",
+        "编程",
+        "效率"
+      ],
+      "views": 251
+    },
+    {
+      "id": 3,
+      "title": "前端性能优化实战",
+      "slug": "frontend-performance-optimization",
+      "excerpt": "从 Lighthouse 评分到实际优化技巧，提升网页加载速度。",
+      "content": "# 前端性能优化实战\n\n## 核心指标\n\n- FCP (First Contentful Paint): 首屏内容时间\n- LCP (Largest Contentful Paint): 最大内容渲染\n- CLS (Cumulative Layout Shift): 布局偏移\n- TTI (Time to Interactive): 可交互时间\n\n## 优化技巧\n\n### 图片优化\n- 使用 WebP/AVIF 格式\n- 响应式图片 srcset\n- 懒加载\n\n### 代码分割\n- React.lazy + Suspense\n- 路由级代码分割\n- 动态 import()\n\n### 缓存策略\n- Service Worker 缓存\n- CDN 静态资源\n- HTTP/2 多路复用\n\n## 工具推荐\n\n- Lighthouse: Chrome 内置性能审计\n- WebPageTest: 全球多节点测试\n- PageSpeed Insights: Google 在线工具",
+      "date": "2026-09-25",
+      "category": "前端",
+      "tags": [
+        "性能",
+        "React",
+        "优化"
+      ],
+      "views": 181
+    }
+  ]
+};
+const articles = data.articles;
+const categories = data.categories;
+
+// ===== 辅助函数 =====
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
+}
+
+// ===== 各路由处理 =====
+async function handleApiCategories(env) {
+  return json(categories);
+}
+
+async function handleApiArticles(env) {
+  return json(articles);
+}
+
+async function handleApiArticleSlug(env, slug) {
+  const article = articles.find((a) => a.slug === slug);
+  if (!article) {
+    return json({ error: 'not found' }, 404);
+  }
+  const key = `views:${slug}`;
+  const current = await env.VIEWS.get(key, 'number');
+  const views = (current ? parseInt(current, 10) : 0) + 1;
+  await env.VIEWS.put(key, String(views), { expirationTtl: 365 * 24 * 3600 });
+  return json({ ...article, views });
+}
+
+// 路由表：模式 -> 处理函数（按顺序匹配，支持 :param）
+const routes = [
+  { pattern: '/api/categories', handler: handleApiCategories },
+  { pattern: '/api/articles', handler: handleApiArticles },
+  { pattern: '/api/articles/:slug', handler: handleApiArticleSlug },
+];
+
+function matchRoute(url) {
+  const path = url.pathname;
+  for (const route of routes) {
+    const parts = route.pattern.split('/');
+    const segs = path.split('/');
+    if (parts.length !== segs.length) continue;
+    const params = {};
+    let ok = true;
+    for (let i = 0; i < parts.length; i++) {
+      if (parts[i].startsWith(':')) {
+        params[parts[i].slice(1)] = decodeURIComponent(segs[i]);
+      } else if (parts[i] !== segs[i]) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) return { handler: route.handler, params };
+  }
+  return null;
+}
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    if (url.pathname.startsWith('/api/')) {
+      const matched = matchRoute(url);
+      if (matched) {
+        return matched.handler(env, matched.params.slug);
+      }
+      return json({ error: 'not found' }, 404);
+    }
+    // 其余请求（静态文件 / 页面 / 404 回退）交给 ASSETS
+    return env.ASSETS.fetch(request);
+  },
+};
+
+--workerbundle-6c9392cf0da445f5bbe0b7e070b42cdd--

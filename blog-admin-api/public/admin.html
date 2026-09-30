@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客管理后台</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <!-- 登录界面 -->
+  <div id="login-page" class="page">
+    <div class="login-container">
+      <h1>🔐 博客管理后台</h1>
+      <form id="login-form">
+        <div class="form-group">
+          <label>用户名</label>
+          <input type="text" id="username" placeholder="admin" required>
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" id="password" placeholder="admin123" required>
+        </div>
+        <button type="submit" class="btn btn-primary">登录</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 管理后台 -->
+  <div id="admin-page" class="page hidden">
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>📝 博客管理</h2>
+      </div>
+      <nav>
+        <a href="#" class="nav-item active" data-page="dashboard">
+          <span class="icon">📊</span> 概览
+        </a>
+        <a href="#" class="nav-item" data-page="posts">
+          <span class="icon">📄</span> 文章
+        </a>
+        <a href="#" class="nav-item" data-page="media">
+          <span class="icon">🖼️</span> 媒体
+        </a>
+        <a href="#" class="nav-item" data-page="settings">
+          <span class="icon">⚙️</span> 设置
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-secondary">退出登录</button>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <!-- 概览页 -->
+      <div id="dashboard-page" class="content-page">
+        <h1>概览</h1>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📄</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-posts">0</div>
+              <div class="stat-label">总文章数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-published">0</div>
+              <div class="stat-label">已发布</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🖼️</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-images">0</div>
+              <div class="stat-label">图片数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📹</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-videos">0</div>
+              <div class="stat-label">视频数</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👁️</div>
+            <div class="stat-info">
+              <div class="stat-value" id="stat-views">0</div>
+              <div class="stat-label">总阅读量</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 文章管理页 -->
+      <div id="posts-page" class="content-page hidden">
+        <div class="page-header">
+          <h1>文章管理</h1>
+          <button class="btn btn-primary" onclick="showPostEditor()">+ 新建文章</button>
+        </div>
+        
+        <!-- 文章列表 -->
+        <div id="posts-list" class="posts-list">
+          <!-- 动态生成 -->
+        </div>
+
+        <!-- 文章编辑器 -->
+        <div id="post-editor" class="editor-container hidden">
+          <div class="editor-header">
+            <button class="btn btn-secondary" onclick="hidePostEditor()">← 返回列表</button>
+            <div class="editor-actions">
+              <button class="btn btn-secondary" onclick="savePost('draft')">保存草稿</button>
+              <button class="btn btn-primary" onclick="savePost('published')">发布</button>
+            </div>
+          </div>
+          <div class="editor-body">
+            <input type="text" id="post-title" placeholder="文章标题" class="input-title">
+            <div class="editor-meta">
+              <select id="post-category" class="input-select">
+                <option value="技术">技术</option>
+                <option value="AI">AI</option>
+                <option value="前端">前端</option>
+                <option value="生活">生活</option>
+                <option value="其他">其他</option>
+              </select>
+              <input type="text" id="post-tags" placeholder="标签（逗号分隔）" class="input-tags">
+            </div>
+            <textarea id="post-content" placeholder="文章内容（支持 Markdown）" class="input-content"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- 媒体库页 -->
+      <div id="media-page" class="content-page hidden">
+        <div class="page-header">
+          <h1>媒体库</h1>
+          <div class="upload-buttons">
+            <button class="btn btn-secondary" onclick="triggerUpload('image')">📷 上传图片</button>
+            <button class="btn btn-secondary" onclick="triggerUpload('video')">🎬 上传视频</button>
+          </div>
+        </div>
+        
+        <div id="image-grid" class="media-grid">
+          <!-- 动态生成 -->
+        </div>
+        
+        <div id="video-grid" class="media-grid">
+          <!-- 动态生成 -->
+        </div>
+      </div>
+
+      <!-- 设置页 -->
+      <div id="settings-page" class="content-page hidden">
+        <h1>站点设置</h1>
+        <div class="settings-form">
+          <div class="form-group">
+            <label>站点名称</label>
+            <input type="text" id="setting-site-title" class="input-text">
+          </div>
+          <div class="form-group">
+            <label>站点描述</label>
+            <textarea id="setting-site-desc" class="input-textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label>管理员用户名</label>
+            <input type="text" id="setting-admin-user" class="input-text">
+          </div>
+          <div class="form-group">
+            <label>管理员密码</label>
+            <input type="password" id="setting-admin-password" class="input-text">
+          </div>
+          <button class="btn btn-primary" onclick="saveSettings()">保存设置</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 隐藏的文件输入 -->
+  <input type="file" id="image-upload" accept="image/*" style="display: none" onchange="handleMediaUpload('image')">
+  <input type="file" id="video-upload" accept="video/*" style="display: none" onchange="handleMediaUpload('video')">
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

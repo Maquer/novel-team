@@ -1,0 +1,42 @@
+{
+  "cohere-north-mini-code": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "deepseek/deepseek-v4-flash": [
+    "HEALTHY",
+    "Got response: {\n  \"action\" : \"run\",\n  \"data\" : {\n    \"injected_s"
+  ],
+  "nvidia/nemotron-3.5-lightning-free": [
+    "UNHEALTHY",
+    "404 Not Found"
+  ],
+  "z-ai/glm-5.3-flash": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "inclusionai/ling-3.0-flash-sante:free": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "sensenova-6.8-flash-lite": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "glm-5.3-flash": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "dots-studio/dots-3-note-preview:free": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "liquid/lfm-2.5-2.6b:free": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ],
+  "poolside/laguna-xs-2.1:free": [
+    "UNHEALTHY",
+    "Error: {\n  \"action\" : \"run\",\n  \"error\" : {\n    \"code\" : \"internal_error\",\n    \"message\""
+  ]
+}
