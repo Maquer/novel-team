@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: 契约测试 + 语法扫描
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 运行契约测试
+      run: |
+        python3 tests/test_contract.py
+
+    - name: 语法扫描（Python）
+      run: |
+        # 只扫描 tools/ 和 novelkit/ 目录，跳过 __pycache__
+        python3 -c "
+        import ast, sys
+        from pathlib import Path
+        errors = []
+        for py in Path('.').rglob('*.py'):
+            if '__pycache__' in str(py) or '.venv' in str(py):
+                continue
+            try:
+                ast.parse(py.read_text(encoding='utf-8'))
+            except SyntaxError as e:
+                errors.append(f'{py}: {e}')
+        if errors:
+            print('❌ 语法错误：')
+            for e in errors:
+                print(f'  {e}')
+            sys.exit(1)
+        else:
+            print(f'✅ 语法检查通过（扫描了 {len(list(Path(\".\").rglob(\"*.py\")))} 个文件）')
+        "
+
+    - name: JSON 格式检查
+      run: |
+        find . -name "*.json" ! -path "*/.git/*" ! -path "*/__pycache__/*" -exec python3 -m json.tool {} \; > /dev/null 2>&1 || (echo "❌ JSON 格式错误" && find . -name "*.json" ! -path "*/.git/*" ! -path "*/__pycache__/*" -exec python3 -m json.tool {} \; && exit 1)
+        echo "✅ JSON 格式正确"
