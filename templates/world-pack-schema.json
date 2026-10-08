@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "World Pack Schema",
+  "description": "世界观数据包标准结构（09-29）",
+  "type": "object",
+  "required": ["id", "name", "type", "setting"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^world-\\d{3}$"},
+    "name": {"type": "string", "minLength": 1},
+    "type": {"type": "string", "enum": ["historical", "modern", "fantasy", "sci-fi", "zombie"]},
+    "created": {"type": "string", "format": "date"},
+    "setting": {
+      "type": "object",
+      "required": ["era", "location"],
+      "properties": {
+        "era": {"type": "string"},
+        "location": {"type": "string"},
+        "taboos": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "power_system": {
+      "type": "object",
+      "properties": {
+        "type": {"type": "string"},
+        "levels": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "hidden_thread": {
+      "type": "object",
+      "properties": {
+        "entity": {"type": "string"},
+        "reveal": {"type": "string", "enum": ["delayed", "ch1", "ch3", "ch5"]},
+        "truth": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-10-03T11:58:34.684707",
+  "total_books": 2,
+  "books": [
+    {
+      "title": "我的公公叫康熙",
+      "path": "我的公公叫康熙.txt",
+      "size_bytes": 22307056,
+      "line_count": 498912,
+      "chapter_count": 1978,
+      "word_count": 6804197,
+      "first_line": "",
+      "last_line": "",
+      "tags": [
+        "清穿",
+        "宫廷"
+      ],
+      "status": "analyzed",
+      "analysis_date": "2026-10-03 11:58:34",
+      "patterns": [
+        "穿越设定",
+        "清穿宫廷",
+        "章节结构：1968章",
+        "短标题风格"
+      ]
+    },
+    {
+      "title": "我的公公叫康熙",
+      "path": "Book/我的公公叫康熙.txt",
+      "size_bytes": 22307056,
+      "line_count": 498912,
+      "chapter_count": 1978,
+      "word_count": 6804197,
+      "first_line": "",
+      "last_line": "",
+      "tags": [
+        "清穿",
+        "宫廷"
+      ],
+      "status": "analyzed",
+      "analysis_date": "2026-10-03 11:58:34",
+      "patterns": [
+        "穿越设定",
+        "清穿宫廷",
+        "章节结构：1968章",
+        "短标题风格"
+      ]
+    }
+  ],
+  "summary": {
+    "total_chapters": 3956,
+    "total_words": 13608394,
+    "genres": [
+      "清穿宫廷"
+    ]
+  }
+}

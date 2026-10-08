@@ -1,0 +1,38 @@
+{
+  "novel_id": "test-novel",
+  "chapters": {
+    "1": {
+      "chapter": 1,
+      "analyzed_at": "2026-10-03T22:16:12.913338",
+      "hook": {
+        "score": 100,
+        "level": "strong",
+        "opening_hooks": 4,
+        "ending_hooks": 4,
+        "desc": "章首4个钩子，章末4个钩子"
+      },
+      "cool_point": {
+        "score": 0,
+        "level": "none",
+        "count": 0,
+        "points": [],
+        "desc": "检测到0个爽点"
+      },
+      "micro_payoff": {
+        "score": 0,
+        "level": "none",
+        "count": 0,
+        "payoffs": [],
+        "desc": "检测到0个微兑现"
+      },
+      "debt": {
+        "new_debts": [],
+        "resolved_debts": [],
+        "desc": "新债务0个，回收0个"
+      },
+      "total_score": 33.333333333333336
+    }
+  },
+  "debt_ledger": [],
+  "cumulative_score": 0
+}

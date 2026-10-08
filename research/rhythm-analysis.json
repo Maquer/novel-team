@@ -1,0 +1,37 @@
+{
+  "novel_title": "我的公公叫康熙",
+  "total_chapters": 2118,
+  "total_words": 6804170,
+  "avg_words_per_chapter": 3212.5,
+  "std_dev": 493.2,
+  "cv": 0.154,
+  "patterns": [
+    {
+      "name": "中等稳定",
+      "description": "章节字数有一定波动，但在合理范围内",
+      "confidence": 0.7,
+      "evidence": [
+        "变异系数: 0.154"
+      ]
+    },
+    {
+      "name": "中篇风格",
+      "description": "单章篇幅适中，平衡密度与可读性",
+      "confidence": 0.9,
+      "evidence": [
+        "平均每章: 3213字"
+      ]
+    },
+    {
+      "name": "存在短章",
+      "description": "有10章字数不足500字，可能是过渡章或特殊设计",
+      "confidence": 0.6,
+      "evidence": [
+        "短章数: 10"
+      ]
+    }
+  ],
+  "recommendations": [
+    "发现10章异常短章，建议检查是否为未完成的过渡段"
+  ]
+}

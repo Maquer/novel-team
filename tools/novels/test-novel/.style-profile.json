@@ -1,0 +1,21 @@
+{
+  "novel_id": "test-novel",
+  "created_at": "2026-10-03T22:17:09.284264",
+  "main_card": {
+    "avg_sentence_length": 8.4,
+    "dialogue_ratio": 0.078,
+    "adjective_density": 0.0,
+    "action_density": 38.8,
+    "sensory_density": 19.4,
+    "avg_paragraph_length": 20.6,
+    "sentence_length_cv": 0.725,
+    "short_sentence_ratio": 0.727,
+    "long_sentence_ratio": 0.0,
+    "dialogue_avg_length": 4.0
+  },
+  "scene_cards": {},
+  "version": 1,
+  "calibration_history": [],
+  "last_updated": "2026-10-03T22:17:09.284465",
+  "last_source": "manual"
+}

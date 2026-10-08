@@ -1,0 +1,8 @@
+{
+  "word_count": {
+    "target": 2600,
+    "soft_min": 2000,
+    "hard_min": 1500,
+    "warn_above": 3500
+  }
+}

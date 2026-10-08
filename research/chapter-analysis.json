@@ -1,0 +1,19 @@
+{
+  "total_chapters": 100,
+  "total_words": 21910,
+  "avg_words_per_chapter": 219.1,
+  "min_words": 131,
+  "max_words": 2128,
+  "std_dev": 196.2195454076887,
+  "distribution": {
+    "0-50行": 0,
+    "50-100行": 0,
+    "100-150行": 7,
+    "150-200行": 44,
+    "200+行": 49
+  },
+  "patterns": [
+    "字数波动大",
+    "长章节风格"
+  ]
+}

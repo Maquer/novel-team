@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-10-03T12:03:36.195340",
+  "total_novels": 2,
+  "successful": 2,
+  "failed": 0,
+  "novels": [
+    {
+      "novel_title": "我的公公叫康熙",
+      "source_file": "/var/minis/mounts/loong/我的公公叫康熙.txt",
+      "status": "success",
+      "chapters_extracted": 2118,
+      "total_words": 6804170,
+      "avg_words_per_chapter": 3212.5,
+      "rhythm_pattern": "中长章节风格",
+      "patterns": [
+        "中等稳定",
+        "中篇风格",
+        "存在短章"
+      ],
+      "recommendations": [
+        "发现10章异常短章，建议检查是否为未完成的过渡段"
+      ],
+      "output_files": [
+        "research/distill-output/我的公公叫康熙_chapters.json",
+        "research/distill-output/我的公公叫康熙_rhythm.json",
+        "research/distill-output/我的公公叫康熙_分析.md"
+      ],
+      "error": null,
+      "analysis_date": "2026-10-03T12:02:35.150468"
+    },
+    {
+      "novel_title": "我的公公叫康熙",
+      "source_file": "/var/minis/mounts/loong/Book/我的公公叫康熙.txt",
+      "status": "success",
+      "chapters_extracted": 2118,
+      "total_words": 6804170,
+      "avg_words_per_chapter": 3212.5,
+      "rhythm_pattern": "中长章节风格",
+      "patterns": [
+        "中等稳定",
+        "中篇风格",
+        "存在短章"
+      ],
+      "recommendations": [
+        "发现10章异常短章，建议检查是否为未完成的过渡段"
+      ],
+      "output_files": [
+        "research/distill-output/我的公公叫康熙_chapters.json",
+        "research/distill-output/我的公公叫康熙_rhythm.json",
+        "research/distill-output/我的公公叫康熙_分析.md"
+      ],
+      "error": null,
+      "analysis_date": "2026-10-03T12:03:36.195220"
+    }
+  ],
+  "summary": {
+    "total_chapters": 4236,
+    "total_words": 13608340
+  }
+}

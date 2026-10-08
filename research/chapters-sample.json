@@ -1,0 +1,806 @@
+{
+  "source": "/var/minis/mounts/loong/我的公公叫康熙.txt",
+  "total_chapters": 1857,
+  "chapters": [
+    {
+      "number": 1,
+      "title": "缘起",
+      "line_start": 8,
+      "line_end": 139,
+      "word_count": 6,
+      "preview": "第一章 缘起"
+    },
+    {
+      "number": 2,
+      "title": "家宴",
+      "line_start": 139,
+      "line_end": 284,
+      "word_count": 6,
+      "preview": "第二章 家宴"
+    },
+    {
+      "number": 3,
+      "title": "官司",
+      "line_start": 284,
+      "line_end": 439,
+      "word_count": 6,
+      "preview": "第三章 官司"
+    },
+    {
+      "number": 4,
+      "title": "反转",
+      "line_start": 439,
+      "line_end": 570,
+      "word_count": 6,
+      "preview": "第四章 反转"
+    },
+    {
+      "number": 5,
+      "title": "指婚",
+      "line_start": 570,
+      "line_end": 711,
+      "word_count": 6,
+      "preview": "第五章 指婚"
+    },
+    {
+      "number": 6,
+      "title": "不喜",
+      "line_start": 711,
+      "line_end": 868,
+      "word_count": 6,
+      "preview": "第六章 不喜"
+    },
+    {
+      "number": 7,
+      "title": "竹马",
+      "line_start": 868,
+      "line_end": 1033,
+      "word_count": 6,
+      "preview": "第七章 竹马"
+    },
+    {
+      "number": 8,
+      "title": "约见",
+      "line_start": 1033,
+      "line_end": 1192,
+      "word_count": 6,
+      "preview": "第八章 约见"
+    },
+    {
+      "number": 9,
+      "title": "好心",
+      "line_start": 1192,
+      "line_end": 1337,
+      "word_count": 6,
+      "preview": "第九章 好心"
+    },
+    {
+      "number": 10,
+      "title": "初定礼",
+      "line_start": 1337,
+      "line_end": 1490,
+      "word_count": 7,
+      "preview": "第十章 初定礼"
+    },
+    {
+      "number": 11,
+      "title": "鸳盟",
+      "line_start": 1490,
+      "line_end": 1717,
+      "word_count": 7,
+      "preview": "第十一章 鸳盟"
+    },
+    {
+      "number": 12,
+      "title": "伏线",
+      "line_start": 1717,
+      "line_end": 1872,
+      "word_count": 7,
+      "preview": "第十二章 伏线"
+    },
+    {
+      "number": 13,
+      "title": "嫁妆",
+      "line_start": 1872,
+      "line_end": 2037,
+      "word_count": 7,
+      "preview": "第十三章 嫁妆"
+    },
+    {
+      "number": 14,
+      "title": "骄客",
+      "line_start": 2037,
+      "line_end": 2198,
+      "word_count": 7,
+      "preview": "第十四章 骄客"
+    },
+    {
+      "number": 15,
+      "title": "新人",
+      "line_start": 2198,
+      "line_end": 2373,
+      "word_count": 7,
+      "preview": "第十五章 新人"
+    },
+    {
+      "number": 16,
+      "title": "“回礼”",
+      "line_start": 2373,
+      "line_end": 2534,
+      "word_count": 9,
+      "preview": "第十六章 “回礼”"
+    },
+    {
+      "number": 17,
+      "title": "学习",
+      "line_start": 2534,
+      "line_end": 2729,
+      "word_count": 7,
+      "preview": "第十七章 学习"
+    },
+    {
+      "number": 18,
+      "title": "人心 （双更求收藏、求票票）",
+      "line_start": 2729,
+      "line_end": 2922,
+      "word_count": 19,
+      "preview": "第十八章 人心 （双更求收藏、求票票）"
+    },
+    {
+      "number": 19,
+      "title": "处置（一更）",
+      "line_start": 2922,
+      "line_end": 3073,
+      "word_count": 11,
+      "preview": "第十九章 处置（一更）"
+    },
+    {
+      "number": 20,
+      "title": "风光（二更）",
+      "line_start": 3073,
+      "line_end": 3226,
+      "word_count": 11,
+      "preview": "第二十章 风光（二更）"
+    },
+    {
+      "number": 21,
+      "title": "添妆",
+      "line_start": 3226,
+      "line_end": 3415,
+      "word_count": 8,
+      "preview": "第二十一章 添妆"
+    },
+    {
+      "number": 22,
+      "title": "出闺（大婚求收藏）",
+      "line_start": 3415,
+      "line_end": 3582,
+      "word_count": 15,
+      "preview": "第二十二章 出闺（大婚求收藏）"
+    },
+    {
+      "number": 23,
+      "title": "妯娌",
+      "line_start": 3582,
+      "line_end": 3781,
+      "word_count": 8,
+      "preview": "第二十三章 妯娌"
+    },
+    {
+      "number": 24,
+      "title": "花烛",
+      "line_start": 3781,
+      "line_end": 3968,
+      "word_count": 8,
+      "preview": "第二十四章 花烛"
+    },
+    {
+      "number": 25,
+      "title": "朝见礼（上）（新书求收藏）",
+      "line_start": 3968,
+      "line_end": 4185,
+      "word_count": 19,
+      "preview": "第二十五章 朝见礼（上）（新书求收藏）"
+    },
+    {
+      "number": 26,
+      "title": "朝见礼（下）",
+      "line_start": 4185,
+      "line_end": 4396,
+      "word_count": 12,
+      "preview": "第二十六章 朝见礼（下）"
+    },
+    {
+      "number": 27,
+      "title": "二所",
+      "line_start": 4396,
+      "line_end": 4615,
+      "word_count": 8,
+      "preview": "第二十七章 二所"
+    },
+    {
+      "number": 28,
+      "title": "宫女子",
+      "line_start": 4615,
+      "line_end": 4808,
+      "word_count": 9,
+      "preview": "第二十八章 宫女子"
+    },
+    {
+      "number": 29,
+      "title": "教学相长",
+      "line_start": 4808,
+      "line_end": 5017,
+      "word_count": 10,
+      "preview": "第二十九章 教学相长"
+    },
+    {
+      "number": 30,
+      "title": "帝妃",
+      "line_start": 5017,
+      "line_end": 5260,
+      "word_count": 7,
+      "preview": "第三十章 帝妃"
+    },
+    {
+      "number": 31,
+      "title": "龙凤烛",
+      "line_start": 5260,
+      "line_end": 5467,
+      "word_count": 9,
+      "preview": "第三十一章 龙凤烛"
+    },
+    {
+      "number": 32,
+      "title": "处置",
+      "line_start": 5467,
+      "line_end": 5664,
+      "word_count": 8,
+      "preview": "第三十二章 处置"
+    },
+    {
+      "number": 33,
+      "title": "加菜",
+      "line_start": 5664,
+      "line_end": 5859,
+      "word_count": 8,
+      "preview": "第三十三章 加菜"
+    },
+    {
+      "number": 34,
+      "title": "《大清律》",
+      "line_start": 5859,
+      "line_end": 6078,
+      "word_count": 11,
+      "preview": "第三十四章 《大清律》"
+    },
+    {
+      "number": 35,
+      "title": "夫纲",
+      "line_start": 6078,
+      "line_end": 6257,
+      "word_count": 8,
+      "preview": "第三十五章 夫纲"
+    },
+    {
+      "number": 36,
+      "title": "景阳宫",
+      "line_start": 6257,
+      "line_end": 6444,
+      "word_count": 9,
+      "preview": "第三十六章 景阳宫"
+    },
+    {
+      "number": 37,
+      "title": "婚姻",
+      "line_start": 6444,
+      "line_end": 6661,
+      "word_count": 8,
+      "preview": "第三十七章 婚姻"
+    },
+    {
+      "number": 38,
+      "title": "请安（上）",
+      "line_start": 6661,
+      "line_end": 6850,
+      "word_count": 11,
+      "preview": "第三十八章 请安（上）"
+    },
+    {
+      "number": 39,
+      "title": "请安（下）",
+      "line_start": 6850,
+      "line_end": 7013,
+      "word_count": 11,
+      "preview": "第三十九章 请安（下）"
+    },
+    {
+      "number": 40,
+      "title": "宿疾",
+      "line_start": 7013,
+      "line_end": 7200,
+      "word_count": 7,
+      "preview": "第四十章 宿疾"
+    },
+    {
+      "number": 41,
+      "title": "人事（上）",
+      "line_start": 7200,
+      "line_end": 7341,
+      "word_count": 11,
+      "preview": "第四十一章 人事（上）"
+    },
+    {
+      "number": 42,
+      "title": "人事（下）",
+      "line_start": 7341,
+      "line_end": 7486,
+      "word_count": 11,
+      "preview": "第四十二章 人事（下）"
+    },
+    {
+      "number": 43,
+      "title": "小字",
+      "line_start": 7486,
+      "line_end": 7707,
+      "word_count": 8,
+      "preview": "第四十三章 小字"
+    },
+    {
+      "number": 44,
+      "title": "老奴（上）",
+      "line_start": 7707,
+      "line_end": 8085,
+      "word_count": 11,
+      "preview": "第四十四章 老奴（上）"
+    },
+    {
+      "number": 45,
+      "title": "小阿哥",
+      "line_start": 8085,
+      "line_end": 8270,
+      "word_count": 9,
+      "preview": "第四十六章 小阿哥"
+    },
+    {
+      "number": 46,
+      "title": "夫妻档",
+      "line_start": 8270,
+      "line_end": 8443,
+      "word_count": 9,
+      "preview": "第四十七章 夫妻档"
+    },
+    {
+      "number": 47,
+      "title": "老参",
+      "line_start": 8443,
+      "line_end": 8644,
+      "word_count": 8,
+      "preview": "第四十八章 老参"
+    },
+    {
+      "number": 48,
+      "title": "茶与酒",
+      "line_start": 8644,
+      "line_end": 8881,
+      "word_count": 9,
+      "preview": "第四十九章 茶与酒"
+    },
+    {
+      "number": 49,
+      "title": "小辞",
+      "line_start": 8881,
+      "line_end": 9106,
+      "word_count": 7,
+      "preview": "第五十章 小辞"
+    },
+    {
+      "number": 50,
+      "title": "堂亲",
+      "line_start": 9106,
+      "line_end": 9291,
+      "word_count": 8,
+      "preview": "第五十一章 堂亲"
+    },
+    {
+      "number": 51,
+      "title": "闹酒",
+      "line_start": 9291,
+      "line_end": 9482,
+      "word_count": 8,
+      "preview": "第五十二章 闹酒"
+    },
+    {
+      "number": 52,
+      "title": "私语（加更）",
+      "line_start": 9482,
+      "line_end": 9651,
+      "word_count": 12,
+      "preview": "第五十三章 私语（加更）"
+    },
+    {
+      "number": 53,
+      "title": "封爵事",
+      "line_start": 9651,
+      "line_end": 9856,
+      "word_count": 9,
+      "preview": "第五十四章 封爵事"
+    },
+    {
+      "number": 54,
+      "title": "金碗",
+      "line_start": 9856,
+      "line_end": 10069,
+      "word_count": 8,
+      "preview": "第五十五章 金碗"
+    },
+    {
+      "number": 55,
+      "title": "惊变",
+      "line_start": 10069,
+      "line_end": 10282,
+      "word_count": 8,
+      "preview": "第五十六章 惊变"
+    },
+    {
+      "number": 56,
+      "title": "会诊",
+      "line_start": 10282,
+      "line_end": 10481,
+      "word_count": 8,
+      "preview": "第五十七章 会诊"
+    },
+    {
+      "number": 57,
+      "title": "有疾",
+      "line_start": 10481,
+      "line_end": 10696,
+      "word_count": 8,
+      "preview": "第五十八章 有疾"
+    },
+    {
+      "number": 58,
+      "title": "背锅",
+      "line_start": 10696,
+      "line_end": 10907,
+      "word_count": 8,
+      "preview": "第五十九章 背锅"
+    },
+    {
+      "number": 59,
+      "title": "改嫁",
+      "line_start": 10907,
+      "line_end": 11122,
+      "word_count": 7,
+      "preview": "第六十章 改嫁"
+    },
+    {
+      "number": 60,
+      "title": "选址",
+      "line_start": 11122,
+      "line_end": 11317,
+      "word_count": 8,
+      "preview": "第六十一章 选址"
+    },
+    {
+      "number": 61,
+      "title": "倾吐",
+      "line_start": 11317,
+      "line_end": 11502,
+      "word_count": 8,
+      "preview": "第六十二章 倾吐"
+    },
+    {
+      "number": 62,
+      "title": "生疑",
+      "line_start": 11502,
+      "line_end": 11691,
+      "word_count": 8,
+      "preview": "第六十三章 生疑"
+    },
+    {
+      "number": 63,
+      "title": "不良",
+      "line_start": 11691,
+      "line_end": 11908,
+      "word_count": 8,
+      "preview": "第六十四章 不良"
+    },
+    {
+      "number": 64,
+      "title": "抢食",
+      "line_start": 11908,
+      "line_end": 12117,
+      "word_count": 8,
+      "preview": "第六十五章 抢食"
+    },
+    {
+      "number": 65,
+      "title": "猪",
+      "line_start": 12117,
+      "line_end": 12308,
+      "word_count": 7,
+      "preview": "第六十六章 猪"
+    },
+    {
+      "number": 66,
+      "title": "赌注",
+      "line_start": 12308,
+      "line_end": 12507,
+      "word_count": 8,
+      "preview": "第六十七章 赌注"
+    },
+    {
+      "number": 67,
+      "title": "传话",
+      "line_start": 12507,
+      "line_end": 12955,
+      "word_count": 8,
+      "preview": "第六十八章 传话"
+    },
+    {
+      "number": 68,
+      "title": "火",
+      "line_start": 12955,
+      "line_end": 13152,
+      "word_count": 6,
+      "preview": "第七十章 火"
+    },
+    {
+      "number": 69,
+      "title": "罚",
+      "line_start": 13152,
+      "line_end": 13331,
+      "word_count": 7,
+      "preview": "第七十一章 罚"
+    },
+    {
+      "number": 70,
+      "title": "补全",
+      "line_start": 13331,
+      "line_end": 13552,
+      "word_count": 8,
+      "preview": "第七十二章 补全"
+    },
+    {
+      "number": 71,
+      "title": "七夕（上）",
+      "line_start": 13552,
+      "line_end": 13803,
+      "word_count": 11,
+      "preview": "第七十三章 七夕（上）"
+    },
+    {
+      "number": 72,
+      "title": "七夕（下）",
+      "line_start": 13803,
+      "line_end": 14022,
+      "word_count": 11,
+      "preview": "第七十四章 七夕（下）"
+    },
+    {
+      "number": 73,
+      "title": "巧合",
+      "line_start": 14022,
+      "line_end": 14251,
+      "word_count": 8,
+      "preview": "第七十五章 巧合"
+    },
+    {
+      "number": 74,
+      "title": "查",
+      "line_start": 14251,
+      "line_end": 14466,
+      "word_count": 7,
+      "preview": "第七十六章 查"
+    },
+    {
+      "number": 75,
+      "title": "悟",
+      "line_start": 14466,
+      "line_end": 14685,
+      "word_count": 7,
+      "preview": "第七十七章 悟"
+    },
+    {
+      "number": 76,
+      "title": "识",
+      "line_start": 14685,
+      "line_end": 14928,
+      "word_count": 7,
+      "preview": "第七十八章 识"
+    },
+    {
+      "number": 77,
+      "title": "清",
+      "line_start": 14928,
+      "line_end": 15149,
+      "word_count": 7,
+      "preview": "第七十九章 清"
+    },
+    {
+      "number": 78,
+      "title": "暑",
+      "line_start": 15149,
+      "line_end": 15356,
+      "word_count": 6,
+      "preview": "第八十章 暑"
+    },
+    {
+      "number": 79,
+      "title": "惊",
+      "line_start": 15356,
+      "line_end": 15591,
+      "word_count": 7,
+      "preview": "第八十一章 惊"
+    },
+    {
+      "number": 80,
+      "title": "探",
+      "line_start": 15591,
+      "line_end": 15828,
+      "word_count": 7,
+      "preview": "第八十二章 探"
+    },
+    {
+      "number": 81,
+      "title": "念",
+      "line_start": 15828,
+      "line_end": 16047,
+      "word_count": 7,
+      "preview": "第八十三章 念"
+    },
+    {
+      "number": 82,
+      "title": "和",
+      "line_start": 16047,
+      "line_end": 16252,
+      "word_count": 7,
+      "preview": "第八十四章 和"
+    },
+    {
+      "number": 83,
+      "title": "来",
+      "line_start": 16252,
+      "line_end": 16451,
+      "word_count": 7,
+      "preview": "第八十五章 来"
+    },
+    {
+      "number": 84,
+      "title": "冰",
+      "line_start": 16451,
+      "line_end": 16672,
+      "word_count": 7,
+      "preview": "第八十六章 冰"
+    },
+    {
+      "number": 85,
+      "title": "傲",
+      "line_start": 16672,
+      "line_end": 16901,
+      "word_count": 7,
+      "preview": "第八十七章 傲"
+    },
+    {
+      "number": 86,
+      "title": "赏",
+      "line_start": 16901,
+      "line_end": 17108,
+      "word_count": 7,
+      "preview": "第八十八章 赏"
+    },
+    {
+      "number": 87,
+      "title": "劝",
+      "line_start": 17108,
+      "line_end": 17291,
+      "word_count": 7,
+      "preview": "第八十九章 劝"
+    },
+    {
+      "number": 88,
+      "title": "菜",
+      "line_start": 17291,
+      "line_end": 17516,
+      "word_count": 6,
+      "preview": "第九十章 菜"
+    },
+    {
+      "number": 89,
+      "title": "家",
+      "line_start": 17516,
+      "line_end": 17709,
+      "word_count": 7,
+      "preview": "第九十一章 家"
+    },
+    {
+      "number": 90,
+      "title": "食",
+      "line_start": 17709,
+      "line_end": 17896,
+      "word_count": 7,
+      "preview": "第九十二章 食"
+    },
+    {
+      "number": 91,
+      "title": "街",
+      "line_start": 17896,
+      "line_end": 18109,
+      "word_count": 7,
+      "preview": "第九十三章 街"
+    },
+    {
+      "number": 92,
+      "title": "出",
+      "line_start": 18109,
+      "line_end": 18312,
+      "word_count": 7,
+      "preview": "第九十四章 出"
+    },
+    {
+      "number": 93,
+      "title": "尝",
+      "line_start": 18312,
+      "line_end": 18513,
+      "word_count": 7,
+      "preview": "第九十五章 尝"
+    },
+    {
+      "number": 94,
+      "title": "问",
+      "line_start": 18513,
+      "line_end": 18712,
+      "word_count": 7,
+      "preview": "第九十六章 问"
+    },
+    {
+      "number": 95,
+      "title": "圆",
+      "line_start": 18712,
+      "line_end": 18940,
+      "word_count": 7,
+      "preview": "第九十七章 圆"
+    },
+    {
+      "number": 96,
+      "title": "行宫（上架求首订）",
+      "line_start": 18940,
+      "line_end": 19183,
+      "word_count": 15,
+      "preview": "第九十八章 行宫（上架求首订）"
+    },
+    {
+      "number": 97,
+      "title": "小席（二更求订阅）",
+      "line_start": 19183,
+      "line_end": 19384,
+      "word_count": 15,
+      "preview": "第九十九章 小席（二更求订阅）"
+    },
+    {
+      "number": 98,
+      "title": "献（三更求订阅）",
+      "line_start": 19384,
+      "line_end": 21512,
+      "word_count": 13,
+      "preview": "第一百章 献（三更求订阅）"
+    },
+    {
+      "number": 99,
+      "title": "端倪",
+      "line_start": 21512,
+      "line_end": 21715,
+      "word_count": 9,
+      "preview": "第一百一十章 端倪"
+    },
+    {
+      "number": 100,
+      "title": "训",
+      "line_start": 21715,
+      "line_end": 21918,
+      "word_count": 9,
+      "preview": "第一百一十一章 训"
+    }
+  ]
+}

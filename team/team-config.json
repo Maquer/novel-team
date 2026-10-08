@@ -1,0 +1,127 @@
+{
+  "team_name": "小说创作团队",
+  "version": "1.0.0",
+  "created_at": "2026-09-27",
+  
+  "roles": [
+    {
+      "id": "director",
+      "name": "团队总监",
+      "department": "management",
+      "responsibilities": ["统筹协调", "质量把控", "项目方向"],
+      "tools": ["context-manager.py", "decide-trigger.py", "contract-tree.py"],
+      "authority": "high"
+    },
+    {
+      "id": "lead_writer",
+      "name": "主笔作者",
+      "department": "content",
+      "responsibilities": ["核心章节创作", "文风把控", "情节设计"],
+      "tools": ["context-manager.py", "plot-analyzer.py", "plot-simulation-v2.py", "wordcount-check.py"],
+      "authority": "high"
+    },
+    {
+      "id": "writer",
+      "name": "辅助作者",
+      "department": "content",
+      "responsibilities": ["常规章节创作", "续写扩展", "润色优化"],
+      "tools": ["batch-replace.py", "merge-chapters.py", "wordcount-check.py", "clean_commas.py"],
+      "authority": "medium"
+    },
+    {
+      "id": "world_builder",
+      "name": "世界观师",
+      "department": "world",
+      "responsibilities": ["世界包管理", "设定维护", "知识图谱"],
+      "tools": ["world-pack.py", "world-init.py", "fact-snapshot.py", "story-graph.py", "rag-enhanced.py"],
+      "authority": "high"
+    },
+    {
+      "id": "outline_designer",
+      "name": "大纲设计师",
+      "department": "outline",
+      "responsibilities": ["大纲制定", "伏笔管理", "剧情推演"],
+      "tools": ["outline.py", "outline-builder.py", "fact-snapshot.py", "plot-simulation-v2.py", "foreshadow-service.py", "contract-tree.py"],
+      "authority": "high"
+    },
+    {
+      "id": "editor",
+      "name": "审稿编辑",
+      "department": "quality",
+      "responsibilities": ["门禁检查", "一致性审核", "事实核验"],
+      "tools": ["gate-check.py", "guard-v6.py", "fact-ledger.py", "decide-trigger.py", "novel-humanizer.py"],
+      "authority": "high"
+    },
+    {
+      "id": "style_optimizer",
+      "name": "去AI味师",
+      "department": "quality",
+      "responsibilities": ["去AI味检测", "文风优化", "指纹蒸馏"],
+      "tools": ["anti-ai-12.py", "novel-humanizer.py", "fusion-engine.py", "guard-v6.py", "clean_commas.py"],
+      "authority": "medium"
+    },
+    {
+      "id": "analyst",
+      "name": "数据分析师",
+      "department": "data",
+      "responsibilities": ["创作统计", "效果评估", "趋势分析"],
+      "tools": ["fact-ledger.py", "preference-memory.py", "timeline.py", "capability-evaluator.py"],
+      "authority": "medium"
+    }
+  ],
+  
+  "departments": [
+    {
+      "name": "内容创作部",
+      "roles": ["lead_writer", "writer"],
+      "head": "lead_writer"
+    },
+    {
+      "name": "世界架构部",
+      "roles": ["world_builder", "outline_designer"],
+      "head": "world_builder"
+    },
+    {
+      "name": "质量控制部",
+      "roles": ["editor", "style_optimizer"],
+      "head": "editor"
+    },
+    {
+      "name": "数据分析部",
+      "roles": ["analyst"],
+      "head": "analyst"
+    },
+    {
+      "name": "管理层",
+      "roles": ["director"],
+      "head": "director"
+    }
+  ],
+  
+  "workflow": {
+    "daily": {
+      "08:00": "analyst generates daily report",
+      "09:00": "director holds morning meeting",
+      "09:30": "outline_designer updates daily tasks",
+      "10:00-12:00": "writers create content",
+      "12:00": "style_optimizer checks morning output",
+      "14:00-17:00": "writers continue creation",
+      "17:00": "editor reviews",
+      "18:00": "analyst generates progress report"
+    },
+    "weekly": {
+      "monday": "outline_designer updates weekly plan",
+      "wednesday": "world_builder checks consistency",
+      "friday": "director holds weekly meeting",
+      "sunday": "analyst generates weekly report"
+    }
+  },
+  
+  "quality_gates": [
+    {"name": "gate-1", "stage": "outline", "checker": "outline_designer", "checklist": ["大纲完整性", "伏笔合理性"]},
+    {"name": "gate-2", "stage": "draft", "checker": "lead_writer", "checklist": ["内容完整", "风格一致"]},
+    {"name": "gate-3", "stage": "review", "checker": "editor", "checklist": ["门禁通过", "事实一致"]},
+    {"name": "gate-4", "stage": "polish", "checker": "style_optimizer", "checklist": ["去AI味", "文风优化"]},
+    {"name": "gate-5", "stage": "publish", "checker": "director", "checklist": ["最终审核", "发布许可"]}
+  ]
+}
