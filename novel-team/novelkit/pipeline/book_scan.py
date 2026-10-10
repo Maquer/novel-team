@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import re
 import time
+import uuid
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -87,7 +88,8 @@ def scan_book(novel_id: str, chapter_files: List[str],
 
     for f in chapter_files:
         try:
-            res = orch.check(f)
+            # L4：批量扫描不产生单章副作用（落盘/账本/事件），只收书级报告。
+            res = orch.check(f, quiet=True)
             checks = res.get("checks", {}) or {}
             ai_tone = checks.get("ai_tone", {}) or {}
             summary = res.get("summary", {}) or {}
@@ -124,7 +126,7 @@ def _save_report(novel_id: str, report: BookScanReport) -> Optional[Path]:
     try:
         result_dir = resolve(novel_id).root_dir / "reports"
         result_dir.mkdir(parents=True, exist_ok=True)
-        p = result_dir / f"book-scan-{int(time.time())}.json"
+        p = result_dir / f"book-scan-{int(time.time())}-{uuid.uuid4().hex[:6]}.json"
         p.write_text(json.dumps(report.to_dict(), ensure_ascii=False, indent=2),
                      encoding="utf-8")
         return p

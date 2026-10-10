@@ -6,7 +6,6 @@ v2 Phase 2：由 tools/gate-check.py 的 GateChecker 审核状态机方法移植
 
 import json
 import time
-from pathlib import Path
 from typing import Dict, Optional
 
 from novelkit.core.resolve import resolve

@@ -35,7 +35,8 @@ class CheckCache:
         self.dir = Path(project_dir) / ".novel" / "cache"
 
     def key(self, chapter_raw: str, novel_id: str, mode: str,
-            flexible: bool, config_dict: Dict[str, Any]) -> str:
+            flexible: bool, config_dict: Dict[str, Any],
+            tool_hashes: str = "") -> str:
         h = hashlib.sha256()
         h.update(chapter_raw.encode("utf-8"))
         h.update(novel_id.encode("utf-8"))
@@ -45,6 +46,9 @@ class CheckCache:
                             ensure_ascii=False).encode("utf-8"))
         h.update(novelkit.__version__.encode("utf-8"))
         h.update(str(CACHE_VERSION).encode("utf-8"))
+        # L1：检查插件经 importlib 加载 tools/*.py（novel-humanizer.py、
+        # logic-review.py、anti-ai-12.py），改了这些文件缓存必须失效。
+        h.update(tool_hashes.encode("utf-8"))
         return h.hexdigest()[:16]
 
     def _path(self, key: str) -> Path:

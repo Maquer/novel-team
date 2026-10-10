@@ -15,9 +15,9 @@ total_open/total_resolved 重算）。
 """
 
 import json
+import sys
 from datetime import datetime
-from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 from novelkit.core.config import novel_team_root
 
@@ -55,14 +55,29 @@ class DebtStore:
         self.novel_id = novel_id
         self.debt_path = novel_team_root() / "ledger" / novel_id / "quality-debt.json"
         self.debt_path.parent.mkdir(parents=True, exist_ok=True)
+        # H2 修复：记录加载期错误；账本损坏不得瘫痪门禁。
+        self.load_errors: List[str] = []
         self._data: Dict = self._load()
 
     # --- IO ---
 
     def _load(self) -> Dict:
-        if self.debt_path.exists():
-            return json.loads(self.debt_path.read_text(encoding="utf-8"))
-        return {"chapter_debts": {}, "total_open": 0, "total_resolved": 0}
+        default = {"chapter_debts": {}, "total_open": 0, "total_resolved": 0}
+        if not self.debt_path.exists():
+            return default
+        try:
+            data = json.loads(self.debt_path.read_text(encoding="utf-8"))
+        except Exception as e:
+            msg = f"债务账本损坏已跳过 {self.debt_path}: {e}"
+            print(f"novelkit: {msg}", file=sys.stderr)
+            self.load_errors.append(msg)
+            return default
+        if not isinstance(data, dict):
+            msg = f"债务账本格式非对象已跳过 {self.debt_path}"
+            print(f"novelkit: {msg}", file=sys.stderr)
+            self.load_errors.append(msg)
+            return default
+        return data
 
     def _save(self):
         tmp = self.debt_path.with_suffix(".tmp")
@@ -71,9 +86,10 @@ class DebtStore:
         tmp.replace(self.debt_path)
 
     def _recount_open(self):
+        # L13：历史数据可能缺 status 字段，用 .get() 避免 KeyError。
         self._data["total_open"] = sum(
             1 for debts in self._data["chapter_debts"].values()
-            for d in debts if d["status"] == "open")
+            for d in debts if d.get("status") == "open")
 
     # --- 债务 ---
 
@@ -170,11 +186,12 @@ class DebtStore:
             r = self.add_debt(chapter, "defer_and_continue", str(s))
             debts_added.append(r["entry"]["id"])
 
+        # M3 修复：直接比较 level key（此前误用 LEVEL_DESCRIPTIONS
+        # 取中文描述文本再去比 BLOCKING_LEVELS，恒为 False）。
         blocking = any(
-            LEVEL_DESCRIPTIONS.get(
-                next((d["level"] for d in
-                      self._data["chapter_debts"].get(str(chapter), [])
-                      if d["id"] == did), ""), "") in BLOCKING_LEVELS
+            next((d["level"] for d in
+                  self._data["chapter_debts"].get(str(chapter), [])
+                  if d["id"] == did), "") in BLOCKING_LEVELS
             for did in debts_added
         ) if debts_added else False
 

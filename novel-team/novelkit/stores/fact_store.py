@@ -35,15 +35,30 @@ class FactStore:
         self.facts_path = base / "facts.json"
         self.states_path = base / "states.json"
         self.facts_path.parent.mkdir(parents=True, exist_ok=True)
+        # H2 修复：记录加载期错误，供检查插件上报可见的 warning。
+        # 账本损坏不得瘫痪整个门禁（此前直接抛 JSONDecodeError）。
+        self.load_errors: List[str] = []
         self.facts: Dict[str, Dict] = self._load_json(self.facts_path)
         self.states: Dict[str, Dict] = self._load_json(self.states_path)
 
     # --- IO ---
 
     def _load_json(self, path: Path) -> Dict:
-        if path.exists():
-            return json.loads(path.read_text(encoding="utf-8"))
-        return {}
+        if not path.exists():
+            return {}
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as e:
+            msg = f"事实账本损坏已跳过 {path}: {e}"
+            print(f"novelkit: {msg}", file=sys.stderr)
+            self.load_errors.append(msg)
+            return {}
+        if not isinstance(data, dict):
+            msg = f"事实账本格式非对象已跳过 {path}"
+            print(f"novelkit: {msg}", file=sys.stderr)
+            self.load_errors.append(msg)
+            return {}
+        return data
 
     def _save_json(self, path: Path, data: Dict):
         tmp = path.with_suffix(".tmp")
@@ -164,7 +179,8 @@ class FactStore:
     def report(self) -> Dict:
         counts: Dict[str, int] = {}
         for f in self.facts.values():
-            cat = f["category"]
+            # L13：历史数据可能缺 category 字段，用 .get() 避免 KeyError。
+            cat = f.get("category", "unknown") if isinstance(f, dict) else "unknown"
             counts[cat] = counts.get(cat, 0) + 1
         return {
             "novel_id": self.novel_id,

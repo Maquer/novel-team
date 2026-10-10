@@ -8,7 +8,6 @@ from novelkit.checks.base import (  # noqa: F401
     Check,
     Context,
     all_checks,
-    error_result,
     get_check,
     register,
     skipped_result,
@@ -29,7 +28,6 @@ CHECK_ORDER = [
     "darkthread",
     "cliche",
     "disciplines",
-    "psychological_depth",
 ]
 
 from novelkit.checks import (  # noqa: F401,E402
@@ -46,5 +44,4 @@ from novelkit.checks import (  # noqa: F401,E402
     darkthread,
     cliche,
     disciplines,
-    psychological_depth,
 )

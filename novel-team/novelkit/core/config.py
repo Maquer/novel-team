@@ -13,6 +13,7 @@ v1 → v2 阈值迁移（评审决策 2026-09-30：取严，不保留双轨）�
 
 import json
 import os
+import sys
 from pathlib import Path
 from typing import Any, Dict, Optional
 
@@ -68,8 +69,11 @@ class Config:
                 file_data = json.loads(path.read_text(encoding="utf-8"))
                 if isinstance(file_data, dict):
                     data = _deep_merge(data, file_data)
-            except Exception:
-                pass  # 配置文件损坏时回退默认值，不阻断
+            except Exception as e:
+                # H1 修复：配置文件损坏时必须可见，不能静默吞错
+                # （否则阈值修改不生效且无声无息）。回退默认值，不阻断。
+                print(f"novelkit: 配置文件解析失败 {path}: {e}，已回退默认值",
+                      file=sys.stderr)
         if overrides:
             data = _deep_merge(data, overrides)
         self._data = data

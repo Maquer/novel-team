@@ -12,23 +12,24 @@
   失败时写 stderr 可见。
 """
 
+import hashlib
 import json
 import re
 import subprocess
 import sys
 import time
+import uuid
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict
 
 from novelkit.checks import CHECK_ORDER
 from novelkit.checks.base import (
     Context,
-    error_result,
     get_check,
     skipped_result,
 )
 from novelkit.core.chapter import Chapter
-from novelkit.core.config import get_config
+from novelkit.core.config import get_config, novel_team_root
 from novelkit.core import log as _log
 from novelkit.core.resolve import resolve
 from novelkit.core.results import CheckResult, CheckStatus, GateReport, Severity
@@ -38,13 +39,15 @@ from novelkit.stores.fact_store import FactStore
 
 log = _log
 
+# L2：事件总线路径派生（novel-team 根的父目录即 minis shared 根）。
+def _event_bus_path() -> Path:
+    return novel_team_root().parent / "event-bus.py"
+
+
 # v1 常量移植（tools/gate-check.py）
-MODIFY_SKIP_GATES = [
-    "ai_tone",       # 修改模式不跑完整质检
-    "word_count",    # 小改动可跳过字数检查
-    "forbidden_words",  # 修改模式不重复扫禁用词
-    "hook",          # 钩子检查非必需
-]
+# 注：v1 的 MODIFY_SKIP_GATES（ai_tone/word_count/forbidden_words/hook）
+# 在 L9 修复后不再使用——modify 模式改为"仅跑 MODIFY_REQUIRED_GATES，
+# 其余全部标 skipped"，不再区分"跳过"子集。
 
 # 必须执行的检查项（无论什么模式）
 MODIFY_REQUIRED_GATES = [
@@ -60,6 +63,11 @@ _P1_GATES = ["word_count", "forbidden_words", "hook"]
 
 # v1 BLOCK_GATES（_evaluate_results 阻断层）
 _BLOCK_GATES = ["fact_consistency", "ai_tone", "protocol"]
+
+# L1：被检查插件经 importlib 加载的 tools 文件（ai_tone→novel-humanizer.py、
+# logic_review→logic-review.py、disciplines→anti-ai-12.py）。
+# 改动任一文件，门禁缓存必须失效（见 _tool_hashes）。
+_TOOL_DEPS = ("novel-humanizer.py", "logic-review.py", "anti-ai-12.py")
 
 
 class Orchestrator:
@@ -79,11 +87,24 @@ class Orchestrator:
         self.cache = CheckCache(self.project_dir)
         self.last_evaluation = None
 
+    def _tool_hashes(self) -> str:
+        """L1：importlib 加载的 tools 文件内容 hash（缓存键的一部分）。"""
+        h = hashlib.sha256()
+        for name in _TOOL_DEPS:
+            p = self.repo_root / "tools" / name
+            if p.exists():
+                h.update(p.read_bytes())
+        return h.hexdigest()[:16]
+
     # ------------------------------------------------------------------
     # 主入口
     # ------------------------------------------------------------------
-    def check(self, chapter_file: str) -> Dict:
-        """执行门禁检查（v1 GateChecker.check 语义，返回 v1 形状 dict）。"""
+    def check(self, chapter_file: str, quiet: bool = False) -> Dict:
+        """执行门禁检查（v1 GateChecker.check 语义，返回 v1 形状 dict）。
+
+        quiet=True 时跳过报告落盘/账本同步/事件发射（L4：book_scan 批量
+        扫描用，避免 50 章产生 50 个文件 + 50 条账本记录）。
+        """
         results = {
             "chapter_file": chapter_file,
             "flexible_mode": self.flexible,
@@ -117,7 +138,7 @@ class Orchestrator:
         if not self.no_cache:
             cache_key = self.cache.key(
                 chapter.raw, self.novel_id, self.mode, self.flexible,
-                self.config.to_dict())
+                self.config.to_dict(), self._tool_hashes())
             hit = self.cache.get(cache_key)
             if hit is not None:
                 log.info(f"缓存命中，跳过检查: {chapter_file}")
@@ -127,7 +148,8 @@ class Orchestrator:
             results["checks"][name] = self._run_check(name, ctx).raw
 
         self._finalize(results)
-        self._save_result(results)
+        if not quiet:
+            self._save_result(results)
         if cache_key is not None:
             # 注意：_finalize/_save_result 之后落缓存；命中时不再重做
             # 报告落盘/账本同步/事件发射等副作用
@@ -151,7 +173,7 @@ class Orchestrator:
         if not self.no_cache:
             cache_key = self.cache.key(
                 chapter.raw, self.novel_id, self.mode, self.flexible,
-                self.config.to_dict())
+                self.config.to_dict(), self._tool_hashes())
             hit = self.cache.get(cache_key)
             if hit is not None:
                 log.info(f"缓存命中，跳过检查: {chapter_file}")
@@ -161,14 +183,20 @@ class Orchestrator:
         for gate in MODIFY_REQUIRED_GATES:
             results["checks"][gate] = self._run_check(gate, ctx).raw
 
-        # 其他检查项标记为跳过
-        for gate in MODIFY_SKIP_GATES:
-            results["checks"][gate] = skipped_result(
-                gate, self._classify_gate(gate),
-                f"修改模式下跳过：{gate}").raw
+        # L9 修复：其余检查项全部标 skipped（此前只有 MODIFY_SKIP_GATES
+        # 的 4 个被标记，reference/description_consistency/darkthread/
+        # cliche/disciplines/psychological_depth 直接缺席，报告不完整）。
+        skipped_gates = [g for g in CHECK_ORDER if g not in MODIFY_REQUIRED_GATES]
+        for gate in skipped_gates:
+            if gate not in results["checks"]:
+                results["checks"][gate] = skipped_result(
+                    gate, self._classify_gate(gate),
+                    f"修改模式下跳过：{gate}").raw
 
-        # 判定
-        results["passed"] = self._evaluate_results(results["checks"], flexible=False)
+        # 判定（L8 修复：用 self.flexible 而非写死的 False；
+        # 注：当前 _evaluate_results 内部暂未使用该参数，改动无行为变化，
+        # 为将来参数生效时口径正确）
+        results["passed"] = self._evaluate_results(results["checks"], self.flexible)
         results["warnings"] = self._collect_warnings(results["checks"])
         results["errors"] = self._collect_errors(results["checks"])
 
@@ -177,7 +205,7 @@ class Orchestrator:
             "p0_blockers": len(results["errors"].get("p0", [])),
             "p1_warnings": len(results["errors"].get("p1", [])) + len(results["warnings"].get("p1", [])),
             "p2_suggestions": len(results["errors"].get("p2", [])) + len(results["warnings"].get("p2", [])),
-            "skipped_gates": MODIFY_SKIP_GATES,
+            "skipped_gates": skipped_gates,
             "total_issues": sum([
                 len(results["errors"].get("p0", [])),
                 len(results["errors"].get("p1", [])) + len(results["warnings"].get("p1", [])),
@@ -400,7 +428,9 @@ class Orchestrator:
         result_dir = self.project_dir / "reports"
         result_dir.mkdir(parents=True, exist_ok=True)
 
-        result_file = result_dir / f"gate-check-{int(time.time())}.json"
+        # L3 修复：秒级时间戳同秒内会互相覆盖（book_scan 连扫多章时必现），
+        # 加 6 位随机后缀保证唯一。
+        result_file = result_dir / f"gate-check-{int(time.time())}-{uuid.uuid4().hex[:6]}.json"
         with open(result_file, 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
 
@@ -428,7 +458,11 @@ class Orchestrator:
                 "summary": result.get("summary", {}),
             }
             cmd = [
-                sys.executable, "/var/minis/shared/event-bus.py", "emit",
+                # L2 修复：不硬编码 /var/minis 路径，改走 novel_team_root()
+                # （默认仍为 /var/minis/shared/event-bus.py；NOVEL_TEAM_ROOT
+                # 覆盖时跟随）。缺失时 subprocess 抛错，由外层 except 转
+                # stderr 警告，不阻断门禁。
+                sys.executable, str(_event_bus_path()), "emit",
                 "--source", self.novel_id,
                 "--type", "CHAPTER_GATE_PASSED",
                 "--payload", json.dumps(payload, ensure_ascii=False),
@@ -478,6 +512,9 @@ class Orchestrator:
         GATE_LABELS = {
             "事实冲突": "fact_consistency",
             "设定矛盾": "fact_consistency",
+            # M4：character_consistency 是虚拟 gate 名（无对应注册插件），
+            # 但 test-degradation.py 的 D2 测试显式锁定声明链
+            # "设定矛盾>角色掉线>AI味"，故保留映射。
             "角色掉线": "character_consistency",
             "AI味": "ai_tone",
             "字数不足": "word_count",
@@ -485,9 +522,10 @@ class Orchestrator:
             "钩子": "hook",
             "协议": "protocol",
             "蓝图": "blueprint",
-            "一致": "consistency",
             "引用": "reference",
-            "实体": "unknown_entities",
+            # M4 修复：删掉 "一致"→consistency（无此插件，且字典序先于
+            # "描述一致"命中，会把描述一致性问题误路由到不存在的 gate）、
+            # "实体"→unknown_entities（无此插件、无检查输出该文本）。
             "描述一致": "description_consistency",
             "逻辑": "logic_review",
             "暗线": "darkthread",
@@ -499,8 +537,8 @@ class Orchestrator:
         GATE_SUB_PRIORITY = {
             "fact_consistency": 1, "character_consistency": 2, "ai_tone": 3,
             "word_count": 4, "forbidden_words": 5, "hook": 6,
-            "protocol": 7, "blueprint": 8, "consistency": 9,
-            "reference": 10, "unknown_entities": 11,
+            "protocol": 7, "blueprint": 8,
+            "reference": 10,
             "description_consistency": 12, "logic_review": 13, "darkthread": 14,
         }
         SUB_FALLBACK = 99
@@ -581,6 +619,10 @@ class Orchestrator:
         names = MODIFY_REQUIRED_GATES if self.mode == "modify" else CHECK_ORDER
         results = [self._run_check(n, ctx) for n in names]
 
+        # M1 修复：P0 阻断口径与 check()/_evaluate_results 统一——
+        # 只有 FAIL/ERROR 阻断；WARNING 可见但不阻断（插件把内部异常
+        # 故意映射为 warning 而非 fail，就是"不拦停、但必须可见"）。
+        p0_blocking = self._p0_blocking(results)
         p0 = [r for r in results
               if r.severity == Severity.BLOCK
               and r.status in (CheckStatus.FAIL, CheckStatus.WARNING, CheckStatus.ERROR)]
@@ -594,8 +636,8 @@ class Orchestrator:
                   for d in r.details]
         ai_tone = next((r for r in results if r.check == "ai_tone"), None)
         return GateReport(
-            passed=not p0,
-            will_block=bool(p0),
+            passed=not p0_blocking,
+            will_block=bool(p0_blocking),
             p0_failures=p0,
             p1_warnings=p1,
             p2_suggestions=p2,
@@ -603,3 +645,13 @@ class Orchestrator:
             chapter_file=chapter_file,
             errors=errors,
         )
+
+    @staticmethod
+    def _p0_blocking(results) -> list:
+        """P0 阻断项：severity 为 BLOCK 且状态为 FAIL/ERROR。
+
+        M1 契约：WARNING 永不阻断（与 _evaluate_results 一致）。
+        """
+        return [r for r in results
+                if r.severity == Severity.BLOCK
+                and r.status in (CheckStatus.FAIL, CheckStatus.ERROR)]

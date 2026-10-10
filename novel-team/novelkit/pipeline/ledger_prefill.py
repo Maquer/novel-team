@@ -63,8 +63,7 @@ def prefill_from_outline(novel_id: str,
         return result
     result.outline_path = str(path)
 
-    text = path.read_text(encoding="utf-8")
-
+    # L5 修复：删掉未使用的 text 读取（load_outline 内部会再读一次）。
     outline = load_outline(str(path))
     log.info(f"大纲解析完成：世界观{len(outline.world)}行 / "
              f"人物{len(outline.characters)}个 / 章节{len(outline.chapters)}章")

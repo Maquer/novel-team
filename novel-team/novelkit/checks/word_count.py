@@ -5,9 +5,10 @@ v1 语义（09-29 软化）：
 - soft_min ~ min_words      → 静默 pass（min_words 是写作目标，不是门禁）
 - 字数 > max_words*(1+范围) → warning（P1，超标）
 
-v2 改动（评审决策 D1，2026-09-30：取严，不保留 1350/1500 双轨）：
-- 下限统一为统一配置的 soft_min=1500，不再打 (1-flexible_range) 折扣；
-- 阈值来源改为 ctx.config（config/novelkit.json）：soft_min=1500 / warn_above=5500；
+v2 改动（评审决策 D1，2026-09-30：取严，不保留 1350/1500 双轨；
+2026-10-01 上调：soft_min=2000，新增 hard_min=1500）：
+- 下限统一为统一配置的 soft_min（当前 2000），不再打 (1-flexible_range) 折扣；
+- 阈值来源改为 ctx.config（config/novelkit.json）：soft_min / hard_min / warn_above；
 - v1 实际触发线为 max_words*(1+flexible_range)=5000*1.1=5500，与统一配置
   warn_above=5500 一致，行为不变；details 文案中的阈值数字改为 warn_above
   （v1 文案写的是 max_words=5000，与实际触发线 5500 不一致，属文案 bug）。
@@ -25,6 +26,9 @@ class WordCountCheck:
     default_severity = Severity.WARN  # v1 _classify_gate: word_count ∈ P1
 
     def run(self, chapter: Chapter, ctx: Context) -> CheckResult:
+        # L7 修复：字数只算一次存局部变量；原先 except 外又调一次
+        # chapter.char_count()，若抛异常会丢掉 except 里攒的提示信息。
+        word_count = 0
         try:
             raw = {"status": "pass", "details": []}
             word_count = chapter.char_count()
@@ -48,5 +52,5 @@ class WordCountCheck:
                   "warning": CheckStatus.WARNING}[raw["status"]]
         return CheckResult(check=self.name, status=status,
                            severity=self.default_severity,
-                           score=float(chapter.char_count()),
+                           score=float(word_count),
                            details=list(raw.get("details", [])), raw=raw)

@@ -55,6 +55,13 @@ class FactConsistencyCheck:
         # 不自己拼路径/构造 store）。账本缺失时 facts 为空 → 循环不执行 → pass，
         # 与 v1「ledger_path 不存在 → return result」语义等价。
         store = ctx.stores.fact if ctx.stores else FactStore(ctx.novel_id)
+        # H2：账本损坏时检查没跑必须可见（记 warning，不静默 pass）。
+        load_errors = getattr(store, "load_errors", None) or []
+        if load_errors:
+            result["status"] = "warning"
+            result["details"].extend(
+                f"fact_consistency 未覆盖：{e}" for e in load_errors)
+            return result
         facts = list(store.facts.values()) if isinstance(store.facts, dict) else store.facts
 
         for f in facts:

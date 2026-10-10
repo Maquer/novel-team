@@ -10,7 +10,6 @@ v2 精简版：门禁/插件只需要「当前代际可写目录」，
 不迁入 novelkit。
 """
 
-import os
 from dataclasses import dataclass
 from pathlib import Path
 

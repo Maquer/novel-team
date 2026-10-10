@@ -9,14 +9,14 @@ wordcount-check.extract_content_from_chapter 等）。
 - meta: frontmatter 字典（--- ... --- 之间，key: value）
 - body: 剥离 frontmatter 后的正文（gate-check 的语义；humanizer 扫描用的也是这个）
 
-注意（v1 行为保留说明）：
-- wordcount-check 另有一套"跳过 #第X章 标题"的提取逻辑且不剥 frontmatter，
-  迁移时原样保留（见 tools/wordcount-check.py 注释），此处不收编——
-  口径统一是 Phase 3/4 的决策，本阶段只求行为一致。
+注意（L6 已统一）：
+- tools/wordcount-check.py 的 extract_content_from_chapter 现已改走
+  Chapter.body，与门禁插件 word_count 的 chapter.char_count() 同口径。
+  此前"跳过 #第X章 标题行"的自有逻辑已废弃。
 """
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict
 
@@ -30,6 +30,12 @@ def _split_frontmatter(raw: str):
     meta: Dict[str, str] = {}
     if raw.startswith("---"):
         closing = raw.find("\n---\n")
+        end_len = 5
+        if closing == -1 and raw.endswith("\n---"):
+            # L12：文件以 "---" 结尾（无尾换行）也算闭合，
+            # 否则会被误判为无 frontmatter。
+            closing = len(raw) - 4
+            end_len = 4
         if closing != -1:
             for line in raw.split("\n")[1:]:
                 if line == "---":
@@ -37,7 +43,7 @@ def _split_frontmatter(raw: str):
                 if ":" in line:
                     k, v = line.split(":", 1)
                     meta[k.strip()] = v.strip()
-            return meta, raw[closing + 5:].strip()
+            return meta, raw[closing + end_len:].strip()
     return meta, raw
 
 

@@ -5,13 +5,13 @@
 v2 Phase 1 迁移：
 - 文件加载走 novelkit.core.chapter.Chapter（路径自动 resolve 为绝对路径，
   frontmatter 解析统一；从结构上消灭相对路径/cwd 类 bug）
-- 阈值走 novelkit 统一配置（config/novelkit.json）：fail 线 1500（取严，
-  评审决策 2026-09-30，原 1350 不再保留双轨）、warn 线 5500、目标 2500
+- 阈值走 novelkit 统一配置（config/novelkit.json）：fail 线 2000
+  （评审决策 2026-10-01 上调；hard_min=1500 为 P0 阻断）、warn 线 5500、目标 2500
 - 其余行为与 v1 一致
 
 核心功能：
   1. 统计字数（默认门禁口径：全部非空白字符；--chinese-only 切回纯汉字口径）
-  2. 检查章节是否达标（<1500 fail；>5500 warning；其余 pass）
+  2. 检查章节是否达标（<2000 fail；>5500 warning；其余 pass）
   3. 生成检查报告
   4. 支持批量检查
 
@@ -60,32 +60,16 @@ def count_gate_words(text: str) -> int:
 
 
 def extract_content_from_chapter(file_path: Path) -> str:
-    """从章节文件中提取正文内容（排除标题等元数据）。
+    """从章节文件中提取正文内容（排除 frontmatter）。
 
-    v2 Phase 1 说明：此函数的行为原样保留，未改用 Chapter.body——
-    它有一套自己的逻辑（跳过 "#第X章" 标题行；无标题行时 frontmatter
-    会被计入）。这是 v1 的既有口径，口径统一是 Phase 3/4 的决策，
-    本阶段只求行为一致。唯一变化：调用方现在传入 Chapter.resolve 后的
-    绝对路径。
+    L6 修复：统一走 Chapter.body，与门禁插件 word_count 的
+    chapter.char_count() 同口径。此前自有逻辑（跳过 "#第X章" 标题行；
+    无标题行时 frontmatter 会被计入）导致同一文件两处字数不一致。
     """
     try:
-        content = file_path.read_text(encoding='utf-8')
-    except Exception as e:
-        return f"读取失败: {e}"
-
-    # 查找正文开始位置（通常是第一个一级标题或二级标题之后）
-    lines = content.split('\n')
-
-    # 跳过开头的元数据（如 # 第XX章 标题）
-    content_start = 0
-    for i, line in enumerate(lines):
-        if line.startswith('#') and '章' in line:
-            content_start = i + 1
-            break
-
-    # 提取正文
-    main_content = '\n'.join(lines[content_start:])
-    return main_content
+        return Chapter.load(str(file_path)).body
+    except Exception:
+        return ""
 
 
 def check_chapter(file_path: Path, min_words: int = None,

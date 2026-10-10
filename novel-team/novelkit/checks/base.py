@@ -4,18 +4,21 @@
 1. @register 装饰器注册，不改编排器即插即用
 2. 输入只收 (Chapter, Context)；文件 IO 走 ctx.stores，不自己拼路径
 3. 输出 CheckResult（raw 字段携带 v1 形状 dict，供门禁 CLI 兼容）
-4. run() 内不捕获异常——抛给编排器统一记 error（"检查没跑"必须可见）
+4. run() 内自行捕获异常并映射为 warning/fail（"检查没跑"必须可见，
+   不静默为 pass；编排器 _run_check 另有最后兜底→ warning）
+   （M2 修正：原"run() 内不捕获异常——抛给编排器统一记 error"与全部
+   13 个插件的实现脱节，已按实际规范改写）
 5. 不 print；日志走 novelkit.core.log（→ stderr）
 6. 类属性声明 severity：P0 阻断 / P1 警告 / P2 建议
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
-from typing import TYPE_CHECKING, Dict, List, Optional, Protocol, Type
+from typing import TYPE_CHECKING, Dict, Optional, Protocol, Type
 
 from novelkit.core.chapter import Chapter
 from novelkit.core.config import Config
-from novelkit.core.results import CheckResult, CheckStatus, Severity
+from novelkit.core.results import CheckResult, CheckStatus
 
 if TYPE_CHECKING:
     from novelkit.stores import Stores
@@ -67,11 +70,3 @@ def skipped_result(name: str, severity: str, reason: str) -> CheckResult:
     raw = {"status": "skipped", "reason": reason, "details": []}
     return CheckResult(check=name, status=CheckStatus.SKIPPED,
                        severity=severity, details=[], raw=raw)
-
-
-def error_result(name: str, severity: str, exc: BaseException) -> CheckResult:
-    """检查执行异常：记 error，必须可见（v1 教训：不静默为 pass）。"""
-    detail = f"{name} 执行异常（{type(exc).__name__}: {exc}），该检查项未覆盖"
-    raw = {"status": "error", "details": [detail]}
-    return CheckResult(check=name, status=CheckStatus.ERROR,
-                       severity=severity, details=[detail], raw=raw)

@@ -21,7 +21,7 @@ from typing import Dict, List, Optional, Tuple
 
 from novelkit.core import log as _log
 from novelkit.core.chapter import Chapter
-from novelkit.outline.loader import Outline, OutlineChapter
+from novelkit.outline.loader import Outline
 
 log = _log
 
@@ -156,14 +156,19 @@ def check_drift(novel_id: str, chapter_files: List[str],
     report = DriftReport(novel_id=novel_id)
     files = sorted(chapter_files)
 
-    # 章节号映射：文件名数字优先，提不到的按顺序配对
+    # 章节号映射：文件名数字优先；提不到数字的文件按顺序取最小未用号。
+    # L11 修复：此前 fallback_iter 从头取号，与已被文件名认领的章节号
+    # 无关（如 ch1.md→1，draft.md→fallback 又分到 1），导致同章被查
+    # 两次、有章被跳过。现跟踪已用号，fallback 只取未用号。
     ordered_nos = sorted(c.no for c in outline.chapters)
-    fallback_iter = iter(ordered_nos)
+    used = set()
     file_nos: List[Tuple[str, Optional[int]]] = []
     for f in files:
         no = chapter_no_from_filename(f)
         if no is None:
-            no = next(fallback_iter, None)
+            no = next((n for n in ordered_nos if n not in used), None)
+        if no is not None:
+            used.add(no)
         file_nos.append((f, no))
 
     for f, no in file_nos:
