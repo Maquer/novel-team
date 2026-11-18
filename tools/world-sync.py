@@ -360,7 +360,9 @@ def _load_pending(novel_id: str) -> List[Dict]:
 
 
 def _save_pending(novel_id: str, items: List[Dict]):
-    _pending_path(novel_id).write_text(
+    p = _pending_path(novel_id)
+    p.parent.mkdir(parents=True, exist_ok=True)  # FIX 2026-10-24：惰性创建父目录
+    p.write_text(
         json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -685,7 +687,7 @@ def list_pending(novel_id: str, status: str = "all") -> List[Dict]:
 
 def main():
     parser = argparse.ArgumentParser(description="事件驱动的世界包同步器")
-    parser.add_argument("--novel-id", "-p", default=None, help="项目ID")
+    parser.add_argument("--novel-id", "-p", default="default", help="项目ID")
     sub = parser.add_subparsers(dest="cmd", required=True)
 
     p_scan = sub.add_parser("scan", help="消费新事件，生成待确认清单")

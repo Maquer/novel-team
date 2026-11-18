@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-NOVEL_ID = None  # FIX 2026-10-04：不再写死，按 --novel-id 参数指定
+NOVEL_ID = "default"  # FIX 2026-10-24：默认 "default"，避免 None 导致路径拼接 TypeError
 BASE = Path("/var/minis/shared/novel-team")
 TOOLS = BASE / "tools"
 WORLD_SYNC = TOOLS / "world-sync.py"

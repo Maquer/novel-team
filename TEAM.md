@@ -222,6 +222,8 @@ git log --oneline TEAM.md | head -3
 
 ### 1. 质量门禁流程（第N章创作标准流程）
 
+> **审稿 ≠ 修订（硬切分，借鉴 InkOS 2026-10-08）**：`quality-gate.py` / `gate-check.py` 审稿只输出**有证据支撑的观测**（命中项 + 位置 + 依据 + 债务档位），**不打分定生死、不自动改写正文**。修订是独立的显式动作（作者/主笔执行），驱动自审稿报告。禁止门禁脚本"顺手"改稿——`gate-check.py review approve` 只是审核状态机转移（3 轮无反馈→默认"已审核"），**不改任何正文**；正文改写必须留源修订可回溯。
+
 ```bash
 # 第一步：生成初稿后执行全流程门禁
 python3 tools/quality-gate.py --chapter projects/my-novel/chapters/chapter-00{N}.md --novel-id my-novel --commit
