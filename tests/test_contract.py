@@ -5,7 +5,7 @@
 1. novelkit.core.config.novel_team_root() 与 tools/project_guard.BASE_DIR 同源
 2. CheckResult / GateReport 的 to_dict() 字段名锁定、可 JSON 序列化
 3. Chapter.path 恒为绝对路径（相对路径/cwd 类 bug 从结构上消失）
-4. 统一配置默认值：soft_min=1500（取严）、warn_above=5500、target=2500
+4. 统一配置默认值：soft_min=2000（2026-10-01 评审决策升级，原 1500）、warn_above=3500（2026-10-03）、target=2500
 5. CLI 的 stdout 为纯 JSON（无警告行混入）
 """
 import json
@@ -81,8 +81,8 @@ os.chdir(cwd)
 
 # 4. 配置默认值
 cfg = Config()
-check("soft_min=1500（取严）", cfg.get("word_count", "soft_min") == 1500)
-check("warn_above=5500", cfg.get("word_count", "warn_above") == 5500)
+check("soft_min=2000（2026-10-01 评审决策升级）", cfg.get("word_count", "soft_min") == 2000)
+check("warn_above=3500（2026-10-03 评审决策）", cfg.get("word_count", "warn_above") == 3500)
 check("target=2500", cfg.get("word_count", "target") == 2500)
 check("ai_tone.threshold=15.0", cfg.get("ai_tone", "threshold") == 15.0)
 check("ai_tone.block_at=16.0", cfg.get("ai_tone", "block_at") == 16.0)

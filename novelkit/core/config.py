@@ -5,13 +5,17 @@
 不允许散落在检查代码里（code review 红线）。
 
 v1 → v2 阈值迁移（评审决策 2026-09-30：取严，不保留双轨）：
-- word_count.soft_min = 1500（原 wordcount-check fail 线 1350 与
-  gate soft_min 1500 分裂，统一取严；下限不再打 flexible_range 折扣）
-- word_count.warn_above = 5500（原两处一致）
+- word_count.soft_min = 1500 → 2000（2026-10-01 评审决策升级）
+- word_count.warn_above = 5500 → 3500（2026-10-03 评审决策，基于康熙 P50 数据）
 - word_count.target = 2500（写作目标，非门禁）
+
+2026-11-18 修复：config/novelkit.json 曾带 Python 三引号注释导致
+json.loads 失败，except 静默回退 DEFAULTS——文件配置从未生效。
+现在文件为合法 JSON；任何解析失败必须记日志，不再裸 except。
 """
 
 import json
+import sys
 import os
 from pathlib import Path
 from typing import Any, Dict, Optional
@@ -69,8 +73,10 @@ class Config:
                 file_data = json.loads(path.read_text(encoding="utf-8"))
                 if isinstance(file_data, dict):
                     data = _deep_merge(data, file_data)
-            except Exception:
-                pass  # 配置文件损坏时回退默认值，不阻断
+            except (json.JSONDecodeError, OSError) as e:
+                # 配置文件损坏时回退默认值，不阻断；但必须可见，禁止静默
+                print(f"[novelkit] WARNING: 配置解析失败，回退 DEFAULTS：{path} ({e})",
+                      file=sys.stderr)
         if overrides:
             data = _deep_merge(data, overrides)
         self._data = data

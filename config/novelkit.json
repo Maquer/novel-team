@@ -1,20 +1,10 @@
-"""统一阈值/开关。评审决策（2026-10-01）：字数下限升级 2000，新增 hard_min=1500。
-
-字段说明：
-- word_count.target: 写作目标（2500），非门禁，仅用于提示
-- word_count.hard_min: 硬下限（1500），低于此为 P0 阻断
-- word_count.soft_min: 软下限（2000），低于此为 P1 警告
-- word_count.warn_above: 超长警告线（5500），高于此为 warning
-- ai_tone.threshold: humanizer 默认阈值（15.0）
-- ai_tone.block_at: tier_1a 阻断线（16.0，P0）：tier_1a >= 16 → fail
-- ai_tone.warn_at: 接近阈值预警线（13）：13 <= tier_1a <= 15 → warning
-"""
 {
+  "__doc__": "统一阈值/开关。评审决策(2026-10-01)：字数下限升级 2000，新增 hard_min=1500；warn_above=3500（2026-10-03，基于康熙 P50 数据，高于此值考虑拆分）。注意：本文件禁止 Python 三引号注释——json.loads 会失败并静默回退 DEFAULTS（2026-11-18 修复的 bug）。",
   "word_count": {
     "target": 2500,
     "hard_min": 1500,
     "soft_min": 2000,
-    "warn_above": 5500
+    "warn_above": 3500
   },
   "ai_tone": {
     "threshold": 15.0,
